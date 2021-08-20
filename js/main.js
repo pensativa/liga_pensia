@@ -48,13 +48,11 @@
     }
 
     // FAQ Accordion
-    $(".expand").on("click", function() {
-        $(".faq-t").removeClass("faq-o");
+    $(".faq__link").on("click", function() {
         $(".detail:visible").slideUp();
         if (!$(this).next().is(":visible")) {
 
             $(this).next().slideDown(200);
-            $(this).find(".faq-t").addClass("faq-o");
         }
     });
 
