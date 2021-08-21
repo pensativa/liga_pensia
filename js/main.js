@@ -45,7 +45,43 @@
           }
         });
       });
+       //Mobile Why
+      $(function(){
+        $('.why__item-title').on('click', function(){
+          if ($(this).hasClass('open')) {
+            $(this).removeClass('open');
+          } else {
+            $(this).addClass('open');
+          }
+          $(this).next().slideToggle("slow", function(){
+            if($(this).css('display') === 'none'){
+              $(this).removeAttr('style');
+            }
+          });
+        });
+      });
     }
+
+    //Grafic img
+    $(function(){
+      $('.profitability__grafic-img').click(function(event) {
+        var i_path = $(this).next().attr('src');
+        $('body').append('<div id="overlay"></div><div id="magnify"><img src="'+i_path+'"><div id="close-popup"><i></i></div></div>');
+        $('#magnify').css({
+         left: ($(document).width() - $('#magnify').outerWidth())/3,
+                top: ($(window).height() - $('#magnify').outerHeight())/3
+       });
+        $('#overlay, #magnify').fadeIn('fast');
+      });
+
+      $('body').on('click', '#close-popup, #overlay', function(event) {
+        event.preventDefault();
+
+        $('#overlay, #magnify').fadeOut('fast', function() {
+          $('#close-popup, #magnify, #overlay').remove();
+        });
+      });
+    });
 
     // FAQ Accordion
     $(".faq__link").on("click", function() {

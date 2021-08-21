@@ -266,47 +266,45 @@
 
             function maleImg () {
                 if (age <= 25) {
-                    $('.person-left').css('background-image', 'url(/img/male-18.png)');
+                    $('.person-left').css('background-image', 'url(../img/male-18.png)');
                 } else if (age >= 26 && age <= 35) {
-                    $('.person-left').css('background-image', 'url(/img/male-26.png)');
+                    $('.person-left').css('background-image', 'url(../img/male-26.png)');
                 } else if (age >= 36 && age <= 47 ) {
-                    $('.person-left').css('background-image', 'url(/img/male-36.png)');
+                    $('.person-left').css('background-image', 'url(../img/male-36.png)');
                 } else if (age >= 48 && age <= 65 ) {
-                    $('.person-left').css('background-image', 'url(/img/male-48.png)');
+                    $('.person-left').css('background-image', 'url(../img/male-48.png)');
                 } if (_average >= 1 && _average <= 2500) {
-                    $('.person-right').css('background-image', 'url(/img/male-48.png)');
+                    $('.person-right').css('background-image', 'url(../img/male-48.png)');
                 } else if (_average > 2500 && _average <= 20000) {
-                    $('.person-right').css('background-image', 'url(/img/male-48.png)');
-                    $('.person-right-bag').css('opacity', '0');
-                    $('.person-right-car').css('opacity', '0');
+                    $('.person-right').css('background-image', 'url(../img/male-48.png)');
                 } else if (_average > 20000 && _average <= 50000) {
-                    $('.person-right').css('background-image', 'url(/img/male-48.png)');
-                    $('.person-right-bag').css('background-image', 'url(/img/male-48.png)');
+                    $('.person-right').css('background-image', 'url(../img/male-48.png)');
+                    $('.person-right-bag').css('background-image', 'url(../img/male-48.png)');
                     $('.person-right-bag').css('opacity', '1');
                     $('.person-right-car').css('opacity', '0');
                 } else if (_average > 50000) {
-                    $('.person-right').css('background-image', 'url(/img/male-48.png)');
+                    $('.person-right').css('background-image', 'url(../img/male-48.png)');
                 }
             }
 
             function femaleImg () {
                 if (age <= 25) {
-                    $('.person-left').css('background-image', 'url(/img/female-18.png)');
-                    $('.person-right').css('background-image', 'url(/img/female-48m.png)');
+                    $('.person-left').css('background-image', 'url(../img/female-18.png)');
+                    $('.person-right').css('background-image', 'url(../img/female-48m.png)');
                 } else if (age >= 26 && age <= 35) {
-                    $('.person-left').css('background-image', 'url(/img/female-26.png)');
+                    $('.person-left').css('background-image', 'url(../img/female-26.png)');
                 } else if (age >= 36 && age <= 47 ) {
-                    $('.person-left').css('background-image', 'url(/img/female-36.png)');
+                    $('.person-left').css('background-image', 'url(../img/female-36.png)');
                 } else if (age >= 48 && age <= 65 ) {
-                    $('.person-left').css('background-image', 'url(/img/female-48m.png)');
+                    $('.person-left').css('background-image', 'url(../img/female-48m.png)');
                 } if (_average >= 1 && _average <= 2500) {
-                    $('.person-right').css('background-image', 'url(/img/female-48m.png)');
+                    $('.person-right').css('background-image', 'url(../img/female-48m.png)');
                 } else if (_average > 2500 && _average <= 20000) {
-                    $('.person-right').css('background-image', 'url(/img/female-48.png)');
+                    $('.person-right').css('background-image', 'url(../img/female-48.png)');
                 } else if (_average > 20000 && _average <= 50000) {
-                    $('.person-right').css('background-image', 'url(/img/female-48.png)');
+                    $('.person-right').css('background-image', 'url(../img/female-48.png)');
                 } else if (_average > 50000) {
-                    $('.person-right').css('background-image', 'url(/img/female-48.png)');
+                    $('.person-right').css('background-image', 'url(../img/female-48.png)');
                 }
             }
 
