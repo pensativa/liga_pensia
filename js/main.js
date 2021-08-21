@@ -49,7 +49,7 @@
 
     // FAQ Accordion
     $(".faq__link").on("click", function() {
-        $(".detail:visible").slideUp();
+        $(".faq__detail:visible").slideUp();
         if (!$(this).next().is(":visible")) {
 
             $(this).next().slideDown(200);
