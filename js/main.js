@@ -10,22 +10,9 @@
           $('#menu__toggle').addClass('mobile');
           $('#menu__toggle').removeClass('desc');
         }
-      $('.why__item-title').on('click', function() {
-        if ($(this).hasClass('open')) {
-          $(this).removeClass('open');
-        } else {
-          $(this).addClass('open');
-        }
-        $(this).next().slideToggle("slow", function() {
-          if ($(this).css('display') === 'none') {
-            $(this).removeAttr('style');
-          }
-        });
-      });
       });
     } else {
       $('.mobile-menu').removeAttr('style');
-      $('.popap-menu').removeClass('abs');
       if ($('#menu__toggle').hasClass('mobile')) {
         $('#menu__toggle').removeClass('mobile');
         $('#menu__toggle').addClass('desc');
@@ -33,10 +20,8 @@
     }
   });
 
-  function addClass() {
-    $('.popap-menu').addClass('abs').removeAttr('style');
-  }
 
+if ($(window).width() > 785)
   $('.desc').on('click', function() {
     if ($('.desc').hasClass('close')) {
       $('.desc').removeClass('close');
@@ -48,8 +33,9 @@
       $('.desc').removeClass('open');
       $('.popap-menu').slideUp(400);
       $('.top-menu__social').slideUp(300);
-      setTimeout(addClass, 600);
-
+      setTimeout(function addClass() {
+      $('.popap-menu').addClass('abs').removeAttr('style');
+    }, 600);
     }
   });
 
@@ -135,7 +121,23 @@
         }, 800);
       });
     });
+  });
 
+  $(function() {
+    $(".profitability__grafic-lup").on('click', function() {
+      const src = $(this).prev().attr('src');
+      $("body").append("<div class='popup'>" +
+        "<div class='popup_bg'></div>" +
+        "<img src='" + src + "' class='popup_img' />" +
+        "</div>");
+      $(".popup").fadeIn(800);
+      $(".popup_bg").on('click', function() {
+        $(".popup").fadeOut(800);
+        setTimeout(function() {
+          $(".popup").remove();
+        }, 800);
+      });
+    });
   });
 
   // FAQ Accordion
