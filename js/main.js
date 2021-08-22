@@ -28,15 +28,6 @@
       $('.popap-menu').removeClass('abs');
       $('.popap-menu').slideDown(200);
       $('.top-menu__social').slideDown(200);
-      $('.menu__item--explosion').on('click', function() {
-        if ($(this).hasClass('menu__item--close')) {
-          $(this).removeClass('menu__item--close');
-          $(this).addClass('menu__item--open');
-        } else {
-          $(this).addClass('menu__item--close');
-          $(this).removeClass('menu__item--open');
-        }
-      });
     } else {
       $('.desc').addClass('close');
       $('.desc').removeClass('open');
@@ -52,6 +43,7 @@
       if ($(this).hasClass('close')) {
         $(this).removeClass('close');
         $(this).addClass('open');
+        $('.popap-menu').removeAttr('style');
         $('.mobile-menu').slideDown(200);
       } else {
         $(this).addClass('close');
@@ -60,6 +52,17 @@
       }
     }
   });
+
+  $('.menu__item--explosion').on('click', function() {
+    $('.popap-menu').removeAttr('style');
+        if ($(this).hasClass('menu__item--close')) {
+          $(this).removeClass('menu__item--close');
+          $(this).addClass('menu__item--open');
+        } else {
+          $(this).addClass('menu__item--close');
+          $(this).removeClass('menu__item--open');
+        }
+      });
 
   if ($(window).width() > 784) {
     $('.top-menu__phone').on('click', function(event) {
@@ -82,17 +85,6 @@
       $('.popap-menu').removeClass('abs');
       $('#menu__toggle').removeClass('desc');
       $('#menu__toggle').addClass('mobile');
-
-
-      $('.menu__item--explosion').on('click', function() {
-        if ($(this).hasClass('menu__item--close')) {
-          $(this).removeClass('menu__item--close');
-          $(this).addClass('menu__item--open');
-        } else {
-          $(this).addClass('menu__item--close');
-          $(this).removeClass('menu__item--open');
-        }
-      });
     });
     //Mobile Why
     $(function() {
