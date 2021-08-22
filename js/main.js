@@ -45,6 +45,7 @@
   if ($(window).width() <= 784) {
     $(function() {
       $('#menu__toggle').on('click', function() {
+        $('.popap-menu').removeClass('abs');
         if ($(this).hasClass('close')) {
           $(this).removeClass('close');
           $(this).addClass('open');
