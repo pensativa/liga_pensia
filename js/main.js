@@ -30,8 +30,8 @@
     } else {
       $('.desc').addClass('close');
       $('.desc').removeClass('open');
-      $('.popap-menu').removeAttr('style').slideUp().addClass('abs');
-      $('.top-menu__social').slideUp();
+      $('.popap-menu').removeAttr('style').slideUp(300).addClass('abs');
+      $('.top-menu__social').slideUp(300);
     }
   });
 
