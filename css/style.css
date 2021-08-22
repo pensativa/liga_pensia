@@ -1321,8 +1321,7 @@ input[type=range]:-moz-focusring {
   position: absolute;
   z-index: 99;
   width: auto;
-  padding: 0 10px;
-  height: 1.2em;
+  padding: 16px 30px 24px 10px;
   cursor: default;
   margin: 0 -5px auto !important;
   text-align: center;
@@ -1346,13 +1345,27 @@ input[type=range]:-moz-focusring {
   opacity: 0.5; }
 
 .ui-slider-horizontal .ui-slider-handle {
-  top: -.5em; }
+  top: -32px; }
 
-.ui-state-default,
-.ui-widget-content .ui-state-default {
-  -webkit-box-shadow: 8px 7px 8px rgba(0, 0, 0, 0.34);
-          box-shadow: 8px 7px 8px rgba(0, 0, 0, 0.34);
-  background: #fff; }
+#slider-age .ui-state-default,
+#slider-age .ui-widget-content .ui-state-default {
+  background: url("../img/range-one.png") no-repeat center/contain; }
+
+#slider-ageOut .ui-state-default,
+#slider-ageOut .ui-widget-content .ui-state-default {
+  background: url("../img/range-two.png") no-repeat center/100% auto; }
+
+#slider-deposit .ui-state-default,
+#slider-deposit .ui-widget-content .ui-state-default {
+  background: url("../img/range-three.png") no-repeat center/100% auto; }
+
+#slider-period .ui-state-default,
+#slider-period .ui-widget-content .ui-state-default {
+  background: url("../img/range-four.png") no-repeat center/contain; }
+
+#slider-income .ui-state-default,
+#slider-income .ui-widget-content .ui-state-default {
+  background: url("../img/range-five.png") no-repeat center/contain; }
 
 .ui-slider .ui-slider-handle {
   cursor: pointer; }
