@@ -162,7 +162,7 @@
             } else {
                 pensResult.html(_average);
             }
-        } 
+
 
         }
         var benefit_text1 = $('.benefits-wrap .one h4');
