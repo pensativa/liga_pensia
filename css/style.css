@@ -31,9 +31,10 @@ body {
 
 a {
   color: #035c67;
+  display: inline-block;
   -webkit-transition: 0.3s;
   transition: 0.3s; }
-  a:hover, a:focus, a:active {
+  a:hover, a:focus {
     color: #f5a800; }
 
 html {
@@ -598,7 +599,7 @@ template {
   -webkit-transition: 0.3s;
   transition: 0.3s; }
   .top-menu__icon:hover {
-    fill: #035c67; }
+    fill: #f5a800; }
 
 .top-menu__social {
   margin-top: 40px;
@@ -1849,6 +1850,9 @@ input[type=range]:-moz-focusring {
 .faq__list {
   padding: 0;
   list-style: none; }
+
+.faq__link:active {
+  color: #f5a800; }
 
 .faq__item {
   padding: 20px 60px;
