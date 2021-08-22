@@ -130,7 +130,6 @@
 
     function calcPension(input) {
         var pensResult = $('#pensResult');
-        var pensResultMob = $('#pensResultMob');
         var maleBtn = document.getElementById('male');
         var femaleBtn = document.getElementById('female');
 
@@ -164,14 +163,7 @@
                 pensResult.html(_average);
             }
         } 
-        if (pensResultMob) {
-            if (age >= ageOut) {
-                pensResultMob.html(nill);
-            } else if (_average >= maxNum) {
-                pensResultMob.html(maxNum);
-            } else {
-                pensResultMob.html(_average);
-            }
+
         }
         var benefit_text1 = $('.benefits-wrap .one h4');
         var benefit_text2 = $('.benefits-wrap .two h4');

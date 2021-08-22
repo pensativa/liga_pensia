@@ -25,14 +25,12 @@
     if ($('.desc').hasClass('close')) {
       $('.desc').removeClass('close');
       $('.desc').addClass('open');
-      $('.popap-menu').removeClass('abs');
-      $('.popap-menu').slideDown(200);
+      $('.popap-menu').removeClass('abs').slideDown(200);
       $('.top-menu__social').slideDown(200);
     } else {
       $('.desc').addClass('close');
       $('.desc').removeClass('open');
-      $('.popap-menu').addClass('abs');
-      $('.popap-menu').slideUp();
+      $('.popap-menu').removeAttr('style').slideUp().addClass('abs');
       $('.top-menu__social').slideUp();
     }
   });

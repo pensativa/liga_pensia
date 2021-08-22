@@ -473,7 +473,7 @@ template {
     display: block;
     height: 0;
     overflow: hidden;
-    padding: 0;
+    padding: 20px;
     position: absolute;
     top: -15px;
     margin-top: 50px;
@@ -483,16 +483,15 @@ template {
     .popap-menu.abs:hover, .popap-menu.abs:focus, .popap-menu.abs:active {
       opacity: 1;
       height: auto;
-      padding: 20px;
       width: 200px;
       z-index: 10;
       background: #f7f6f3;
       -webkit-box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
               box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1); }
 
-.menu__link:hover ~ .popap-menu.abs,
-.menu__link:focus ~ .popap-menu.abs,
-.menu__link:active ~ .popap-menu.abs {
+.menu__item:hover > .popap-menu.abs,
+.menu__item:focus > .popap-menu.abs,
+.menu__item:active > .popap-menu.abs {
   opacity: 1;
   height: auto;
   padding: 20px;
@@ -699,14 +698,16 @@ template {
     background: url("../img/cit.png") no-repeat center/contain;
     margin: 0 auto 30px; }
 
+.title__img-mob {
+  display: none; }
+
 .title__button {
   margin-bottom: 255px; }
 
 @media (max-width: 785px) {
   .title {
     padding-top: 30px;
-    background-image: url("../img/top-bg-mob.jpg");
-    background-position: bottom 40px right; }
+    background: #f7f6f3; }
     .title .wrapper {
       padding: 0; }
   .title__wrapper {
@@ -716,10 +717,14 @@ template {
     font-size: 20px;
     line-height: 26px;
     max-width: 275px;
-    margin: 0 0 365px 50px; }
+    margin: 0 auto; }
     .title__text::before {
       width: 21px;
       height: 15px; }
+  .title__img-mob {
+    display: block;
+    width: 100%;
+    height: auto; }
   .title__button {
     margin-bottom: 0;
     width: 100vw; } }
@@ -1411,7 +1416,9 @@ input[type=range]:-moz-focusring {
   .calc__wrapper .pension-result {
     font-size: 16px; }
   .calc__wrapper .pension-result span {
-    font-size: 18px; } }
+    font-size: 18px; }
+  .calc__wrapper .range-items {
+    padding: 0 25px; } }
 
 .investments {
   background: #f2f2f2;
