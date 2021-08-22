@@ -1355,6 +1355,12 @@ input[type=range]:-moz-focusring {
 #slider-ageOut .ui-widget-content .ui-state-default {
   background: url("../img/range-two.png") no-repeat center/100% auto; }
 
+#slider-deposit.ui-slider .ui-slider-handle {
+  padding-top: 8px; }
+
+#slider-deposit.ui-slider-horizontal .ui-slider-handle {
+  top: -25px; }
+
 #slider-deposit .ui-state-default,
 #slider-deposit .ui-widget-content .ui-state-default {
   background: url("../img/range-three.png") no-repeat center/100% auto; }
