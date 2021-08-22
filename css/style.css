@@ -1865,7 +1865,8 @@ input[type=range]:-moz-focusring {
   margin: 0; }
 
 .faq__detail {
-  display: none; }
+  display: none;
+  padding: 20px 60px; }
 
 @media (max-width: 785px) {
   .faq {
@@ -1874,7 +1875,7 @@ input[type=range]:-moz-focusring {
     font-size: 20px; }
   .faq__item {
     padding: 10px 55px 10px 15px;
-    background: #f7f6f3 url(../img/Path.png) no-repeat top 10px right 25px/16px 16px; }
+    background: #f7f6f3 url(../img/Path.png) no-repeat top 25px right 25px/16px 16px; }
   .faq__item-title {
     font-size: 15px; } }
 
