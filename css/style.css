@@ -428,19 +428,17 @@ template {
   text-decoration: none;
   position: relative; }
   .menu__link:hover, .menu__link:focus, .menu__link:active {
-    color: #f5a800; }
+    color: #0a0000;
+    font-weight: bold; }
 
-.popap-menu__link {
+.menu__item:hover > .menu__link,
+.menu__item:focus > .menu__link,
+.menu__item:active > .menu__link {
   color: #0a0000;
-  font-size: 11px;
-  text-decoration: none; }
-  .popap-menu__link:hover, .popap-menu__link:focus, .popap-menu__link:active {
-    color: #f5a800; }
-
-.menu__link--accent {
-  position: relative;
   font-weight: bold; }
-  .menu__link--accent::before {
+  .menu__item:hover > .menu__link::before,
+  .menu__item:focus > .menu__link::before,
+  .menu__item:active > .menu__link::before {
     content: "";
     display: block;
     width: 8px;
@@ -450,10 +448,23 @@ template {
     left: 0;
     background-color: #f5a800; }
 
-.popap-menu__link--accent {
-  position: relative;
+.popap-menu__link {
+  color: #0a0000;
+  font-size: 11px;
+  text-decoration: none;
+  position: relative; }
+  .popap-menu__link:hover, .popap-menu__link:focus, .popap-menu__link:active {
+    color: #0a0000;
+    font-weight: bold; }
+
+.popap-menu__item:hover > .popap-menu__link,
+.popap-menu__item:focus > .popap-menu__link,
+.popap-menu__item:active > .popap-menu__link {
+  color: #0a0000;
   font-weight: bold; }
-  .popap-menu__link--accent::before {
+  .popap-menu__item:hover > .popap-menu__link::before,
+  .popap-menu__item:focus > .popap-menu__link::before,
+  .popap-menu__item:active > .popap-menu__link::before {
     content: "";
     display: inline-block;
     width: 8px;
@@ -498,7 +509,7 @@ template {
   float: left;
   width: 55%;
   padding-right: 10px;
-  height: 305px; }
+  height: 370px; }
   .popap-menu__text p {
     margin-top: 0; }
 
