@@ -470,6 +470,11 @@ template {
   transition: 0.3s;
   background: #f7f6f3;
   display: none; }
+  .popap-menu--text {
+    width: 450px; }
+    .popap-menu--text .popap-menu__item {
+      width: 45%;
+      float: right; }
   .popap-menu.abs {
     display: block;
     height: 0;
@@ -489,13 +494,19 @@ template {
       -webkit-box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
               box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1); }
 
+.popap-menu__text {
+  float: left;
+  width: 55%;
+  padding-right: 10px;
+  height: 305px;
+  margin: 0; }
+
 .menu__item:hover > .popap-menu.abs,
 .menu__item:focus > .popap-menu.abs,
 .menu__item:active > .popap-menu.abs {
   opacity: 1;
   height: auto;
   padding: 20px;
-  width: 200px;
   background: #f7f6f3;
   -webkit-box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
           box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
@@ -559,6 +570,13 @@ template {
   .popap-menu {
     width: 100%;
     padding-top: 20px; }
+    .popap-menu--text {
+      width: 100%; }
+      .popap-menu--text .popap-menu__item {
+        width: 100%;
+        float: none; }
+  .popap-menu__text {
+    display: none; }
   .popap-menu__item {
     width: 100%;
     padding: 20px;
@@ -1871,8 +1889,13 @@ input[type=range]:-moz-focusring {
 @media (max-width: 785px) {
   .faq {
     padding: 50px 0 30px; }
+  .faq__link {
+    padding: 20px; }
   .faq__title {
     font-size: 20px; }
+  .faq__detail {
+    display: none;
+    padding: 20px; }
   .faq__item {
     padding: 10px 55px 10px 15px;
     background: #f7f6f3 url(../img/Path.png) no-repeat top 25px right 25px/16px 16px; }
