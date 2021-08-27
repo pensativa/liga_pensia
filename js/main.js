@@ -6,41 +6,13 @@
         if ($('.popap-menu').hasClass('abs')) {
           $('.popap-menu').removeClass('abs');
         }
-        if ($('#menu__toggle').hasClass('desc')) {
-          $('#menu__toggle').addClass('mobile');
-          $('#menu__toggle').removeClass('desc');
-        }
       });
     } else {
       $('.mobile-menu').removeAttr('style');
-      if ($('#menu__toggle').hasClass('mobile')) {
-        $('#menu__toggle').removeClass('mobile');
-        $('#menu__toggle').addClass('desc');
-      }
-    }
-  });
-
-
-if ($(window).width() > 785)
-  $('.desc').on('click', function() {
-    if ($('.desc').hasClass('close')) {
-      $('.desc').removeClass('close');
-      $('.desc').addClass('open');
-      $('.popap-menu').removeClass('abs').slideDown(200);
-      $('.top-menu__social').slideDown(200);
-    } else {
-      $('.desc').addClass('close');
-      $('.desc').removeClass('open');
-      $('.popap-menu').slideUp(400);
-      $('.top-menu__social').slideUp(300);
-      setTimeout(function addClass() {
-      $('.popap-menu').addClass('abs').removeAttr('style');
-    }, 600);
     }
   });
 
   $('#menu__toggle').on('click', function() {
-    if ($(this).hasClass('mobile')) {
       $('.popap-menu').removeClass('abs');
       $('.menu__item--explosion').on('click', function() {
         $('.popap-menu').removeAttr('style');
@@ -62,7 +34,6 @@ if ($(window).width() > 785)
         $(this).removeClass('open');
         $('.mobile-menu').slideUp();
       }
-    }
   });
 
   if ($(window).width() > 784) {
@@ -127,6 +98,7 @@ if ($(window).width() > 785)
     $(".profitability__grafic-lup").on('click', function() {
       const src = $(this).prev().attr('src');
       $("body").append("<div class='popup'>" +
+        "<div class='popap_close'></div>" +
         "<div class='popup_bg'></div>" +
         "<img src='" + src + "' class='popup_img' />" +
         "</div>");
@@ -147,6 +119,21 @@ if ($(window).width() > 785)
 
       $(this).next().slideDown(200);
     }
+  });
+
+  //to top
+
+  $(function() {
+    $(window).scroll(function() {
+      if($(this).scrollTop() != 0) {
+        $('#to-top').fadeIn();
+      } else {
+        $('#to-top').fadeOut();
+      }
+    });
+    $('#to-top').click(function() {
+      $('body, html').animate({scrollTop:0},800);
+    });
   });
 
 }(jQuery));
