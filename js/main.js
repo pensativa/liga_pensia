@@ -114,9 +114,13 @@
 
   // FAQ Accordion
   $(".faq__link").on("click", function() {
+    if ($(this).hasClass('open')) {
+      $(this).removeClass('open')
+    } else {
+      $(this).addClass('open')
+    }
     $(".faq__detail:visible").slideUp();
     if (!$(this).next().is(":visible")) {
-
       $(this).next().slideDown(200);
     }
   });
@@ -136,4 +140,79 @@
     });
   });
 
+  //Contract
+  $(function() {
+    $(".button--modal").on('click', function(e) {
+      e.preventDefault();
+      $(".modal").fadeIn(800);
+      $(".modal__close").on('click', function() {
+        $(".modal").fadeOut(800);
+      });
+    });
+  });
+
+  $('.file').change(function() {
+    if ($(this).val() != '') $(this).prev().text('Обрано файлів: ' + $(this)[0].files.length);
+    else $(this).prev().text('Загрузить');
+  });
+
 }(jQuery));
+
+/*const popup = document.querySelector(".modal-feedback");
+const overlay = document.querySelector("body");
+const close = popup.querySelector(".modal-close");
+const form = popup.querySelector("form");
+const username = popup.querySelector("[name=username]");
+const phone = popup.querySelector("[name=phone]");
+const email = popup.querySelector("[name=email]");
+const text = popup.querySelector("[name=text]");
+let isStorageSupport = true;
+let storage = "";
+
+try {
+  storage = localStorage.getItem("username");
+} catch (err) {
+  isStorageSupport = false;
+}
+link.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  popup.classList.add("modal-show");
+  overlay.classList.add("modal-overlay-show");
+  username.focus();
+});
+if (storage) {
+  username.value = storage;
+  email.focus();
+} else {
+  username.focus();
+};
+close.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  popup.classList.remove("modal-show");
+  popup.classList.remove("modal-error");
+  overlay.classList.remove("modal-overlay-show");
+  overlay.classList.remove("modal-error");
+});
+form.addEventListener("submit", function(evt) {
+  if (!username.value || !phone.value || !email.value || !text.value) {
+    evt.preventDefault();
+    popup.classList.remove("modal-error");
+    popup.offsetWidth = popup.offsetWidth;
+    popup.classList.add("modal-error");
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("username", username.value);
+    }
+  }
+});
+window.addEventListener("keydown", function(evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (popup.classList.contains("modal-show")) {
+      popup.classList.remove("modal-show");
+      popup.classList.remove("modal-error");
+      overlay.classList.remove("modal-overlay-show");
+      overlay.classList.remove("modal-error");
+    }
+  }
+});*/

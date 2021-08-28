@@ -65,11 +65,11 @@
         <li class="menu__item menu__item--explosion menu__item--close">
           <a class="menu__link" href="#">Для себе</a>
           <ul class="popap-menu abs">
-            <li class="popap-menu__item"><a class="popap-menu__link" href="#">Калькулятор пенсії</a></li>
+            <li class="popap-menu__item"><a class="popap-menu__link" href="calc.html">Калькулятор пенсії</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="#">Умови та переваги</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="#">Пільги та податки</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="#">Укласти договір</a></li>
-            <li class="popap-menu__item"><a class="popap-menu__link" href="#">Питання про НПФ для приватних осіб</a></li>
+            <li class="popap-menu__item"><a class="popap-menu__link" href="voprosy-o-npf-dlya-fiz-lits.html">Питання про НПФ для приватних осіб</a></li>
           </ul>
         </li>
         <li class="menu__item menu__item--explosion menu__item--close">
@@ -78,7 +78,7 @@
             <li class="popap-menu__item"><a class="popap-menu__link" href="#">Умови та переваги</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="#">Податкові пільги та економія</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="#">Корпоративні програми</a></li>
-            <li class="popap-menu__item"><a class="popap-menu__link" href="#">Питання про НПФ для бізнесу</a></li>
+            <li class="popap-menu__item"><a class="popap-menu__link" href="voprosy-o-npf-dlya-biznesa.html">Питання про НПФ для бізнесу</a></li>
           </ul>
         </li>
         <li class="menu__item"><a class="menu__link" href="#">Перехід з іншого фонду</a></li>
@@ -133,7 +133,7 @@
             <br>життя на пенсії
           </h1>
           <img class="title__img-mob" src="img/top-bg-mob.jpg" alt="Девушка на острове">
-          <a href="#" class="button title__button">Укласти контракт</a>
+          <a href="#" class="button title__button button--modal">Укласти контракт</a>
         </div>
       </div>
     </section>
@@ -158,12 +158,12 @@
             <p class="work__main">Ми інвестуємо ваші заощадження у прибуткові інструменти з максимальною надійністю.</p>
             <p>Чим довше ви заощаджуєте – тим більший інвестиційний дохід ви отримуєте.</p>
             <p>За 10 років до офіційного пенсійного віку ви вже маєте право отримувати пенсійні виплати або можете продовжити інвестувати та отримати ще вищу пенсію пізніше. З якого моменту та з якою регулярністю отримувати пенсійні виплати – вирішуєте ви сам.</p>
-            <a href="#" class="button work__button">Укласти контракт</a>
+            <a href="#" class="button work__button button--modal">Укласти контракт</a>
           </div>
         </div>
       </div>
     </section>
-    <section class="calc liga-calculator">
+    <section class="calc liga-calculator" button--modal="">
       <h2 class="calc__title">Ви самі визначаєте скільки заощаджувати. Жодних зобов’язань по платежах!</h2>
       <p class="calc__text">Рухайте бігунком калькулятора, щоб змінити параметри та самостійно спланувати свої пенсійні заощадження</p>
       <div class="wrapper calc__wrapper">
@@ -234,7 +234,7 @@
               <div class="person person-left">
               </div>
             </div>
-            <div class="calc__result-item">
+            <div class="calc__result-item calc__result-item--big">
               <p class="battery-title">
                 Рівень життя на пенсії
               </p>
@@ -265,7 +265,7 @@
                 </div>
               </div>
             </div>
-            <div class=" calc__result-item hidxs">
+            <div class="calc__result-item hidxs">
               <p class="person-title">
                 Ви у 65 років
               </p>
@@ -280,6 +280,9 @@
               Ваша майбутня пенсія <span id="pensResult">0</span> грн./міс.
             </div>
           </div>
+        </div>
+        <div class="calc__button">
+          <a href="#" class="button">Укласти контракт</a>
         </div>
       </div>
       <div class="wrapper">
@@ -325,7 +328,7 @@
             <p class="investmets__instr">Інші активи</p>
           </li>
         </ul>
-        <a href="#" class="button investmets__button">Укласти контракт</a>
+        <a href="#" class="button investmets__button button--modal">Укласти контракт</a>
       </div>
     </section>
     <section class="profitability">
@@ -357,7 +360,7 @@
         </div>
         <div class="profitability__footer">
           <p>Показник дохідності та інфляції розраховано за період 365 днів</p>
-          <a href="#" class="button profitability__button">Укласти контракт</a>
+          <a href="#" class="button profitability__button button--modal">Укласти контракт</a>
         </div>
       </div>
     </section>
@@ -387,14 +390,14 @@
             <p class="why__item-text">Діяльність НПФ чітко регламентується законодавством та ретельно контролюється державою</p>
           </li>
         </ul>
-        <a href="#" class="button why__button">Укласти контракт</a>
+        <a href="#" class="button why__button button--modal">Укласти контракт</a>
       </div>
     </section>
     <section class="moneybox">
       <div class="wrapper">
         <h2 class="moneybox__title">Як почати накопичувати на пенсію?</h2>
         <p class="moneybox__text">Заповніть заявку на укладання пенсійного контракту. Для цього введіть свої персональні дані і додайте скани паспорта та ідентифікаційного кода. Або авторизуйтеся через BankID чи ЕЦП - тоді Ваші дані підтягнуться в форму заявки автоматично.</p>
-        <a href="#" class="button moneybox__button">Укласти контракт</a>
+        <a href="#" class="button moneybox__button button--modal">Укласти контракт</a>
         <div class="moneybox__list-wrapper">
           <ul class="moneybox__list">
             <li class="moneybox__item">Заповніть заявку на укладання контракту</li>
@@ -583,11 +586,11 @@
         <li class="menu__item">
           <a class="menu__link" href="#">Для себе</a>
           <ul class="popap-menu">
-            <li class="popap-menu__item"><a class="popap-menu__link" href="#">Калькулятор пенсії</a></li>
+            <li class="popap-menu__item"><a class="popap-menu__link" href="calc.html">Калькулятор пенсії</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="#">Умови та переваги</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="#">Пільги та податки</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="#">Укласти договір</a></li>
-            <li class="popap-menu__item"><a class="popap-menu__link" href="#">Питання про НПФ для приватних осіб</a></li>
+            <li class="popap-menu__item"><a class="popap-menu__link" href="voprosy-o-npf-dlya-fiz-lits.html">Питання про НПФ для приватних осіб</a></li>
           </ul>
         </li>
         <li class="menu__item">
@@ -596,7 +599,7 @@
             <li class="popap-menu__item"><a class="popap-menu__link" href="#">Умови та переваги</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="#">Податкові пільги та економія</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="#">Корпоративні програми</a></li>
-            <li class="popap-menu__item"><a class="popap-menu__link" href="#">Питання про НПФ для бізнесу</a></li>
+            <li class="popap-menu__item"><a class="popap-menu__link" href="voprosy-o-npf-dlya-biznesa.html">Питання про НПФ для бізнесу</a></li>
           </ul>
         </li>
         <li class="menu__item"><a class="menu__link" href="#">Перехід з іншого фонду</a></li>
@@ -643,6 +646,33 @@
     </div>
   </div></footer>
   <div id="to-top"></div>
+  <section class="modal">
+    <ul class="modal__list">
+      <li class="modal__item modal__item--one">Щоб відкрити пенсійний рахунок заповніть заявку і додайте до неї скани паспорта та ідентифікаційного кода.</li>
+      <li class="modal__item modal__item--two">
+        Після того, як Ви заповните цю форму, менеджер “Ліга Пенсія” перевірить Ваші дані та згодом зателефонує Вам.
+      </li>
+    </ul>
+    <form class="modal__form" action="" method="post">
+        <label for="username" class="modal__label">ПІБ</label>
+        <input class="modal__input" id="username" type="text" name="username" required="">
+        <label for="userphone" class="modal__label">Телефон</label>
+        <input class="modal__input" id="userphone" type="tel" name="userphone" required="">
+        <label for="useremail" class="modal__label">Email</label>
+        <input class="modal__input modal__label--file" id="useremail" type="email" name="useremail" required="">
+        <div class="modal__input modal__input--file">
+          <label for="file" class="modal__label modal__label--file">Загрузить</label>
+          <input class="file" type="file" name="file" multiple="" required="">
+        </div>
+        <p class="modal__prim">*Паспорт та ідентифікаційний код (будь ласка, додайте копії усіх заповнених сторінок паспорта та ІПН)</p>
+        <div class="modal__checkbox">
+          <input class="modal__none modal__label--file" id="agreement" type="checkbox" name="agreement" checked="" required="">
+          <label class="modal__label-check" for="agreement">Даю дозвіл на збір і обробку персональних даних*</label>
+        </div>
+        <input class="button modal__button" type="submit" value="відправити">
+        <button class="modal__close" type="button">Закрыть</button>
+      </form>
+  </section>
   <script src="js/jquery-min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
   <script src="js/jquery.ui.touch-punch.min.js"></script>
