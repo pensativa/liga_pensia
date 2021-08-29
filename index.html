@@ -41,17 +41,7 @@
       <div id="menu__toggle" class="close"></div>
       <ul class="menu mobile-menu" id="menu">
         <li class="menu__item menu__item--explosion menu__item--close"><a class="menu__link" href="#">Про компанію</a>
-          <ul class="popap-menu popap-menu--text abs">
-            <div class="popap-menu__text">
-              <p class="popap-menu__text-title">Про компанію</p>
-              <p>Інформація про Засновників
-              ТОВ «АДМІНІСТРАТОР ПЕНСІЙНИХ ФОНДІ
-              «ЛІГА ПЕНСІЯ»,
-              НПФ «ВЗАЄМОДОПОМОГА»
-              та ВНПФ «ГАРАНТ-ПЕНСІЯ».
-              Історія, керівництво, прибутковість та
-              офіційні документи.</p>
-            </div>
+          <ul class="popap-menu abs">
             <li class="popap-menu__item"><a class="popap-menu__link" href="#">Про ТОВ «АДМІНІСТРАТОР ПЕНСІЙНИХ ФОНДІВ «ЛІГА ПЕНСІЯ»</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="#">Про ТОВ «АДМІНІСТРАТОР ПЕНСІЙНИХ ФОНДІВ «ЛІГА ПЕНСІЯ»</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="#">Про НПФ «ВЗАЄМОДОПОМОГА»</a></li>
@@ -75,13 +65,13 @@
         <li class="menu__item menu__item--explosion menu__item--close">
           <a class="menu__link" href="#">Для бізнесу</a>
           <ul class="popap-menu abs">
-            <li class="popap-menu__item"><a class="popap-menu__link" href="#">Умови та переваги</a></li>
-            <li class="popap-menu__item"><a class="popap-menu__link" href="#">Податкові пільги та економія</a></li>
+            <li class="popap-menu__item"><a class="popap-menu__link" href="usloviya.html">Умови та переваги</a></li>
+            <li class="popap-menu__item"><a class="popap-menu__link" href="nalogovye-lgoty-i-ekonomiya.html">Податкові пільги та економія</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="#">Корпоративні програми</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="voprosy-o-npf-dlya-biznesa.html">Питання про НПФ для бізнесу</a></li>
           </ul>
         </li>
-        <li class="menu__item"><a class="menu__link" href="#">Перехід з іншого фонду</a></li>
+        <li class="menu__item"><a class="menu__link" href="perehod-iz-drugogo-fonda.html">Перехід з іншого фонду</a></li>
         <li class="menu__item"><a class="menu__link" href="contacts.html">Контакти</a></li>
       </ul>
       <div class="top-menu mobile-menu">
@@ -342,24 +332,40 @@
           <ul class="profitability__grafics">
             <li class="profitability__grafic">
               <p class="profitability__grafic-name">НПФ «Взаємодопомога»</p>
-              <p class="profitability__grafic-percent">13,3 %</p>
-              <p class="profitability__grafic-discr">Переважно інвестує у гривневі інструменти</p>
-              <img src="img/grafic-small.png" alt="График НПФ «Взаємодопомога»" class="profitability__grafic-img">
-              <img src="img/grafic.png" alt="График НПФ «Гарант Пенсія»" class="profitability__grafic-img-full">
-              <button class="profitability__grafic-lup"></button>
+              <p class="profitability__grafic-text">У власності “Ліга Пенсія” - з серпня 2018 року</p>
+              <p class="profitability__grafic-text">Переважно інвестує у гривневі інструменти</p>
+              <p class="profitability__footer">Дохідність*</p>
+              <table class="profitability__table">
+                <tr>
+                  <td>за місяць, %</td>
+                  <td>0,89</td>
+                </tr>
+                <tr>
+                  <td>з початку року, %</td>
+                  <td>3,92</td>
+                </tr>
+                <tr>
+                  <td>за останні 365 днів, %</td>
+                  <td>7,49</td>
+                </tr>
+                <tr>
+                  <td>за попередній рік, %</td>
+                  <td>9,49</td>
+                </tr>
+                <tr>
+                  <td>з початку управління КУА “АПІНВЕСТ” (з 01.11.2018 р.)</td>
+                  <td>36,98</td>
+                </tr>
+              </table>
+              <p class="profitability__grafic-discr">* станом на 31 липня 2021 року.</p>
             </li>
             <li class="profitability__grafic">
               <p class="profitability__grafic-name">НПФ «Гарант Пенсія»</p>
-              <p class="profitability__grafic-percent">13,3 %</p>
-              <p class="profitability__grafic-discr">Переважно інвестує у гривневі інструменти</p>
-              <img src="img/grafic-small.png" alt="График НПФ «Гарант Пенсія»" class="profitability__grafic-img">
-              <img src="img/grafic.png" alt="График НПФ «Гарант Пенсія»" class="profitability__grafic-img-full">
-              <button class="profitability__grafic-lup"></button>
+
             </li>
           </ul>
         </div>
         <div class="profitability__footer">
-          <p>Показник дохідності та інфляції розраховано за період 365 днів</p>
           <a href="#" class="button profitability__button button--modal">Укласти контракт</a>
         </div>
       </div>
@@ -596,13 +602,13 @@
         <li class="menu__item">
           <a class="menu__link" href="#">Для бізнесу</a>
           <ul class="popap-menu">
-            <li class="popap-menu__item"><a class="popap-menu__link" href="#">Умови та переваги</a></li>
-            <li class="popap-menu__item"><a class="popap-menu__link" href="#">Податкові пільги та економія</a></li>
+            <li class="popap-menu__item"><a class="popap-menu__link" href="usloviya.html">Умови та переваги</a></li>
+            <li class="popap-menu__item"><a class="popap-menu__link" href="nalogovye-lgoty-i-ekonomiya.html">Податкові пільги та економія</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="#">Корпоративні програми</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="voprosy-o-npf-dlya-biznesa.html">Питання про НПФ для бізнесу</a></li>
           </ul>
         </li>
-        <li class="menu__item"><a class="menu__link" href="#">Перехід з іншого фонду</a></li>
+        <li class="menu__item"><a class="menu__link" href="perehod-iz-drugogo-fonda.html">Перехід з іншого фонду</a></li>
         <li class="menu__item menu__item--footer"><a class="menu__link" href="contacts.html">Контакти</a></li>
       </ul>
       <div class="top-menu top-menu--footer">
