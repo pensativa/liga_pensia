@@ -369,6 +369,15 @@ template {
   border: 1px solid #0a0000;
   margin-top: 30px;
   background: transparent; }
+  .button--pay.button--payacc {
+    padding: 12px 50px;
+    border-color: #035c67;
+    border-radius: 2px;
+    color: #035c67;
+    text-transform: uppercase;
+    font-size: 16px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
   .button--pay:hover, .button--pay:focus, .button--pay:active {
     background: #035c67;
     border-color: #035c67;
@@ -1682,19 +1691,12 @@ input[type=range]:-moz-focusring {
 
 .profitability__grafic-text {
   font-weight: bold;
-  font-size: 18px; }
-  .profitability__grafic-text::before {
-    content: "";
-    width: 27px;
-    height: 27px;
-    display: inline-block;
-    vertical-align: middle;
-    background: url("../img/many.png") no-repeat center/contain;
-    margin-right: 15px; }
+  font-size: 18px;
+  text-align: center; }
 
 .profitability__grafic-discr {
   margin: 0;
-  text-align: right;
+  text-align: center;
   font-size: 14px; }
 
 .profitability__table {
@@ -2313,13 +2315,17 @@ body::after {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0;
-  margin: 0 0 30px; }
+  margin: 0 0 15px; }
 
 .modal__item {
   position: relative;
   width: 50%;
-  padding: 0 20px 0 80px; }
+  padding: 0 20px 0 80px;
+  margin-bottom: 15px; }
   .modal__item::before {
     content: "";
     width: 56px;
@@ -2337,6 +2343,8 @@ body::after {
   width: 400px;
   max-width: 94%;
   margin: 0 auto; }
+  .modal__form--page {
+    margin-bottom: 50px; }
 
 .modal__label {
   font-size: 14px;
@@ -2448,6 +2456,11 @@ body::after {
 .modal__button {
   margin: 0 auto;
   border: none; }
+
+@media (max-width: 785px) {
+  .modal__item {
+    width: 400px;
+    max-width: 95%; } }
 
 .page__title {
   font-size: 42px;
@@ -2797,5 +2810,102 @@ body::after {
   .contacts__map,
   .contacts__comment {
     width: 100%; } }
+
+.tabs {
+  margin-bottom: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.tab {
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-bottom: 4px solid transparent;
+  margin: 0 10px;
+  padding-bottom: 15px;
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+  .tab.active {
+    font-weight: bold;
+    border-color: #f5a800;
+    padding-left: 30px; }
+    .tab.active::before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      background-color: #f5a800; }
+
+.tab-item {
+  padding-left: 95px; }
+  .tab-item--three {
+    background: url("../img/delivery_hand.png") no-repeat bottom right; }
+  .tab-item--four {
+    background: url("../img/communication_chat.png") no-repeat bottom right; }
+
+.tab__text {
+  max-width: 700px; }
+  .tab__text--upper {
+    text-transform: uppercase; }
+  .tab__text a {
+    text-transform: uppercase; }
+
+.tab__button {
+  margin: 47px 0 100px; }
+
+.tab__table {
+  border-collapse: collapse;
+  margin-top: 45px; }
+  .tab__table td {
+    padding: 0 50px 15px 0;
+    max-width: 460px; }
+    .tab__table td:nth-of-type(odd) {
+      text-transform: uppercase;
+      text-decoration: underline; }
+
+.pay-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 170px;
+  background: url("../img/purchase.png") no-repeat bottom right; }
+
+.pay-form__label {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 15px; }
+
+.pay-form__input {
+  width: 457px;
+  max-width: 95%;
+  min-height: 45px;
+  background-color: #f7f6f3;
+  margin-bottom: 35px;
+  border: none;
+  padding: 12px 18px; }
+  .pay-form__input:hover, .pay-form__input:focus, .pay-form__input:focus-visible, .pay-form__input:active {
+    border: none;
+    outline: none;
+    background-color: rgba(245, 168, 0, 0.1); }
+
+.pay-form__button {
+  margin-top: 50px; }
 
 /*# sourceMappingURL=style.css.map */

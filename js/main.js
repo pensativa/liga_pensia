@@ -125,7 +125,7 @@
     }
   });
 
-  //to top
+  //To top
 
   $(function() {
     $(window).scroll(function() {
@@ -141,19 +141,32 @@
   });
 
   //Contract
-  $(function() {
-    $(".button--modal").on('click', function(e) {
-      e.preventDefault();
-      $(".modal").fadeIn(800);
-      $(".modal__close").on('click', function() {
-        $(".modal").fadeOut(800);
+  if ($(window).height() > 600) {
+    $(function() {
+      $(".button--modal").on('click', function(e) {
+        e.preventDefault();
+        $(".modal").fadeIn(800);
+        $(".modal__close").on('click', function() {
+          $(".modal").fadeOut(800);
+        });
       });
     });
-  });
+  }
 
+  //Download files
   $('.file').change(function() {
     if ($(this).val() != '') $(this).prev().text('Обрано файлів: ' + $(this)[0].files.length);
     else $(this).prev().text('Загрузить');
+  });
+
+  //Tabs
+  $('.tabs-wrapper').each(function() {
+    let ths = $(this);
+    ths.find('.tab-item').not(':first').hide();
+    ths.find('.tab').click(function() {
+      ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+      ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass('active');
   });
 
 }(jQuery));
