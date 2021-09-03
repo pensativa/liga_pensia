@@ -169,6 +169,28 @@
     }).eq(0).addClass('active');
   });
 
+  $('.tabs-wrapper--report').each(function() {
+    let ths = $(this);
+    ths.find('.tab-item--report').not(':first').hide();
+    ths.find('.tab--report').click(function() {
+      ths.find('.tab--report').removeClass('active').eq($(this).index()).addClass('active');
+      ths.find('.tab-item--report').hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass('active');
+  });
+
+  //Team page
+  $(".team__link").on('click', function(e) {
+    e.preventDefault();
+    if ($(this).hasClass('close')) {
+      $(this).removeClass('close');
+      $(this).parents(".team__item").removeClass('active');
+    } else {
+      $(this).addClass('close');
+      $(this).parents(".team__item").addClass('active');
+    }
+  });
+
+
 }(jQuery));
 
 /*const popup = document.querySelector(".modal-feedback");
