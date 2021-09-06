@@ -125,6 +125,18 @@
     }
   });
 
+  $(".faq__link--next").on("click", function() {
+    if ($(this).hasClass('open')) {
+      $(this).removeClass('open')
+    } else {
+      $(this).addClass('open')
+    }
+    $(".faq__detail--next:visible").slideUp();
+    if (!$(this).next().is(":visible")) {
+      $(this).next().slideDown(200);
+    }
+  });
+
   //To top
 
   $(function() {

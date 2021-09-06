@@ -1974,9 +1974,43 @@ input[type=range]:-moz-focusring {
 .faq__list--page {
   max-width: 850px; }
 
+.faq__item-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0; }
+  .faq__item-title--list {
+    font-weight: normal;
+    padding-bottom: 10px;
+    padding-right: 40px; }
+
 .faq__link {
   width: 100%;
   padding: 20px 60px; }
+  .faq__link--next {
+    color: #0a0000;
+    width: 100%;
+    position: relative;
+    padding: 20px 60px;
+    border-bottom: 2px solid #EBEBEB; }
+    .faq__link--next .faq__item-title {
+      font-size: 18px;
+      text-transform: inherit; }
+    .faq__link--next::after, .faq__link--next::before {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 3px;
+      background-color: #979797;
+      position: absolute; }
+    .faq__link--next::after {
+      top: 25px;
+      right: 25px; }
+    .faq__link--next::before {
+      -webkit-transform: rotate(90deg);
+              transform: rotate(90deg);
+      top: 25px;
+      right: 25px; }
   .faq__link--list {
     color: #0a0000;
     padding: 20px;
@@ -2012,19 +2046,15 @@ input[type=range]:-moz-focusring {
     .faq__item--list.open {
       background: #f7f6f3; }
 
-.faq__item-title {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 20px;
-  margin: 0; }
-  .faq__item-title--list {
-    font-weight: normal;
-    padding-bottom: 10px;
-    padding-right: 40px; }
-
 .faq__detail {
   display: none;
-  padding: 20px 60px; }
+  background: #fff; }
+  .faq__detail > p {
+    padding: 20px 60px 0; }
+  .faq__detail--next {
+    display: none;
+    padding: 20px 60px;
+    border-bottom: 2px solid #EBEBEB; }
   .faq__detail--list {
     padding: 20px; }
 
@@ -3393,6 +3423,115 @@ body::after {
   margin-top: 80px;
   text-align: center; }
 
-/*@import "blocks/benefits-taxes.scss";*/
+.benefits-taxes {
+  margin: 0;
+  background: url("../img/benefits_taxes.png") no-repeat top 1px right; }
+  .benefits-taxes__title {
+    text-align: left;
+    padding-top: 70px;
+    margin: 0;
+    font-size: 42px;
+    font-weight: normal;
+    line-height: 48px; }
+  .benefits-taxes__content {
+    max-width: 903px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .benefits-taxes__text {
+    margin-top: 33px;
+    margin-right: 90px;
+    text-indent: 40px;
+    max-width: 605px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px; }
+
+.discount__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin: 70px 0 25px 0; }
+
+.discount__content {
+  max-width: 903px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-indent: 40px; }
+
+.discount__content span {
+  text-transform: uppercase; }
+
+.discount__list {
+  list-style: none;
+  margin-bottom: 45px;
+  list-style: none;
+  padding: 0;
+  max-width: 903px; }
+
+.taxes {
+  margin: 54px 0 25px 0; }
+  .taxes__payments-title__uppercase {
+    text-transform: uppercase; }
+  .taxes__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 21px;
+    text-transform: uppercase;
+    margin-top: 42px; }
+  .taxes__text {
+    max-width: 937px;
+    margin: 27px 0 27px 0; }
+  .taxes__list {
+    list-style: none;
+    padding: 0; }
+  .taxes .payments {
+    background-color: rgba(255, 250, 227, 0.96);
+    padding: 18px 60px 18px 52px;
+    margin-bottom: 40px; }
+  .taxes .page-list__item:nth-of-type(even)::before {
+    background-color: #f5a800; }
+  .taxes .others {
+    padding: 18px 60px 18px 52px;
+    margin-bottom: 40px; }
+
+.page-list__item-date {
+  padding: 0;
+  list-style: none; }
+
+.title__uppercase {
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase; }
+
+.not-taxed {
+  margin-top: 20px;
+  margin-bottom: 90px; }
+  .not-taxed__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 35px; }
+  .not-taxed .list-page__item {
+    padding: 30px 60px; }
+  .not-taxed__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 21px;
+    text-transform: uppercase;
+    margin-top: 42px; }
 
 /*# sourceMappingURL=style.css.map */
