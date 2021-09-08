@@ -635,7 +635,8 @@ template {
       flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  position: relative; }
 
 .lang {
   -webkit-box-flex: 1;
@@ -677,19 +678,23 @@ template {
   .top-menu__social .link-icon:not(:last-of-type) {
     margin-right: 25px; }
 
-.top-menu__phone {
-  position: relative; }
-
-.phone {
+.top-menu__phones {
   display: none;
   position: absolute;
   background: #f7f6f3;
   -webkit-box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
           box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  width: 185px;
+  padding: 20px 30px 0 15px;
+  width: 235px;
   top: 35px;
-  left: 0; }
+  right: 0;
+  z-index: 10; }
+  .top-menu__phones .link-icon {
+    margin-bottom: 20px;
+    color: #0a0000; }
+  .top-menu__phones .top-menu__icon {
+    margin-right: 15px;
+    vertical-align: middle; }
 
 @media (max-width: 785px) {
   .mobile-menu {
@@ -940,8 +945,6 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
@@ -1972,7 +1975,7 @@ input[type=range]:-moz-focusring {
   list-style: none; }
 
 .faq__list--page {
-  max-width: 850px; }
+  max-width: 870px; }
 
 .faq__item-title {
   text-transform: uppercase;
@@ -2013,7 +2016,7 @@ input[type=range]:-moz-focusring {
       right: 25px; }
   .faq__link--list {
     color: #0a0000;
-    padding: 20px;
+    padding: 20px 5px;
     border-bottom: 1px solid #E0E0E0;
     position: relative; }
     .faq__link--list::after, .faq__link--list::before {
@@ -2511,7 +2514,26 @@ body::after {
 
 .page--faq {
   padding-bottom: 100px;
-  background: url("../img/faq.png") no-repeat bottom right, url("../img/communication.png") no-repeat top right; }
+  padding-left: 98px;
+  position: relative; }
+  .page--faq::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 44px;
+    right: -111px;
+    width: 25%;
+    height: 312px;
+    background: url("../img/communication.png") no-repeat top center/contain; }
+  .page--faq.page--faq-fiz::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -22px;
+    right: -105px;
+    width: 29%;
+    height: 346px;
+    background: url("../img/faq.png") no-repeat center/contain; }
 
 .no-page {
   background: #f7f6f3;
@@ -2546,7 +2568,9 @@ body::after {
 
 @media (max-width: 1060px) {
   .page--faq {
-    background: none; }
+    padding-left: 0; }
+    .page--faq::before, .page--faq::after {
+      display: none; }
     .page--faq .page__title {
       text-align: center; } }
 
@@ -2560,8 +2584,134 @@ body::after {
   .no-page__title {
     font-size: 30px; } }
 
+.benefits-taxes {
+  margin: 0; }
+  .benefits-taxes .wrapper {
+    position: relative; }
+    .benefits-taxes .wrapper::after {
+      content: '';
+      position: absolute;
+      top: -4px;
+      right: -22px;
+      width: 400px;
+      height: 308px;
+      background: url("../img/benefits_taxes.png") no-repeat top right; }
+  .benefits-taxes__title {
+    font-weight: normal;
+    line-height: 48px; }
+  .benefits-taxes__content {
+    max-width: 903px; }
+  .benefits-taxes__text {
+    padding-bottom: 70px;
+    margin-right: 90px;
+    text-indent: 40px;
+    max-width: 605px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px; }
+
+.discount__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin: 0 0 25px 0; }
+
+.discount__content {
+  max-width: 903px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-indent: 40px; }
+
+.discount__content span,
+.discount__text span {
+  text-transform: uppercase; }
+
+.discount__content-link {
+  text-indent: 0px; }
+
+.discount__list {
+  list-style: none;
+  margin-bottom: 45px;
+  list-style: none;
+  padding: 0;
+  max-width: 903px; }
+
+.taxes {
+  margin: 54px 0 25px 0; }
+  .taxes__payments-title__uppercase {
+    text-transform: uppercase; }
+  .taxes__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 21px;
+    text-transform: uppercase;
+    margin-top: 42px; }
+  .taxes__text {
+    max-width: 937px;
+    margin: 27px 0 27px 0; }
+  .taxes__list {
+    list-style: none;
+    padding: 0; }
+  .taxes .payments {
+    background-color: rgba(255, 250, 227, 0.96);
+    padding: 18px 60px 18px 52px;
+    margin-bottom: 40px; }
+    .taxes .payments .page-list__item:nth-of-type(even)::before {
+      background-color: #f5a800; }
+  .taxes .others {
+    padding: 18px 60px 18px 52px;
+    margin-bottom: 40px; }
+
+.page-list__item-date {
+  padding: 0;
+  list-style: none; }
+
+.title__uppercase {
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase; }
+
+.not-taxed {
+  margin-top: 20px;
+  margin-bottom: 90px; }
+  .not-taxed__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 35px; }
+  .not-taxed .list-page__item {
+    padding: 40px 60px;
+    margin-bottom: 10px;
+    background: url("../img/oval.png") no-repeat center/100% auto;
+    display: inline-block; }
+  .not-taxed__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 21px;
+    text-transform: uppercase;
+    margin-top: 42px; }
+
 .page-list__main {
-  background: url("../img/finance.png") no-repeat top right; }
+  padding: 55px 20px 0 80px;
+  position: relative; }
+  .page-list__main::after {
+    content: "";
+    position: absolute;
+    top: 115px;
+    right: -81px;
+    width: 403px;
+    height: 403px;
+    background: url("../img/finance.png") no-repeat center; }
 
 .page-list__title {
   width: 60%; }
@@ -2569,7 +2719,18 @@ body::after {
 .page-list {
   list-style: none;
   padding: 0;
-  margin-bottom: 70px; }
+  margin-bottom: 70px;
+  max-width: 800px; }
+  .page-list.page-list--garant {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 100%; }
 
 .page-list--perehod {
   max-width: 500px; }
@@ -2594,6 +2755,14 @@ body::after {
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
     text-transform: uppercase; }
+  .page-list__item.long {
+    width: 100%; }
+
+.page-list--garant .page-list__item::before {
+  top: 23px; }
+
+.item--color::before {
+  background-color: #035c67; }
 
 .page-list--prime .page-list__item:nth-of-type(even)::before {
   background-color: #f5a800; }
@@ -2619,11 +2788,11 @@ body::after {
   position: relative; }
   .page-list-num__item::before {
     content: "";
-    width: 33px;
-    height: 32px;
+    width: 44px;
+    height: 40px;
     display: block;
     position: absolute;
-    top: -5px;
+    top: -7px;
     left: 0;
     background-position: center;
     background-size: contain;
@@ -2661,7 +2830,9 @@ body::after {
     margin-bottom: 0; } }
 
 .perehod {
-  background: url("../img/why.png") no-repeat top 100px right; }
+  padding-top: 40px;
+  padding-left: 63px;
+  background: url("../img/why.png") no-repeat top 114px right 48px/32% auto; }
 
 .perehod__accent {
   background-color: #f7f6f3;
@@ -2683,20 +2854,31 @@ body::after {
 .perehod__button {
   margin-top: 50px; }
 
-@media screen {
+@media (max-width: 992px) {
   .perehod {
     background-position: bottom right;
     background-size: 30% auto;
     padding-bottom: 100px; } }
 
 .uslovia {
-  background: url("../img/idea.png") no-repeat top right/35% auto; }
+  padding: 34px 20px 0 81px;
+  position: relative; }
+  .uslovia::after {
+    content: "";
+    position: absolute;
+    bottom: -57px;
+    right: -68px;
+    width: 346px;
+    height: 346px;
+    background: url("../img/idea.png") no-repeat center; }
   .uslovia > * {
-    max-width: 60%; }
+    max-width: 76%; }
+  .uslovia .page-list {
+    margin-bottom: 50px; }
 
 .uslovia__accent {
   background: #f7f6f3;
-  padding: 60px 0; }
+  padding: 50px 0; }
   .uslovia__accent .page-list-num {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2719,16 +2901,17 @@ body::after {
   font-size: 20px;
   text-transform: uppercase;
   margin: 0 auto 70px;
-  max-width: 500px; }
+  max-width: 690px; }
 
 .uslovia__sec {
   padding: 70px 0;
   text-align: center; }
   .uslovia__sec .uslovia__title {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    max-width: 660px; }
   .uslovia__sec .list-page {
-    padding-top: 70px;
-    margin-bottom: 70px;
+    padding-top: 15px;
+    margin-bottom: 60px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2744,7 +2927,7 @@ body::after {
     max-height: 370px;
     -ms-flex-line-pack: justify;
         align-content: space-between;
-    background: url("../img/lineez.png") no-repeat top 30px center/30% auto; }
+    background: url("../img/lineez.png") no-repeat top -3px center/36% auto; }
   .uslovia__sec .list-page__item:nth-of-type(2) {
     margin-left: 10%; }
   .uslovia__sec .list-page__item:nth-of-type(3) {
@@ -2803,14 +2986,18 @@ body::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 90px; }
+  margin-bottom: 90px;
+  padding-left: 30px; }
 
 .contacts__text {
   width: 45%;
-  background: url("../img/delivery.png") no-repeat top right; }
+  margin-top: 25px;
+  background: url("../img/delivery.png") no-repeat top right 38px; }
 
 .contacts__adres {
-  max-width: 50%; }
+  line-height: 1.4;
+  max-width: 45%;
+  margin-bottom: 23px; }
 
 .contacts__phone {
   color: #0a0000;
@@ -2819,14 +3006,14 @@ body::after {
     content: "";
     display: inline-block;
     vertical-align: middle;
-    margin-right: 10px;
+    margin-right: 17px;
     width: 16px;
-    height: 16px;
+    height: 22px;
     background: url("../img/icon-phone.svg") no-repeat center/contain; }
 
 .contacts__email {
   text-transform: uppercase;
-  margin: 30px 0; }
+  margin: 15px 0 20px; }
 
 .contacts__title {
   color: #ffa000; }
@@ -2857,7 +3044,10 @@ body::after {
       flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
 
 .page--npf .tabs-wrapper {
   margin-top: 30px; }
@@ -2870,6 +3060,7 @@ body::after {
   margin: 0 10px;
   padding-bottom: 15px;
   position: relative;
+  max-width: 145px;
   -webkit-transition: 0.5s;
   transition: 0.5s; }
   .tab.active {
@@ -2886,12 +3077,14 @@ body::after {
       left: 0;
       background-color: #f5a800; }
 
-.tab-item {
-  padding-left: 95px; }
-  .tab-item--three {
-    background: url("../img/delivery_hand.png") no-repeat bottom right; }
-  .tab-item--four {
-    background: url("../img/communication_chat.png") no-repeat bottom right; }
+.page--payaccount .tab {
+  max-width: 100%; }
+
+.tab-item--three {
+  background: url("../img/delivery_hand.png") no-repeat bottom right; }
+
+.tab-item--four {
+  background: url("../img/communication_chat.png") no-repeat bottom right; }
 
 .page--npf .tab-item {
   padding-left: 0; }
@@ -2994,6 +3187,9 @@ body::after {
   .about__text .red {
     color: red; }
 
+.about--garant .about__text {
+  background-image: url("../img/location.png"); }
+
 .about__button {
   text-align: right; }
   .about__button a {
@@ -3004,6 +3200,14 @@ body::after {
       font-size: 24px;
       padding-left: 17px; }
 
+.about__name {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.about__position {
+  text-transform: uppercase; }
+
 .about__table {
   border-collapse: collapse;
   margin-bottom: 50px; }
@@ -3011,18 +3215,28 @@ body::after {
     background: rgba(255, 250, 227, 0.96);
     border: 1px solid rgba(251, 194, 58, 0.47);
     padding: 18px 15px; }
+  .about__table.about__table--garant td {
+    background: rgba(255, 250, 227, 0.96); }
   .about__table .about__title_table {
+    text-transform: uppercase;
     width: 215px;
     border-color: rgba(255, 255, 255, 0.6);
     text-align: center;
     background: #f5a800 url("../img/over-black.png") no-repeat center/90% auto; }
+  .about__table.about__table--garant .about__title_table {
+    background: rgba(121, 178, 185, 0.57) url("../img/over-green.png") no-repeat center/90% auto; }
+
+.about__table--garant {
+  margin-bottom: 100px; }
+
+.about__title {
+  font-size: 20px;
+  text-transform: uppercase; }
 
 .about__data {
   margin-bottom: 70px; }
   .about__data h2 {
-    font-size: 20px;
-    font-weight: normal;
-    text-transform: uppercase; }
+    font-weight: normal; }
   .about__data p {
     max-width: 825px; }
 
@@ -3124,7 +3338,12 @@ body::after {
   margin: -15px 0 20px 40px; }
 
 .results {
-  text-align: center; }
+  text-align: center;
+  display: block !important;
+  height: 0;
+  overflow: hidden; }
+  .results.open {
+    height: auto; }
 
 .download-list {
   list-style: none;
@@ -3138,6 +3357,10 @@ body::after {
   padding-bottom: 0;
   margin-bottom: 100px;
   background: url("../img/contracts.png") no-repeat top right/30% auto; }
+
+.download-list--garnt-contracts {
+  margin-bottom: 0;
+  padding-bottom: 100px; }
 
 .download-list__item {
   margin-bottom: 35px;
@@ -3232,18 +3455,22 @@ body::after {
   .report__faq-list .faq__link--list.open::after {
     background-color: #035c67; }
 
+.callback--npf {
+  display: none; }
+
 .report__download-list {
   padding-bottom: 0; }
 
 .umovy {
-  background: url("../img/business.png") no-repeat top right/30% auto; }
+  background: url(../img/business.png) no-repeat top 18px right/28% auto;
+  padding: 0 20px 0 142px; }
 
 .uper {
   text-transform: uppercase; }
 
 .umovy__text {
   max-width: 660px;
-  padding-bottom: 80px; }
+  padding-bottom: 60px; }
 
 .umovy__advanteges {
   padding: 50px 0;
@@ -3251,7 +3478,7 @@ body::after {
 
 .umovy__title {
   font-size: 20px;
-  margin: 0 0 65px;
+  margin: 0 0 25px;
   text-transform: uppercase;
   font-weight: normal;
   text-align: center; }
@@ -3267,7 +3494,7 @@ body::after {
           justify-content: space-between;
   background-image: url("../img/groups.png"), url("../img/liness.png");
   background-repeat: no-repeat;
-  background-position: center, top center; }
+  background-position: top 155px center, top 17px center; }
 
 .umovy__list p,
 .umovy__list h3 {
@@ -3279,22 +3506,22 @@ body::after {
   margin: 0 0 12px; }
 
 .umovy__left li:first-of-type {
-  margin-bottom: 85px;
-  margin-left: 25%; }
+  margin-bottom: 80px;
+  margin-left: 37%; }
 
 .umovy__left li:nth-of-type(2) {
   margin-bottom: 96px; }
 
 .umovy__left li:nth-of-type(3) {
   margin-bottom: 55px;
-  margin-left: 5%; }
+  margin-left: 9%; }
 
 .umovy__left li:nth-of-type(4) {
-  margin-left: 35%; }
+  margin-left: 59%; }
 
 .umovy__right li:first-of-type {
-  margin-bottom: 85px;
-  margin-left: -25%; }
+  margin-bottom: 77px;
+  margin-left: -30%; }
   .umovy__right li:first-of-type::before {
     background-image: url("../img/fiveth.png"); }
 
@@ -3304,18 +3531,21 @@ body::after {
     background-image: url("../img/six.png"); }
 
 .umovy__right li:nth-of-type(3) {
-  margin-bottom: 45px;
-  margin-left: -5%; }
+  margin-bottom: 50px;
+  margin-left: -10%; }
   .umovy__right li:nth-of-type(3)::before {
     background-image: url("../img/seven.png"); }
 
 .umovy__right li:nth-of-type(4) {
-  margin-left: -35%; }
+  margin-left: -67%; }
   .umovy__right li:nth-of-type(4)::before {
     background-image: url("../img/eight.png"); }
 
 .umovy__section {
-  margin: 100px 0 80px; }
+  margin: 80px 0 80px; }
+  .umovy__section .umovy__title ~ p:first-of-type {
+    max-width: 880px;
+    margin: 55px auto; }
 
 .umovy__shema {
   text-align: center; }
@@ -3422,116 +3652,5 @@ body::after {
 .umovy__button {
   margin-top: 80px;
   text-align: center; }
-
-.benefits-taxes {
-  margin: 0;
-  background: url("../img/benefits_taxes.png") no-repeat top 1px right; }
-  .benefits-taxes__title {
-    text-align: left;
-    padding-top: 70px;
-    margin: 0;
-    font-size: 42px;
-    font-weight: normal;
-    line-height: 48px; }
-  .benefits-taxes__content {
-    max-width: 903px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-  .benefits-taxes__text {
-    margin-top: 33px;
-    margin-right: 90px;
-    text-indent: 40px;
-    max-width: 605px;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 21px; }
-
-.discount__title {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 21px;
-  text-transform: uppercase;
-  margin: 70px 0 25px 0; }
-
-.discount__content {
-  max-width: 903px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21px;
-  text-indent: 40px; }
-
-.discount__content span {
-  text-transform: uppercase; }
-
-.discount__list {
-  list-style: none;
-  margin-bottom: 45px;
-  list-style: none;
-  padding: 0;
-  max-width: 903px; }
-
-.taxes {
-  margin: 54px 0 25px 0; }
-  .taxes__payments-title__uppercase {
-    text-transform: uppercase; }
-  .taxes__title {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 21px;
-    text-transform: uppercase;
-    margin-top: 42px; }
-  .taxes__text {
-    max-width: 937px;
-    margin: 27px 0 27px 0; }
-  .taxes__list {
-    list-style: none;
-    padding: 0; }
-  .taxes .payments {
-    background-color: rgba(255, 250, 227, 0.96);
-    padding: 18px 60px 18px 52px;
-    margin-bottom: 40px; }
-  .taxes .page-list__item:nth-of-type(even)::before {
-    background-color: #f5a800; }
-  .taxes .others {
-    padding: 18px 60px 18px 52px;
-    margin-bottom: 40px; }
-
-.page-list__item-date {
-  padding: 0;
-  list-style: none; }
-
-.title__uppercase {
-  font-weight: 450;
-  font-size: 16px;
-  line-height: 21px;
-  text-transform: uppercase; }
-
-.not-taxed {
-  margin-top: 20px;
-  margin-bottom: 90px; }
-  .not-taxed__content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 35px; }
-  .not-taxed .list-page__item {
-    padding: 30px 60px; }
-  .not-taxed__title {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 21px;
-    text-transform: uppercase;
-    margin-top: 42px; }
 
 /*# sourceMappingURL=style.css.map */

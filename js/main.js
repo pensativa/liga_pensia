@@ -39,15 +39,8 @@
   if ($(window).width() > 784) {
     $('.top-menu__phone').on('click', function(event) {
       event.preventDefault()
-      $('.phone').toggle();
+      $(this).next().toggle();
       //Hide menu when clicked outside
-      $('.phone').mouseleave(function() {
-        var thisUI = $(this);
-        $('html').click(function() {
-          thisUI.hide();
-          $('html').unbind('click');
-        });
-      });
     });
   }
 
@@ -199,6 +192,35 @@
     } else {
       $(this).addClass('close');
       $(this).parents(".team__item").addClass('active');
+    }
+  });
+
+  //Section block
+
+  $(".team__link").on('click', function(e) {
+    e.preventDefault();
+    if ($(this).hasClass('close')) {
+      $(this).removeClass('close');
+      $(this).parents(".team__item").removeClass('active');
+    } else {
+      $(this).addClass('close');
+      $(this).parents(".team__item").addClass('active');
+    }
+  });
+
+  $(".tab").on("click", function() {
+    if ($(this).hasClass('tab--callback') && $(this).hasClass('active')) {
+      $(".callback--npf").slideDown();
+    } else {
+      $(".callback--npf").slideUp();
+    }
+  });
+
+  $(".tab").on("click", function() {
+    if ($(this).hasClass('report-tab') && $(this).hasClass('active')) {
+      $(".results").addClass('open');
+    } else {
+      $(".results").removeClass('open');
     }
   });
 
