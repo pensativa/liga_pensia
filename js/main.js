@@ -184,14 +184,14 @@
   });
 
   //Team page
-  $(".team__link").on('click', function(e) {
+  $(".team__link a").on('click', function(e) {
     e.preventDefault();
     if ($(this).hasClass('close')) {
       $(this).removeClass('close');
-      $(this).parents(".team__item").removeClass('active');
+      $(this).parents(".team__item").addClass('active');
     } else {
       $(this).addClass('close');
-      $(this).parents(".team__item").addClass('active');
+      $(this).parents(".team__item").removeClass('active');
     }
   });
 
