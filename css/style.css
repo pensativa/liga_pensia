@@ -21,7 +21,7 @@
   margin: 0 auto; }
 
 body {
-  font-size: 13px;
+  font-size: 15px;
   font-family: "Avenir Next Cyr", "Arial", sans-serif;
   color: #0a0000;
   margin: 0;
@@ -61,7 +61,7 @@ button {
 
 @media (min-width: 786px) {
   body {
-    font-size: 16px; } }
+    font-size: 17px; } }
 
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -445,7 +445,7 @@ template {
 .menu__link {
   text-transform: uppercase;
   color: #0a0000;
-  font-size: 13px;
+  font-size: 15px;
   text-decoration: none;
   position: relative; }
   .menu__link:hover, .menu__link:focus, .menu__link:active {
@@ -473,7 +473,7 @@ template {
 
 .popap-menu__link {
   color: #0a0000;
-  font-size: 13px;
+  font-size: 15px;
   text-decoration: none;
   position: relative; }
   .popap-menu__link:hover, .popap-menu__link:focus, .popap-menu__link:active {
@@ -499,7 +499,7 @@ template {
 
 .popap-menu {
   padding: 40px 0 0;
-  width: 200px;
+  width: 220px;
   margin: 0;
   list-style: none;
   -webkit-transition: 0.3s;
@@ -786,6 +786,12 @@ template {
 .title__button {
   margin-bottom: 255px; }
 
+@media (min-width: 2000px) {
+  .title {
+    padding-top: 280px; }
+  .title__button {
+    margin-bottom: 380px; } }
+
 @media (max-width: 785px) {
   .title {
     padding-top: 30px;
@@ -904,7 +910,7 @@ template {
 .calc {
   background-color: #035c67;
   color: #f6f6f6;
-  padding: 70px 0 80px; }
+  padding: 10px 0 80px; }
 
 .calc__wrapper {
   display: -webkit-box;
@@ -926,7 +932,15 @@ template {
 .calc__text {
   text-align: center;
   max-width: 558px;
-  margin: 0 auto 70px; }
+  margin: 0 auto 30px; }
+
+.calc__list {
+  max-width: 425px;
+  margin: 0 auto 90px;
+  list-style: square;
+  list-style-position: inside; }
+  .calc__list li {
+    margin-top: 10px; }
 
 .calc__item {
   width: 40%; }
@@ -2052,14 +2066,15 @@ input[type=range]:-moz-focusring {
 .faq__detail {
   display: none;
   background: #fff; }
-  .faq__detail > p {
-    padding: 20px 60px 0; }
   .faq__detail--next {
     display: none;
     padding: 20px 60px;
     border-bottom: 2px solid #EBEBEB; }
   .faq__detail--list {
     padding: 20px; }
+
+.faq__list--main .faq__detail > p {
+  padding: 20px 60px 0; }
 
 .detail-list {
   list-style: none;
@@ -2143,7 +2158,6 @@ input[type=range]:-moz-focusring {
             box-shadow: none; }
 
 .form__label {
-  font-size: 14px;
   max-width: 150px; }
 
 .form__button {
@@ -2289,7 +2303,7 @@ input[type=range]:-moz-focusring {
   background-color: #fff;
   max-height: 100%;
   max-width: 94%;
-  width: 1040px;
+  width: 1150px;
   top: 50%;
   left: 50%;
   margin-right: -50%;
@@ -2298,6 +2312,8 @@ input[type=range]:-moz-focusring {
   z-index: 1010;
   padding: 50px 65px 30px;
   display: none; }
+  .modal .modal__item {
+    font-size: 15px; }
 
 body::after {
   content: "";
@@ -2384,7 +2400,7 @@ body::after {
     margin-bottom: 50px; }
 
 .modal__label {
-  font-size: 14px;
+  font-size: 15px;
   color: #035c67; }
 
 .modal__input {
@@ -2521,7 +2537,7 @@ body::after {
     display: block;
     position: absolute;
     top: 44px;
-    right: -111px;
+    right: -120px;
     width: 25%;
     height: 312px;
     background: url("../img/communication.png") no-repeat top center/contain; }
@@ -2530,7 +2546,7 @@ body::after {
     display: block;
     position: absolute;
     bottom: -22px;
-    right: -105px;
+    right: -120px;
     width: 29%;
     height: 346px;
     background: url("../img/faq.png") no-repeat center/contain; }
@@ -2704,11 +2720,13 @@ body::after {
 .page-list__main {
   padding: 55px 20px 0 80px;
   position: relative; }
+  .page-list__main p {
+    width: 800px; }
   .page-list__main::after {
     content: "";
     position: absolute;
     top: 115px;
-    right: -81px;
+    right: -115px;
     width: 403px;
     height: 403px;
     background: url("../img/finance.png") no-repeat center; }
@@ -2732,8 +2750,13 @@ body::after {
             justify-content: space-between;
     max-width: 100%; }
 
+.page-list__main .page-list {
+  margin-top: 50px; }
+
 .page-list--perehod {
-  max-width: 500px; }
+  max-width: 790px; }
+  .page-list--perehod li:first-of-type {
+    max-width: 500px; }
 
 .page-list__item {
   padding-left: 40px;
@@ -2889,9 +2912,12 @@ body::after {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    max-height: 480px;
+    height: 520px;
     -ms-flex-line-pack: justify;
         align-content: space-between;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     background: url("../img/business_agreement.png") no-repeat center/30% auto; }
   .uslovia__accent .page-list-num__item {
     max-width: 33%; }
@@ -2992,7 +3018,7 @@ body::after {
 .contacts__text {
   width: 45%;
   margin-top: 25px;
-  background: url("../img/delivery.png") no-repeat top right 38px; }
+  background: url("../img/delivery.png") no-repeat top right 48px; }
 
 .contacts__adres {
   line-height: 1.4;
@@ -3081,7 +3107,7 @@ body::after {
   max-width: 100%; }
 
 .tab-item--three {
-  background: url("../img/delivery_hand.png") no-repeat bottom right; }
+  background: url("../img/delivery_hand.png") no-repeat bottom right/37% auto; }
 
 .tab-item--four {
   background: url("../img/communication_chat.png") no-repeat bottom right; }
@@ -3364,6 +3390,7 @@ body::after {
 
 .download-list__item {
   margin-bottom: 35px;
+  position: relative;
   -webkit-transition: 0.3s;
   transition: 0.3s; }
   .download-list__item a {
@@ -3371,14 +3398,16 @@ body::after {
     text-transform: uppercase;
     display: inline-block;
     width: 100%;
-    text-decoration: none; }
+    text-decoration: none;
+    margin-left: 60px; }
     .download-list__item a::before {
       content: '';
       width: 38px;
       height: 36px;
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 20px;
+      display: block;
+      position: absolute;
+      top: -8px;
+      left: 0;
       background: url("../img/downarrow.png") no-repeat center/contain;
       opacity: 0; }
   .download-list__item:hover a,
@@ -3454,6 +3483,9 @@ body::after {
   border-bottom: none; }
   .report__faq-list .faq__link--list.open::after {
     background-color: #035c67; }
+
+.information-report .faq__item:last-of-type {
+  margin-top: 0; }
 
 .callback--npf {
   display: none; }
@@ -3652,5 +3684,133 @@ body::after {
 .umovy__button {
   margin-top: 80px;
   text-align: center; }
+
+.about__box {
+  background-color: rgba(247, 246, 243, 0.76); }
+
+.about__box > h2,
+.about__company > h2 {
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 33px;
+  padding-bottom: 30px;
+  font-size: 20px;
+  line-height: 21px;
+  text-transform: uppercase; }
+
+.about__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 34px; }
+
+.about__info > img {
+  max-height: 339px; }
+
+.about .box-text {
+  padding-left: 53px;
+  max-width: 679px; }
+
+.about .box-text > p {
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 21px; }
+
+.about .box-text > p > span {
+  text-transform: uppercase; }
+
+.about__comment {
+  padding-top: 80px;
+  padding-bottom: 84px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: url("../img/done.png") no-repeat top 100px left; }
+
+.about__comment-text {
+  max-width: 506px;
+  margin-right: 51px;
+  font-size: 16px;
+  line-height: 21px;
+  padding: 40px 27px 16px 60px;
+  background: url("../img/dotted-oval.png") 100% 50%/contain no-repeat; }
+
+.about__comment-content {
+  text-transform: uppercase;
+  font-size: 20px;
+  max-width: 216px;
+  background: url("../img/Ellipse-bg-picture.png") no-repeat; }
+
+.about__comment-content > img {
+  padding-left: 9px; }
+
+.about__comment-content > p > span {
+  font-size: 16px; }
+
+.about__company-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 21px; }
+
+.about__company-text {
+  max-width: 677px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px; }
+
+.about .page__list {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.about .page-list__item > span {
+  text-transform: uppercase; }
+
+.about__company-founders {
+  margin-top: 40px;
+  margin-bottom: 70px; }
+
+.about__company-founders > span {
+  text-transform: uppercase; }
+
+.information-report > ul {
+  max-width: 1028px;
+  margin: 0 auto; }
+
+.item-report {
+  margin-bottom: 30px;
+  padding-right: 90px;
+  padding-left: 48px; }
+
+.information-report > .faq__item:last-of-type {
+  margin-top: 0px; }
+
+.title-information-report,
+.title-audit-option {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 21px;
+  text-transform: uppercase;
+  padding-bottom: 60px;
+  text-align: center; }
+
+.title-audit-option {
+  background: url(../img/delivery_hand.png) no-repeat top left;
+  padding: 50px; }
+
+.download-list--document {
+  margin-bottom: 0;
+  padding: 0 0 10px 0;
+  background: url(../img/contracts.png) no-repeat bottom right/30% auto; }
+
+.download-list--document > li {
+  max-width: 722px; }
 
 /*# sourceMappingURL=style.css.map */
