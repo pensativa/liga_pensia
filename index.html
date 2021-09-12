@@ -971,15 +971,15 @@
           <div class="form__items">
             <div class="form__item">
               <label for="name" class="form__label">ПІБ</label>
-              <input id="name" class="form__input" type="text">
+              <input id="name" class="form__input" type="text" required="">
             </div>
             <div class="form__item">
               <label for="phone" class="form__label">Телефон</label>
-              <input id="phone" class="form__input" type="tel">
+              <input id="phone" class="form__input" type="tel" placeholder="+38 (XXX) XXX XXXX" required="">
             </div>
             <div class="form__item">
               <label for="email" class="form__label">Email</label>
-              <input id="email" class="form__input" type="email">
+              <input id="email" class="form__input" type="email" required="">
             </div>
           </div>
           <div class="form__items">
@@ -988,7 +988,7 @@
               <textarea name="message" id="message" class="form-textarea" rows="2"></textarea>
             </div>
           </div>
-          <button class="button form__button">Відправити нам</button>
+          <input class="button form__button" type="submit" value="Відправити нам">
         </form>
       </div>
     </section>
@@ -1086,11 +1086,11 @@
         Після заповнення заявки співробітник компанії “Ліга Пенсія” перевірить Ваші дані та згодом сконтактує з Вами щодо подальшого оформлення пенсійного контракту.
       </li>
     </ul>
-    <form class="modal__form" action="" method="post">
+    <form class="modal__form" action="" method="">
         <label for="username" class="modal__label">ПІБ</label>
         <input class="modal__input" id="username" type="text" name="username" required="">
         <label for="userphone" class="modal__label">Телефон</label>
-        <input class="modal__input" id="userphone" type="tel" name="userphone" required="">
+        <input class="modal__input" id="userphone" type="tel" name="userphone" placeholder="+38 (XXX) XXX XXXX" required="">
         <label for="useremail" class="modal__label">Email</label>
         <input class="modal__input modal__label--file" id="useremail" type="email" name="useremail" required="">
         <div class="modal__input modal__input--file">
@@ -1109,6 +1109,7 @@
   <script src="js/jquery-min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
   <script src="js/jquery.ui.touch-punch.min.js"></script>
+  <script src="js/jquery.mask.js"></script>
   <script src="js/main.js"></script>
   <script src="js/app.js"></script>
 </body>

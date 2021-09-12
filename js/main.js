@@ -224,64 +224,136 @@
     }
   });
 
+  // Feed form
+    /*var path = "https://ligapension.com/lib/ajax.php";
+    $(document).on('submit', '.form', function(event) {
+        event.preventDefault();
+        name = $(this).attr('name');
+        url = $(this).attr('url');
+        var formData = new FormData(this);
+        // $(this).find("button[type=submit]").prop("disabled", true);
+        $.ajax({
+            type: "POST",
+            url: path,
+            data: $(this).serialize(),
+            success: function(response) {
+                successWindow();
+                $('#successMsg').modal({'show' : true});
+            },
+            error: function(e) {
+                console.log("ERROR : ", e);
+            }
+        });
+        // event.stopImmediatePropagation();
+        // if (!event.isDefaultPrevented()) {
+        //     event.returnValue = false;
+        // }
+    });
+
+    function successWindow() {
+        $("body").append(`<div class="modal modal--fade" id="successMsg" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Дякуємо! Ваше повідомлення надіслано.</p>
+                    </div>
+                </div>
+            </div>
+        </div>`);
+    }*/
+
+    //Временная замена
+    $(".modal__button").on("click", function(e) {
+      e.preventDefault();
+        $("footer").append(`<div class="modal modal--fade modal-auto-clear" id="successMsg" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img src="../img/logo-desctop.png" alt="Liga pensia">
+                        <button type="button" class="modal-close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <h2>Дякуємо!</h2>
+                        <p>Ваші документи успішно завантажені.</p>
+                        <p class="bigger">В найближчий час ми зв’яжемося з Вами та відкриємо рахунок.</p>
+                    </div>
+                </div>
+            </div>
+        </div>`);
+        $(".modal--fade").fadeIn(800);
+        $(".modal-close").on('click', function() {
+          $(".modal--fade").fadeOut(800);
+          setTimeout(function() {
+            $(".modal--fade").remove();
+          }, 800);
+      });
+    });
+
+    $(".pay-form__button").on("click", function(e) {
+      e.preventDefault();
+        $("footer").append(`<div class="modal modal--pay modal-auto-clear" id="successMsg" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img src="../img/logo-desctop.png" alt="Liga pensia">
+                        <button type="button" class="modal-close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <h2>Дякуємо!</h2>
+                        <p>пОПОВНЕННЯ вАШОГО ПЕНСІЙНОГО РАХУНКУ ПРОЙШЛО УСПІШНО! </p>
+                        <p class="bigger">В найближчий час вАШІ КОШТИ З’ЯВЛЯТЬСЯ НА ВАШОМУ РАХУНКУ.</p>
+                    </div>
+                </div>
+            </div>
+        </div>`);
+        $(".modal--pay").fadeIn(800);
+        $(".modal-close").on('click', function() {
+          $(".modal--pay").fadeOut(800);
+          setTimeout(function() {
+            $(".modal--pay").remove();
+          }, 800);
+      });
+    });
+
+    $("#successMsg").on('click', function() {
+      $("footer").detach('#successMsg');
+    });
+
+    $('.rerun-button').click(function(){
+       $('.pay-wrap').find('.pay-body')
+            .first().addClass('is-showing')
+            .siblings().removeClass('is-showing');
+       $('.pay-header span:').first().addClass('is-active')
+            .siblings().removeClass('is-active');
+       $('.form1').find("button[type=submit]").prop("disabled", false);
+    });
+
+
+    // Auto-hide modal
+    $('.modal-auto-clear').on('shown.bs.modal', function() {
+        $(this).delay(7000).fadeOut(200, function() {
+            $(this).modal('hide');
+        });
+    });
+
+    // Phone Mask
+    $('#phone').mask('+38 (000) 000 0000', {
+        'translation': {
+            0: {
+                pattern: /[0-9+]/
+            }
+        }
+    });
+    $('#userphone').mask('+38 (000) 000 0000', {
+        'translation': {
+            0: {
+                pattern: /[0-9+]/
+            }
+        }
+    });
+
 
 }(jQuery));
-
-/*const popup = document.querySelector(".modal-feedback");
-const overlay = document.querySelector("body");
-const close = popup.querySelector(".modal-close");
-const form = popup.querySelector("form");
-const username = popup.querySelector("[name=username]");
-const phone = popup.querySelector("[name=phone]");
-const email = popup.querySelector("[name=email]");
-const text = popup.querySelector("[name=text]");
-let isStorageSupport = true;
-let storage = "";
-
-try {
-  storage = localStorage.getItem("username");
-} catch (err) {
-  isStorageSupport = false;
-}
-link.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  popup.classList.add("modal-show");
-  overlay.classList.add("modal-overlay-show");
-  username.focus();
-});
-if (storage) {
-  username.value = storage;
-  email.focus();
-} else {
-  username.focus();
-};
-close.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  popup.classList.remove("modal-show");
-  popup.classList.remove("modal-error");
-  overlay.classList.remove("modal-overlay-show");
-  overlay.classList.remove("modal-error");
-});
-form.addEventListener("submit", function(evt) {
-  if (!username.value || !phone.value || !email.value || !text.value) {
-    evt.preventDefault();
-    popup.classList.remove("modal-error");
-    popup.offsetWidth = popup.offsetWidth;
-    popup.classList.add("modal-error");
-  } else {
-    if (isStorageSupport) {
-      localStorage.setItem("username", username.value);
-    }
-  }
-});
-window.addEventListener("keydown", function(evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    if (popup.classList.contains("modal-show")) {
-      popup.classList.remove("modal-show");
-      popup.classList.remove("modal-error");
-      overlay.classList.remove("modal-overlay-show");
-      overlay.classList.remove("modal-error");
-    }
-  }
-});*/

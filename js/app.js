@@ -270,12 +270,10 @@
                 } else if (_average > 2500 && _average <= 20000) {
                     $('.person-right').css('background-image', 'url(/bitrix/templates/.default/images/img/male-48.png)');
                 } else if (_average > 20000 && _average <= 50000) {
-                    $('.person-right').css('background-image', 'url(/bitrix/templates/.default/images/img/male-48.png)');
-                    $('.person-right-bag').css('background-image', 'url(/bitrix/templates/.default/images/img/male-48.png)');
-                    $('.person-right-bag').css('opacity', '1');
-                    $('.person-right-car').css('opacity', '0');
+                    $('.person-right').css('background-image', 'url(/bitrix/templates/.default/images/img/male-65.png)');
+                    $('.person-right-bag').css('background-image', 'url(/bitrix/templates/.default/images/img/male-65.png)');
                 } else if (_average > 50000) {
-                    $('.person-right').css('background-image', 'url(/bitrix/templates/.default/images/img/male-48.png)');
+                    $('.person-right').css('background-image', 'url(/bitrix/templates/.default/images/img/male-65.png)');
                 }
             }
 
@@ -292,11 +290,11 @@
                 } if (_average >= 1 && _average <= 2500) {
                     $('.person-right').css('background-image', 'url(/bitrix/templates/.default/images/img/female-48m.png)');
                 } else if (_average > 2500 && _average <= 20000) {
-                    $('.person-right').css('background-image', 'url(/bitrix/templates/.default/images/img/female-48.png)');
+                    $('.person-right').css('background-image', 'url(/bitrix/templates/.default/images/img/female-48m.png)');
                 } else if (_average > 20000 && _average <= 50000) {
                     $('.person-right').css('background-image', 'url(/bitrix/templates/.default/images/img/female-48.png)');
                 } else if (_average > 50000) {
-                    $('.person-right').css('background-image', 'url(/bitrix/templates/.default/images/img/female-48.png)');
+                    $('.person-right').css('background-image', 'url(/bitrix/templates/.default/images/img/female-66.png)');
                 }
             }
 
