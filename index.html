@@ -40,15 +40,35 @@
       <img class="header__logo" src="img/logo-desctop.png" alt="Лига Пенсия">
       <div id="menu__toggle" class="close"></div>
       <ul class="menu mobile-menu" id="menu">
-        <li class="menu__item menu__item--explosion menu__item--close"><a class="menu__link" href="#">Про компанію</a>
+        <li class="menu__item menu__item--explosion menu__item--close"><a class="menu__link">Про компанію</a>
           <ul class="popap-menu abs">
-            <li class="popap-menu__item"><a class="popap-menu__link" href="administrator-pension-fond.html">Про ТОВ «АДМІНІСТРАТОР ПЕНСІЙНИХ ФОНДІВ «ЛІГА ПЕНСІЯ»</a></li>
-            <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html">Про НПФ «ВЗАЄМОДОПОМОГА»</a></li>
-            <li class="popap-menu__item"><a class="popap-menu__link" href="garant-pensia.html">Про ВНПФ «ГАРАНТ-ПЕНСІЯ»</a></li>
+            <li class="popap-menu__item-title">
+              Про ТОВ «АДМІНІСТРАТОР ПЕНСІЙНИХ ФОНДІВ «ЛІГА ПЕНСІЯ»
+              <ul class="popap-menu--iner">
+                <li class="popap-menu__item"><a class="popap-menu__link" href="administrator-pension-fond.html">Про компанію</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="administrator-pension-fond.html">Документи та звітність</a></li>
+              </ul>
+            </li>
+            <li class="popap-menu__item-title">
+              Про НПФ «ВЗАЄМОДОПОМОГА»
+              <ul class="popap-menu--iner">
+                <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html">Про фонд</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html">Показники діяльності</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html">Документи та звітність</a></li>
+              </ul>
+            </li>
+            <li class="popap-menu__item-title">
+              Про ВНПФ «ГАРАНТ-ПЕНСІЯ»
+              <ul class="popap-menu--iner">
+                <li class="popap-menu__item"><a class="popap-menu__link" href="garant-pensia.html">Про фонд</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="garant-pensia.html">Показники діяльності</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="garant-pensia.html">Документи та звітність</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
         <li class="menu__item menu__item--explosion menu__item--close">
-          <a class="menu__link" href="#">Для себе</a>
+          <a class="menu__link">Для себе</a>
           <ul class="popap-menu abs">
             <li class="popap-menu__item"><a class="popap-menu__link" href="calc.html">Калькулятор пенсії</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="umovy.html">Умови та переваги</a></li>
@@ -58,7 +78,7 @@
           </ul>
         </li>
         <li class="menu__item menu__item--explosion menu__item--close">
-          <a class="menu__link" href="#">Для бізнесу</a>
+          <a class="menu__link">Для бізнесу</a>
           <ul class="popap-menu abs">
             <li class="popap-menu__item"><a class="popap-menu__link" href="usloviya.html">Умови та переваги</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="nalogovye-lgoty-i-ekonomiya.html">Податкові пільги та економія</a></li>
@@ -75,12 +95,12 @@
           </svg>
           <div class="top-menu__phones">
             <a href="tel:+380443649965" class="link-icon">
-              <svg class="top-menu__icon top-menu__phone" width="18" height="18">
+              <svg class="top-menu__icon" width="18" height="18">
                 <use xlink:href="#icon-phone"></use>
               </svg>
               <span class="phone">+38 (044) 364 99 65</span>
             </a>
-            <a href="tel:+380504028888" class="link-icon top-menu__phone">
+            <a href="tel:+380504028888" class="link-icon">
               <svg class="top-menu__icon" width="18" height="18">
                 <use xlink:href="#icon-phone"></use>
               </svg>
@@ -160,11 +180,11 @@
     </section>
     <section class="calc calc--front liga-calculator" button--modal="">
       <h2 class="calc__title">Ви самі визначаєте скільки заощаджувати. Жодних зобов’язань по платежах!</h2>
-      <p class="calc__text">Рухайте бігунком калькулятора, щоб змінити параметри та самостійно спланувати свої пенсійні заощадження</p>
       <ul class="calc__list">
-        <li>Ви самі визначаєте скільки заощаджувати.</li>
-        <li>Жодних зобов’язань по платежах!</li>
+        <li class="page-list__item">Ви самі визначаєте скільки заощаджувати.</li>
+        <li class="page-list__item">Жодних зобов’язань по платежах!</li>
       </ul>
+      <p class="calc__text">Рухайте бігунком калькулятора, щоб змінити параметри та самостійно спланувати свої пенсійні заощадження</p>
       <div class="wrapper calc__wrapper">
         <div class="calc__item">
           <!--range items start-->
@@ -369,7 +389,7 @@
                 </tr>
               </table>
               <p class="profitability__grafic-discr">* станом на 31 липня 2021 року.</p>
-              <p class="profitability__grafic-discr">ТОВ "Адміністратор пенсійних фондів "Ліга Пенсія" стало одноосібним власником НПФ "Взаємодопомога" з серпня 2018 року.</p>
+              <p class="profitability__grafic-discr">З серпня 2018 року ТОВ "Адміністратор пенсійних фондів "Ліга Пенсія"  є одноосібним власником НПФ "Взаємодопомога"</p>
             </li>
           </ul>
         </div>
@@ -384,7 +404,7 @@
         <ul class="why__list">
           <li class="why__item why__item--one">
             <p class="why__item-title">Репутація</p>
-            <p class="why__item-text">Ми є частиною групи компаній «Ліга», яка має більше 30 років бездоганної репутації в бізнесі</p>
+            <p class="why__item-text">Ми є частиною Групи компаній «ЛІГА», яка має більше 30 років бездоганної репутації в бізнесі</p>
           </li>
           <li class="why__item why__item--two">
             <p class="why__item-title">Досвід</p>
@@ -410,7 +430,8 @@
     <section class="moneybox">
       <div class="wrapper">
         <h2 class="moneybox__title">Як почати накопичувати на пенсію?</h2>
-        <p class="moneybox__text">Заповніть заявку на укладання пенсійного контракту. Для цього введіть свої персональні дані і додайте скани паспорта та ідентифікаційного кода. Або авторизуйтеся через BankID чи ЕЦП - тоді Ваші дані підтягнуться в форму заявки автоматично.</p>
+        <p class="moneybox__text">Заповніть заявку на укладання пенсійного контракту. Для цього введіть свої персональні дані і додайте скани паспорта та ідентифікаційного кода. Потрібно завантажити копії усіх сторінок паспорта, в тому числі сторінку з відміткою про місце реєстрації. Якщо Ви маєте паспорт у формі ID-картки - додайте, будь ласка, також копію довідки про місце реєстрації. Найкраще підготувати копії кожного документа у форматі *pdf.<br>
+        Після заповнення заявки менеджер “Ліга Пенсія” перевірить надані Вами документи та сконтактує з Вами щодо подальшого оформлення пенсійного контракту та відкриття пенсійного рахунку.</p>
         <a href="openaccount.html" class="button moneybox__button button--modal">Укласти контракт</a>
         <div class="moneybox__list-wrapper">
           <ul class="moneybox__list">
@@ -997,15 +1018,15 @@
     <div class="wrapper footer__wrapper">
       <img src="img/logo-desctop.png" alt="Liga pensia" class="footer__logo">
       <ul class="menu menu--footer">
-        <li class="menu__item"><a class="menu__link" href="#">Про компанію</a>
+        <li class="menu__item menu__item--explosion menu__item--close"><a class="menu__link">Про компанію</a>
           <ul class="popap-menu">
             <li class="popap-menu__item"><a class="popap-menu__link" href="administrator-pension-fond.html">Про ТОВ «АДМІНІСТРАТОР ПЕНСІЙНИХ ФОНДІВ «ЛІГА ПЕНСІЯ»</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html">Про НПФ «ВЗАЄМОДОПОМОГА»</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="garant-pensia.html">Про ВНПФ «ГАРАНТ-ПЕНСІЯ»</a></li>
           </ul>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Для себе</a>
+        <li class="menu__item menu__item--explosion menu__item--close">
+          <a class="menu__link">Для себе</a>
           <ul class="popap-menu">
             <li class="popap-menu__item"><a class="popap-menu__link" href="calc.html">Калькулятор пенсії</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="umovy.html">Умови та переваги</a></li>
@@ -1014,8 +1035,8 @@
             <li class="popap-menu__item"><a class="popap-menu__link" href="voprosy-o-npf-dlya-fiz-lits.html">Питання про НПФ для приватних осіб</a></li>
           </ul>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Для бізнесу</a>
+        <li class="menu__item menu__item--explosion menu__item--close">
+          <a class="menu__link">Для бізнесу</a>
           <ul class="popap-menu">
             <li class="popap-menu__item"><a class="popap-menu__link" href="usloviya.html">Умови та переваги</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="nalogovye-lgoty-i-ekonomiya.html">Податкові пільги та економія</a></li>
@@ -1032,12 +1053,12 @@
           </svg>
           <div class="top-menu__phones">
             <a href="tel:+380443649965" class="link-icon">
-              <svg class="top-menu__icon top-menu__phone" width="18" height="18">
+              <svg class="top-menu__icon" width="18" height="18">
                 <use xlink:href="#icon-phone"></use>
               </svg>
               <span class="phone">+38 (044) 364 99 65</span>
             </a>
-            <a href="tel:+380504028888" class="link-icon top-menu__phone">
+            <a href="tel:+380504028888" class="link-icon">
               <svg class="top-menu__icon" width="18" height="18">
                 <use xlink:href="#icon-phone"></use>
               </svg>

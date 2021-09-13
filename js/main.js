@@ -14,16 +14,6 @@
 
   $('#menu__toggle').on('click', function() {
       $('.popap-menu').removeClass('abs');
-      $('.menu__item--explosion').on('click', function() {
-        $('.popap-menu').removeAttr('style');
-          if ($(this).hasClass('menu__item--close')) {
-            $(this).removeClass('menu__item--close');
-            $(this).addClass('menu__item--open');
-          } else {
-            $(this).addClass('menu__item--close');
-            $(this).removeClass('menu__item--open');
-          }
-        });
       if ($(this).hasClass('close')) {
         $(this).removeClass('close');
         $(this).addClass('open');
@@ -50,8 +40,18 @@
       $('.popap-menu').removeClass('abs');
       $('#menu__toggle').removeClass('desc');
       $('#menu__toggle').addClass('mobile');
-
       });
+
+    $('.menu__item--explosion').on('click', function() {
+        $('.popap-menu').removeAttr('style');
+          if ($(this).hasClass('menu__item--close')) {
+            $(this).removeClass('menu__item--close');
+            $(this).addClass('menu__item--open');
+          } else {
+            $(this).addClass('menu__item--close');
+            $(this).removeClass('menu__item--open');
+          }
+        });
     //Mobile Why
     $(function() {
       $('.why__item-title').on('click', function() {
@@ -272,7 +272,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <img src="../img/logo-desctop.png" alt="Liga pensia">
+                        <img src="../../img/logo-desctop.png" alt="Liga pensia">
                         <button type="button" class="modal-close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
@@ -298,7 +298,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <img src="../img/logo-desctop.png" alt="Liga pensia">
+                        <img src="../../img/logo-desctop.png" alt="Liga pensia">
                         <button type="button" class="modal-close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
