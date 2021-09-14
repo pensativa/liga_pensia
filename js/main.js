@@ -60,7 +60,7 @@
         } else {
           $(this).addClass('open');
         }
-        $(this).next().slideToggle("slow", function() {
+        $(this).next().slideToggle(300, function() {
           if ($(this).css('display') === 'none') {
             $(this).removeAttr('style');
           }
@@ -168,7 +168,8 @@
   $('.tabs-wrapper').each(function() {
     let ths = $(this);
     ths.find('.tab-item').not(':first').hide();
-    ths.find('.tab').click(function() {
+    ths.find('.tab').click(function(e) {
+      e.preventDefault();
       ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
       ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
     }).eq(0).addClass('active');
@@ -177,10 +178,31 @@
   $('.tabs-wrapper--report').each(function() {
     let ths = $(this);
     ths.find('.tab-item--report').not(':first').hide();
-    ths.find('.tab--report').click(function() {
+    ths.find('.tab--report').click(function(e) {
+      e.preventDefault();
       ths.find('.tab--report').removeClass('active').eq($(this).index()).addClass('active');
       ths.find('.tab-item--report').hide().eq($(this).index()).fadeIn()
     }).eq(0).addClass('active');
+  });
+
+  $('.popap-menu__item').on('click', function() {
+    $('.popap-menu__item').removeClass('active');
+    $(this).addClass('active');
+    var loc = window.location.hash;
+    if (loc != "") {
+      var href = loc;
+      var target = $('.tab').find(href);
+      $('.tab').removeClass('active');
+      $('.tab[href="'+href  +'"]').addClass('active');
+      $('.tab-item').hide();
+      $(href).fadeIn();
+      if ($('.tab').hasClass('report-tab') && $(this).hasClass('active')) {
+        $(".results").addClass('open');
+      } else {
+        $(".results").removeClass('open');
+      }
+      window.location.split("#")[0];
+    }
   });
 
   //Team page
@@ -224,55 +246,17 @@
     }
   });
 
-  // Feed form
-    /*var path = "https://ligapension.com/lib/ajax.php";
-    $(document).on('submit', '.form', function(event) {
-        event.preventDefault();
-        name = $(this).attr('name');
-        url = $(this).attr('url');
-        var formData = new FormData(this);
-        // $(this).find("button[type=submit]").prop("disabled", true);
-        $.ajax({
-            type: "POST",
-            url: path,
-            data: $(this).serialize(),
-            success: function(response) {
-                successWindow();
-                $('#successMsg').modal({'show' : true});
-            },
-            error: function(e) {
-                console.log("ERROR : ", e);
-            }
-        });
-        // event.stopImmediatePropagation();
-        // if (!event.isDefaultPrevented()) {
-        //     event.returnValue = false;
-        // }
-    });
 
-    function successWindow() {
-        $("body").append(`<div class="modal modal--fade" id="successMsg" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Дякуємо! Ваше повідомлення надіслано.</p>
-                    </div>
-                </div>
-            </div>
-        </div>`);
-    }*/
+    //Окна успешной отправки формы
 
-    //Временная замена
+    //Для открытия счета
     $(".modal__button").on("click", function(e) {
       e.preventDefault();
         $("footer").append(`<div class="modal modal--fade modal-auto-clear" id="successMsg" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <img src="../../img/logo-desctop.png" alt="Liga pensia">
+                        <img src="img/logo-desctop.png" alt="Liga pensia">
                         <button type="button" class="modal-close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
@@ -292,13 +276,14 @@
       });
     });
 
+    //Для пополнения счета
     $(".pay-form__button").on("click", function(e) {
       e.preventDefault();
         $("footer").append(`<div class="modal modal--pay modal-auto-clear" id="successMsg" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <img src="../../img/logo-desctop.png" alt="Liga pensia">
+                        <img src="img/logo-desctop.png" alt="Liga pensia">
                         <button type="button" class="modal-close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
@@ -316,27 +301,6 @@
             $(".modal--pay").remove();
           }, 800);
       });
-    });
-
-    $("#successMsg").on('click', function() {
-      $("footer").detach('#successMsg');
-    });
-
-    $('.rerun-button').click(function(){
-       $('.pay-wrap').find('.pay-body')
-            .first().addClass('is-showing')
-            .siblings().removeClass('is-showing');
-       $('.pay-header span:').first().addClass('is-active')
-            .siblings().removeClass('is-active');
-       $('.form1').find("button[type=submit]").prop("disabled", false);
-    });
-
-
-    // Auto-hide modal
-    $('.modal-auto-clear').on('shown.bs.modal', function() {
-        $(this).delay(7000).fadeOut(200, function() {
-            $(this).modal('hide');
-        });
     });
 
     // Phone Mask

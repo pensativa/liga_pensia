@@ -40,15 +40,35 @@
       <a href="/"><img class="header__logo" src="img/logo-desctop.png" alt="Лига Пенсия"></a>
       <div id="menu__toggle" class="close"></div>
       <ul class="menu mobile-menu" id="menu">
-        <li class="menu__item menu__item--explosion menu__item--close active"><a class="menu__link" href="#">Про компанію</a>
+        <li class="menu__item menu__item--explosion menu__item--close active"><a class="menu__link">Про компанію</a>
           <ul class="popap-menu abs">
-            <li class="popap-menu__item"><a class="popap-menu__link" href="administrator-pension-fond.html">Про ТОВ «АДМІНІСТРАТОР ПЕНСІЙНИХ ФОНДІВ «ЛІГА ПЕНСІЯ»</a></li>
-            <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html">Про НПФ «ВЗАЄМОДОПОМОГА»</a></li>
-            <li class="popap-menu__item active"><a class="popap-menu__link" href="garant-pensia.html">Про ВНПФ «ГАРАНТ-ПЕНСІЯ»</a></li>
+            <li class="popap-menu__item-title">
+              Про ТОВ «АДМІНІСТРАТОР ПЕНСІЙНИХ ФОНДІВ «ЛІГА ПЕНСІЯ»
+              <ul class="popap-menu--iner">
+                <li class="popap-menu__item"><a class="popap-menu__link" href="administrator-pension-fond.html#about">Про компанію</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="administrator-pension-fond.html#report">Документи та звітність</a></li>
+              </ul>
+            </li>
+            <li class="popap-menu__item-title">
+              Про НПФ «ВЗАЄМОДОПОМОГА»
+              <ul class="popap-menu--iner">
+                <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html#about">Про фонд</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html#results">Показники діяльності</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html#report">Документи та звітність</a></li>
+              </ul>
+            </li>
+            <li class="popap-menu__item-title">
+              Про ВНПФ «ГАРАНТ-ПЕНСІЯ»
+              <ul class="popap-menu--iner">
+                <li class="popap-menu__item"><a class="popap-menu__link" href="garant-pensia.html#about">Про фонд</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="garant-pensia.html#results">Показники діяльності</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="garant-pensia.html#report">Документи та звітність</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
         <li class="menu__item menu__item--explosion menu__item--close">
-          <a class="menu__link" href="#">Для себе</a>
+          <a class="menu__link">Для себе</a>
           <ul class="popap-menu abs">
             <li class="popap-menu__item"><a class="popap-menu__link" href="calc.html">Калькулятор пенсії</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="umovy.html">Умови та переваги</a></li>
@@ -58,7 +78,7 @@
           </ul>
         </li>
         <li class="menu__item menu__item--explosion menu__item--close">
-          <a class="menu__link" href="#">Для бізнесу</a>
+          <a class="menu__link">Для бізнесу</a>
           <ul class="popap-menu abs">
             <li class="popap-menu__item"><a class="popap-menu__link" href="usloviya.html">Умови та переваги</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="nalogovye-lgoty-i-ekonomiya.html">Податкові пільги та економія</a></li>
@@ -75,12 +95,12 @@
           </svg>
           <div class="top-menu__phones">
             <a href="tel:+380443649965" class="link-icon">
-              <svg class="top-menu__icon top-menu__phone" width="18" height="18">
+              <svg class="top-menu__icon" width="18" height="18">
                 <use xlink:href="#icon-phone"></use>
               </svg>
               <span class="phone">+38 (044) 364 99 65</span>
             </a>
-            <a href="tel:+380504028888" class="link-icon top-menu__phone">
+            <a href="tel:+380504028888" class="link-icon">
               <svg class="top-menu__icon" width="18" height="18">
                 <use xlink:href="#icon-phone"></use>
               </svg>
@@ -125,14 +145,14 @@
       <h1 class="page__title page__title--center">Про ВНПФ «ГАРАНТ-ПЕНСІЯ»</h1>
       <div class="tabs-wrapper">
         <div class="tabs">
-          <span class="tab">Про Фонд</span>
-          <span class="tab report-tab">результати діяльності</span>
-          <span class="tab">Пенсійні контракти</span>
-          <span class="tab tab--callback">Звітність</span>
-          <span class="tab">Установчі документи</span>
+          <a href="#about" class="tab">Про Фонд</a>
+          <a href="#results" class="tab report-tab">результати діяльності</a>
+          <a href="#contracts" class="tab">Пенсійні контракти</a>
+          <a href="#report" class="tab tab--callback">Звітність</a>
+          <a href="#docs" class="tab">Установчі документи</a>
         </div>
         <div class="tabs-content">
-          <div class="tab-item about about--garant">
+          <div class="tab-item about about--garant" id="about">
             <div class="about__text">
               <p>ВІДКРИТИЙ НЕДЕРЖАВНИЙ ПЕНСІЙНИЙ ФОНД «ГАРАНТ-ПЕНСІЯ» створено 27.06.2007р. з метою залучення грошових коштів вкладників та подальшого надійного накопичення, збереження, для подальшого їх інвестування в економіку України з отриманням додаткової недержавної пенсії учасниками Фонду.</p>
               <p>Вкладниками Фонду може бути будь-яка юридична особа або фізична особа.</p>
@@ -191,7 +211,7 @@
               <p>Про ВНПФ «ГАРАНТ-ПЕНСІЯ» здійснює свою діяльність на підставі Закону України «Про недержавне пенсійне забезпечення» та інших нормативно-правових актів з питань недержавного пенсійного забезпечення.</p>
             </div>
           </div>
-          <div class="tab-item results">
+          <div class="tab-item results" id="results">
             <div class="results__wrapper">
               <iframe id="666" lang="uk" onload="calcFrame();" width="910" height="3500" src="https://app.powerbi.com/view?r=eyJrIjoiMzU5YWU5MDYtODllMS00ZTRhLWJiOTgtZjBhNmFjNTY2ZDA4IiwidCI6ImJhODM2ZDI3LWQ1YmYtNGViMi1iMTVlLTQwNWI0OTJmMjE5NiIsImMiOjl9" frameborder="0" scrolling="no" allowFullScreen="true"></iframe>
             </div>
@@ -208,7 +228,7 @@
             }
             </script>
           </div>
-          <div class="tab-item">
+          <div class="tab-item" id="contracts">
             <ul class="download-list download-list--garnt-contracts download-list--contracts">
               <li class="download-list__item"><a href="#">Пенсійна схема для вкладників - юридичних та фізичних осіб</a></li>
               <li class="download-list__item"><a href="#">шаблон пенсійного контракту для себе</a></li>
@@ -216,7 +236,7 @@
               <li class="download-list__item"><a href="#">пам’ятка з роз’ясненнями основних положень пенсійного контракту</a></li>
             </ul>
           </div>
-          <div class="tab-item report">
+          <div class="tab-item report" id="report">
             <h2 class="report__title">Щомісячні звіти з діяльності</h2>
             <div class="tabs-wrapper--report">
               <div class="tabs--report">
@@ -421,7 +441,7 @@
               </ul>
             </div>
           </div>
-          <div class="tab-item">
+          <div class="tab-item" id="docs">
             <ul class="download-list download-list download-list--docs">
               <li class="download-list__item"><a href="#">статут</a></li>
               <li class="download-list__item"><a href="#">Витяг зі статуту</a></li>
@@ -469,15 +489,15 @@
     <div class="wrapper footer__wrapper">
       <a href="/"><img src="img/logo-desctop.png" alt="Liga pensia" class="footer__logo"></a>
       <ul class="menu menu--footer">
-        <li class="menu__item"><a class="menu__link" href="#">Про компанію</a>
+        <li class="menu__item menu__item--explosion menu__item--close"><a class="menu__link">Про компанію</a>
           <ul class="popap-menu">
             <li class="popap-menu__item"><a class="popap-menu__link" href="administrator-pension-fond.html">Про ТОВ «АДМІНІСТРАТОР ПЕНСІЙНИХ ФОНДІВ «ЛІГА ПЕНСІЯ»</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html">Про НПФ «ВЗАЄМОДОПОМОГА»</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="garant-pensia.html">Про ВНПФ «ГАРАНТ-ПЕНСІЯ»</a></li>
           </ul>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Для себе</a>
+        <li class="menu__item menu__item--explosion menu__item--close">
+          <a class="menu__link">Для себе</a>
           <ul class="popap-menu">
             <li class="popap-menu__item"><a class="popap-menu__link" href="calc.html">Калькулятор пенсії</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="umovy.html">Умови та переваги</a></li>
@@ -486,8 +506,8 @@
             <li class="popap-menu__item"><a class="popap-menu__link" href="voprosy-o-npf-dlya-fiz-lits.html">Питання про НПФ для приватних осіб</a></li>
           </ul>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Для бізнесу</a>
+        <li class="menu__item menu__item--explosion menu__item--close">
+          <a class="menu__link">Для бізнесу</a>
           <ul class="popap-menu">
             <li class="popap-menu__item"><a class="popap-menu__link" href="usloviya.html">Умови та переваги</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="nalogovye-lgoty-i-ekonomiya.html">Податкові пільги та економія</a></li>
@@ -504,12 +524,12 @@
           </svg>
           <div class="top-menu__phones">
             <a href="tel:+380443649965" class="link-icon">
-              <svg class="top-menu__icon top-menu__phone" width="18" height="18">
+              <svg class="top-menu__icon" width="18" height="18">
                 <use xlink:href="#icon-phone"></use>
               </svg>
               <span class="phone">+38 (044) 364 99 65</span>
             </a>
-            <a href="tel:+380504028888" class="link-icon top-menu__phone">
+            <a href="tel:+380504028888" class="link-icon">
               <svg class="top-menu__icon" width="18" height="18">
                 <use xlink:href="#icon-phone"></use>
               </svg>

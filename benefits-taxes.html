@@ -41,15 +41,35 @@
       <a href="/"><img class="header__logo" src="img/logo-desctop.png" alt="Лига Пенсия"></a>
       <div id="menu__toggle" class="close"></div>
       <ul class="menu mobile-menu" id="menu">
-        <li class="menu__item menu__item--explosion menu__item--close"><a class="menu__link" href="#">Про компанію</a>
+        <li class="menu__item menu__item--explosion menu__item--close"><a class="menu__link">Про компанію</a>
           <ul class="popap-menu abs">
-            <li class="popap-menu__item"><a class="popap-menu__link" href="administrator-pension-fond.html">Про ТОВ «АДМІНІСТРАТОР ПЕНСІЙНИХ ФОНДІВ «ЛІГА ПЕНСІЯ»</a></li>
-            <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html">Про НПФ «ВЗАЄМОДОПОМОГА»</a></li>
-            <li class="popap-menu__item"><a class="popap-menu__link" href="garant-pensia.html">Про ВНПФ «ГАРАНТ-ПЕНСІЯ»</a></li>
+            <li class="popap-menu__item-title">
+              Про ТОВ «АДМІНІСТРАТОР ПЕНСІЙНИХ ФОНДІВ «ЛІГА ПЕНСІЯ»
+              <ul class="popap-menu--iner">
+                <li class="popap-menu__item"><a class="popap-menu__link" href="administrator-pension-fond.html#about">Про компанію</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="administrator-pension-fond.html#report">Документи та звітність</a></li>
+              </ul>
+            </li>
+            <li class="popap-menu__item-title">
+              Про НПФ «ВЗАЄМОДОПОМОГА»
+              <ul class="popap-menu--iner">
+                <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html#about">Про фонд</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html#results">Показники діяльності</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html#report">Документи та звітність</a></li>
+              </ul>
+            </li>
+            <li class="popap-menu__item-title">
+              Про ВНПФ «ГАРАНТ-ПЕНСІЯ»
+              <ul class="popap-menu--iner">
+                <li class="popap-menu__item"><a class="popap-menu__link" href="garant-pensia.html#about">Про фонд</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="garant-pensia.html#results">Показники діяльності</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="garant-pensia.html#report">Документи та звітність</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
         <li class="menu__item menu__item--explosion menu__item--close active">
-          <a class="menu__link" href="#">Для себе</a>
+          <a class="menu__link">Для себе</a>
           <ul class="popap-menu abs">
             <li class="popap-menu__item"><a class="popap-menu__link" href="calc.html">Калькулятор пенсії</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="umovy.html">Умови та переваги</a></li>
@@ -59,7 +79,7 @@
           </ul>
         </li>
         <li class="menu__item menu__item--explosion menu__item--close">
-          <a class="menu__link" href="#">Для бізнесу</a>
+          <a class="menu__link">Для бізнесу</a>
           <ul class="popap-menu abs">
             <li class="popap-menu__item"><a class="popap-menu__link" href="usloviya.html">Умови та переваги</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="nalogovye-lgoty-i-ekonomiya.html">Податкові пільги та економія</a></li>
@@ -76,12 +96,12 @@
           </svg>
           <div class="top-menu__phones">
             <a href="tel:+380443649965" class="link-icon">
-              <svg class="top-menu__icon top-menu__phone" width="18" height="18">
+              <svg class="top-menu__icon" width="18" height="18">
                 <use xlink:href="#icon-phone"></use>
               </svg>
               <span class="phone">+38 (044) 364 99 65</span>
             </a>
-            <a href="tel:+380504028888" class="link-icon top-menu__phone">
+            <a href="tel:+380504028888" class="link-icon">
               <svg class="top-menu__icon" width="18" height="18">
                 <use xlink:href="#icon-phone"></use>
               </svg>
@@ -124,7 +144,7 @@
   <main class="page">
     <section class="benefits-taxes">
     <div class="wrapper">
-        <h1 class="page__title benefits-taxes__title">Пільги та податки</h1>
+        <h1 class="page__title">Пільги та податки</h1>
        <div class="benefits-taxes__content">
           <p class="benefits-taxes__text">Оскільки недержавний пенсійний фонд це неприбуткова організація, він не є платником податку на прибуток. Це означає, що доходи від інвестиційної діяльності не підлягають оподаткуванню, а розподіляються між учасниками фонду в повному обсязі та можуть бути реінвестовані більш ефективно.</p>
       </div>
@@ -137,7 +157,7 @@
             <p class="discount__content">Під час накопичення недержавної пенсії вкладник - фізична особа може отримати податкову знижку та повернути сплачений ПДФО (18%) із суми пенсійних внесків, сплачених на свою користь та на користь члена сім’ї першого ступеня споріднення (діти, чоловік/дружина, батьки) за попередній рік.</p>
             <p class="discount__content">Відповідно до п. 166.3.5. Податкового Кодексу України максимальна сума витрат на сплату пенсійних внесків до недержавного пенсійного фонду, яку фізична особа-платник податку має право включити до складу податкової знижки, визначається в прив’язці до розміру прожиткового мінімуму для працездатних осіб. Визначений законом розмір прожиткового мінімуму для працездатних осіб становить: на 01.01.2020 р. - 2102 грн., на 01.01.2021 - 2270 грн.</p>
             <p class="discount__content">Для витрат понесених у 2021 році максимальна сума витрат на сплату пенсійних внесків до недержавного пенсійного фонду, яку фізична особа-платник податку має право включити до складу податкової знижки, становить:</p>
-
+           
             <ul class="page__list discount__list">
                 <li class="page-list__item"><p class="discount__text"><span>при сплаті внесків на свою користь</span> - не більше, ніж 3180,00 гривень на місяць (відповідно до п. 169.4.1. Податкового кодексу України, розраховується як розмір прожиткового мінімуму для працездатних осіб помножений на коефіцієнт 1,4);</p></li>
                 <li class="page-list__item"><p class="discount__text"><span>при сплаті внесків на користь членів сім'ї першого ступеня споріднення</span> (дітей, батьків, чоловіка, дружини) - не більше, ніж 50% від 3180,00 гривень на місяць, а саме не більше, ніж 1590,00 гривень на місяць (відповідно до п. 166.3.5 Податкового кодексу);</p></li>
@@ -145,7 +165,7 @@
 
             <p class="discount__content">Для визначення річної суми отриманий показник перемножується на 12.
                 Отже, максимальна сума внесків, з якої держава поверне податки складає<span> за рік:</span></p>
-
+            
             <ul class="page__list discount__list">
                 <li class="page-list__item"><p class="discount__text">у випадку сплати пенсійних внесків за себе: 35 280 грн. у 2020 році та 38 160 грн. у 2021 році;</p></li>
                 <li class="page-list__item"><p class="discount__text">у випадку сплати пенсійних внесків на користь члена сім’ї першого ступеня споріднення (діти, чоловік/дружина, батьки): 17 640 грн. у 2020 році та 19080 грн. у 2021 році.</p></li>
@@ -161,7 +181,7 @@
     <section class="taxes">
         <div class="wrapper">
             <h2 class="taxes__title">Оподаткування пенсійних виплат</h2>
-            <h3 class="title__uppercase">У період здійснення пенсійних виплат для громадян України діють спеціальні умови оподаткування.</h3>
+            <h4 class="title__uppercase">У період здійснення пенсійних виплат для громадян України діють спеціальні умови оподаткування.</h4>
             <p class="taxes__text"> Адміністратор недержавного пенсійного фонду, діє як податковий агент - він зобов'язаний перерахувати до бюджету ПДФО та військовий збір з пенсійних виплат.</p>
             <div class="payments">
                 <h3 class="title__uppercase">Виплати на певний термін:</h3>
@@ -173,18 +193,18 @@
                 </ul>
             </div>
 
-            <div class="payments">
+            <div class="payments one-time-payments">
             <h3 class="title__uppercase">Одноразова пенсійна виплата:</h3>
             <ul class="page__list taxes__list">
                 <li class="page-list__item"><p class="discount__text">початок виплат - не раніше, ніж за 10 років до настання офіційного пенсійного віку (не раніше 50 років)</p></li>
                 <li class="page-list__item">
-                    <p class="discount__text">може бути виплачена не раніше, ніж за 10 років до настання офіційного пенсійного віку (не раніше 50 років) за умови, що сума накопичень становить менше, ніж 60 прожиткових мінімумів, встановлених Законом для непрацездатних громадян на дату звернення за виплатою:
+                    <div class="discount__text">може бути виплачена не раніше, ніж за 10 років до настання офіційного пенсійного віку (не раніше 50 років) за умови, що сума накопичень становить менше, ніж 60 прожиткових мінімумів, встановлених Законом для непрацездатних громадян на дату звернення за виплатою:
                         <ul class="page-list__item-date">
                             <li>- з 1 січня 2021 р.: 106 140 грн.</li>
                             <li>- з 1 липня 2021 р.: 111 240 грн.</li>
                             <li>- з 1 грудня 2021 р.: 116 040 грн.</li>
                         </ul>
-                     </p>
+                      </div>
                 </li>
                 <li class="page-list__item"><p class="discount__text">до 70 років оподатковується в розмірі 100% від суми одноразової виплати обкладається ПДФО і військовим збором (18 + 1,5%)</p></li>
                 <li class="page-list__item"><p class="discount__text">після 70 років - не оподатковуються</p></li>
@@ -206,10 +226,10 @@
 
     <section class="not-taxed">
         <div class="wrapper">
-            <h2 class="not-taxed__title">Оподаткування пенсійних виплат</h2>
+            <h2 class="not-taxed__title">Звільнені від оподаткування пенсійних виплат</h2>
             <ul class="list-page not-taxed__content">
                 <li class="list-page__item">учасник старше 70 років</li>
-                <li class="list-page__item">учасник-інвалід I групи</li>
+                <li class="list-page__item item--right">учасник-інвалід I групи</li>
                 <li class="list-page__item">спадкоємець учасника<br>(I ступінь споріднення)</li>
             </ul>
         </div>
@@ -220,15 +240,15 @@
     <div class="wrapper footer__wrapper">
       <a href="/"><img src="img/logo-desctop.png" alt="Liga pensia" class="footer__logo"></a>
       <ul class="menu menu--footer">
-        <li class="menu__item"><a class="menu__link" href="#">Про компанію</a>
+        <li class="menu__item menu__item--explosion menu__item--close"><a class="menu__link">Про компанію</a>
           <ul class="popap-menu">
             <li class="popap-menu__item"><a class="popap-menu__link" href="administrator-pension-fond.html">Про ТОВ «АДМІНІСТРАТОР ПЕНСІЙНИХ ФОНДІВ «ЛІГА ПЕНСІЯ»</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html">Про НПФ «ВЗАЄМОДОПОМОГА»</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="garant-pensia.html">Про ВНПФ «ГАРАНТ-ПЕНСІЯ»</a></li>
           </ul>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Для себе</a>
+        <li class="menu__item menu__item--explosion menu__item--close">
+          <a class="menu__link">Для себе</a>
           <ul class="popap-menu">
             <li class="popap-menu__item"><a class="popap-menu__link" href="calc.html">Калькулятор пенсії</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="umovy.html">Умови та переваги</a></li>
@@ -237,8 +257,8 @@
             <li class="popap-menu__item"><a class="popap-menu__link" href="voprosy-o-npf-dlya-fiz-lits.html">Питання про НПФ для приватних осіб</a></li>
           </ul>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Для бізнесу</a>
+        <li class="menu__item menu__item--explosion menu__item--close">
+          <a class="menu__link">Для бізнесу</a>
           <ul class="popap-menu">
             <li class="popap-menu__item"><a class="popap-menu__link" href="usloviya.html">Умови та переваги</a></li>
             <li class="popap-menu__item"><a class="popap-menu__link" href="nalogovye-lgoty-i-ekonomiya.html">Податкові пільги та економія</a></li>
@@ -255,12 +275,12 @@
           </svg>
           <div class="top-menu__phones">
             <a href="tel:+380443649965" class="link-icon">
-              <svg class="top-menu__icon top-menu__phone" width="18" height="18">
+              <svg class="top-menu__icon" width="18" height="18">
                 <use xlink:href="#icon-phone"></use>
               </svg>
               <span class="phone">+38 (044) 364 99 65</span>
             </a>
-            <a href="tel:+380504028888" class="link-icon top-menu__phone">
+            <a href="tel:+380504028888" class="link-icon">
               <svg class="top-menu__icon" width="18" height="18">
                 <use xlink:href="#icon-phone"></use>
               </svg>
@@ -312,7 +332,7 @@
         <label for="username" class="modal__label">ПІБ</label>
         <input class="modal__input" id="username" type="text" name="username" required="">
         <label for="userphone" class="modal__label">Телефон</label>
-        <input class="modal__input" id="userphone" type="tel" placeholder="+38 (XXX) XXX XXXX" name="userphone" required="">
+        <input class="modal__input" id="userphone" type="tel" name="userphone" required="">
         <label for="useremail" class="modal__label">Email</label>
         <input class="modal__input modal__label--file" id="useremail" type="email" name="useremail" required="">
         <div class="modal__input modal__input--file">
@@ -332,7 +352,6 @@
   <script src="js/jquery-min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
   <script src="js/jquery.ui.touch-punch.min.js"></script>
-  <script src="js/jquery.mask.js"></script>
   <script src="js/main.js"></script>
   <script src="js/app.js"></script>
 </body>
