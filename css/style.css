@@ -718,7 +718,7 @@ template {
     min-height: auto; }
   .top-menu__icon {
     margin-right: 0; }
-  .top-menu__phones {
+  .mobile-menu .top-menu__phones {
     position: static;
     background: none;
     -webkit-box-shadow: none;
@@ -727,24 +727,24 @@ template {
     display: block;
     font-size: 14px;
     width: auto; }
-    .top-menu__phones .link-icon {
+    .mobile-menu .top-menu__phones .link-icon {
       margin-bottom: 0;
       margin-right: 15px; }
-    .top-menu__phones .link-icon:last-of-type {
+    .mobile-menu .top-menu__phones .link-icon:last-of-type {
       display: none; }
-  .top-menu__phone {
+  .mobile-menu .top-menu__phone {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
     color: #0a0000;
     padding: 20px; }
-    .top-menu__phone .top-menu__icon {
+    .mobile-menu .top-menu__phone .top-menu__icon {
       margin-right: 20px; }
-  .profil {
+  .mobile-menu .profil {
     padding: 20px;
     border-right: 1px solid #0a0000;
     border-left: 1px solid #0a0000; }
-  .lang {
+  .mobile-menu .lang {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
@@ -809,7 +809,7 @@ template {
       padding: 0; }
   .title__wrapper {
     padding-left: 0;
-    max-width: auto; }
+    max-width: 100%; }
   .title__text {
     font-size: 20px;
     line-height: 26px;
@@ -2322,15 +2322,20 @@ input[type=range]:-moz-focusring {
   .menu__item--footer {
     position: static; } }
 
+@media (max-width: 935px) {
+  .top-menu--footer {
+    margin: 0 auto; } }
+
 @media (max-width: 785px) {
+  .footer__wrapper {
+    position: relative; }
   .menu--footer {
     width: 650px;
     position: relative;
     margin: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center;
-    border-bottom: 1px solid #0a0000; }
+            justify-content: center; }
     .menu--footer .popap-menu {
       width: auto;
       display: none; }
@@ -2340,21 +2345,35 @@ input[type=range]:-moz-focusring {
     .menu--footer .menu__item {
       width: 100%;
       border-color: #E3DDDD;
-      margin-bottom: 0; }
+      margin: 0; }
       .menu--footer .menu__item .menu__link {
         text-align: left;
         width: 135px;
         margin: 0 auto; }
       .menu--footer .menu__item--open .popap-menu {
         display: block; }
-  .top-menu--footer .top-menu__wrapper .button--pay {
-    margin-bottom: -1px; }
+  .top-menu--footer .top-menu__wrapper {
+    position: static; }
+  .top-menu--footer .profil,
+  .top-menu--footer .top-menu__phone,
+  .top-menu--footer .lang {
+    position: absolute;
+    top: 0; }
+  .top-menu--footer .lang {
+    right: 0; }
+  .top-menu--footer .profil {
+    right: 80px; }
+  .top-menu--footer .top-menu__phone {
+    right: 120px; }
   .top-menu__social--footer {
-    margin-top: 0;
+    margin-top: 50px;
     text-align: left;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
-            order: 2; } }
+            order: 2;
+    border: none; }
+  .top-menu--footer .button--pay {
+    margin-top: 20px; } }
 
 #to-top {
   width: 16px;
@@ -2747,7 +2766,7 @@ body::after {
     padding-top: 50px;
     margin-bottom: 30px; }
   .page--faq {
-    background-position: top -27px right;
+    background-position: top 10px right;
     background-size: 20% auto; }
   .no-page .wrapper > div {
     width: 100%;
@@ -2757,7 +2776,7 @@ body::after {
 
 @media (max-width: 680px) {
   .page--faq {
-    background-position: top -10px right;
+    background-position: top 27px right;
     background-size: 23% auto; } }
 
 .benefits-taxes {
@@ -3625,7 +3644,7 @@ body::after {
     padding-bottom: 200px;
     background-position: bottom left;
     background-size: auto 200px; }
-  .button--pay {
+  .pay-form__button {
     width: auto;
     margin: 50px auto 0; }
   .tab__button {
@@ -4301,7 +4320,7 @@ body::after {
 
 .head-administrator {
   max-width: 900px;
-  margin: 0 auto; }
+  margin: 0 auto 20px; }
 
 .head-administrator > span {
   margin-bottom: 50px; }
@@ -4431,7 +4450,7 @@ body::after {
 .title-audit-option {
   font-weight: 600;
   font-size: 20px;
-  line-height: 21px;
+  margin-top: 30px;
   text-transform: uppercase;
   padding-bottom: 60px;
   text-align: center; }
@@ -4510,7 +4529,7 @@ body::after {
         -ms-flex-pack: center;
             justify-content: center;
     max-width: 139px;
-    background: url(../img/Ellipse-bg-picture.png) no-repeat 75px 6px; }
+    background: url("../img/Ellipse-bg-picture.png") no-repeat 75px 6px; }
   .about__comment-text {
     padding: 33px 13px;
     font-size: 13px;
@@ -4524,7 +4543,7 @@ body::after {
     top: 300px;
     width: 335px;
     height: 335px;
-    background: url(../img/done.png) no-repeat center/70%; }
+    background: url("../img/done.png") no-repeat center/70%; }
   .about__company-title {
     font-weight: 450;
     font-size: 16px;
@@ -4554,9 +4573,8 @@ body::after {
     position: absolute;
     top: 40%;
     left: -105px;
-    background: url(../img/delivery_hand.png) no-repeat center/50%; }
+    background: url("../img/delivery_hand.png") no-repeat center/50%; }
   .download-list--document {
-    padding: 0 0 136px 0;
-    background: url(../img/contracts.png) no-repeat bottom right/57%; } }
+    padding: 30px 20px 136px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -26,13 +26,11 @@
       }
   });
 
-  if ($(window).width() > 784) {
     $('.top-menu__phone').on('click', function(event) {
       event.preventDefault()
       $(this).next().toggle();
       //Hide menu when clicked outside
     });
-  }
 
   //Mobile Menu
   if ($(window).width() <= 784) {
@@ -52,6 +50,7 @@
             $(this).removeClass('menu__item--open');
           }
         });
+
     //Mobile Why
     $(function() {
       $('.why__item-title').on('click', function() {
@@ -188,10 +187,10 @@
   $('.popap-menu__item').on('click', function() {
     $('.popap-menu__item').removeClass('active');
     $(this).addClass('active');
-    var loc = window.location.hash;
+    const loc = window.location.hash;
     if (loc != "") {
-      var href = loc;
-      var target = $('.tab').find(href);
+      const href = loc;
+      const target = $('.tab').find(href);
       $('.tab').removeClass('active');
       $('.tab[href="'+href  +'"]').addClass('active');
       $('.tab-item').hide();
@@ -201,7 +200,6 @@
       } else {
         $(".results").removeClass('open');
       }
-      window.location.split("#")[0];
     }
   });
 
