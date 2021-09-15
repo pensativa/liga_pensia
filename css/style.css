@@ -14,6 +14,13 @@
   font-weight: bold;
   font-display: swap; }
 
+@font-face {
+  font-family: 'Avenir Next Cyr';
+  src: url("../fonts/AvenirNextCyr-Medium.woff") format("woff"), url("../fonts/AvenirNextCyr-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 450;
+  font-display: swap; }
+
 /*Переменные*/
 .wrapper, .header__navigation {
   max-width: 1200px;
@@ -733,11 +740,7 @@ template {
     .mobile-menu .top-menu__phones .link-icon:last-of-type {
       display: none; }
   .mobile-menu .top-menu__phone {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    color: #0a0000;
-    padding: 20px; }
+    display: none; }
     .mobile-menu .top-menu__phone .top-menu__icon {
       margin-right: 20px; }
   .mobile-menu .profil {
@@ -2655,6 +2658,15 @@ body::after {
   border: none; }
 
 @media (max-width: 785px) {
+  .modal {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(0);
+            transform: translate(0); }
   .modal__list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
@@ -2677,7 +2689,7 @@ body::after {
 
 .page__title {
   font-size: 42px;
-  font-weight: normal;
+  font-weight: 450;
   margin: 0;
   padding: 70px 0 30px; }
   .page__title--center {
@@ -2743,7 +2755,7 @@ body::after {
       width: 50%; }
 
 .no-page__title {
-  font-weight: normal;
+  font-weight: 450;
   font-size: 42px;
   margin: 0 0 40px; }
 
@@ -2763,6 +2775,7 @@ body::after {
 @media (max-width: 785px) {
   .page__title {
     font-size: 24px;
+    font-weight: 450;
     padding-top: 50px;
     margin-bottom: 30px; }
   .page--faq {
@@ -2921,11 +2934,14 @@ body::after {
   .taxes__title {
     font-weight: 450;
     font-size: 16px;
-    line-height: 21px; }
+    line-height: 21px;
+    text-align: center; }
   .taxes h4 {
     font-weight: 450;
     font-size: 13px;
-    line-height: 18px; }
+    line-height: 18px;
+    width: 100%;
+    text-align: right; }
   .taxes__item {
     max-width: 293px; }
   .taxes .payments,
@@ -2977,7 +2993,8 @@ body::after {
     background: url("../img/finance.png") no-repeat center; }
 
 .page-list__title {
-  width: 60%; }
+  width: 60%;
+  font-weight: 450; }
 
 .page-list {
   list-style: none;
@@ -2998,7 +3015,7 @@ body::after {
 .page-list__main .page-list {
   margin-top: 50px; }
 
-.page-list--perehod {
+.page-list--perehod .page-list__item:first-of-type {
   max-width: 600px; }
 
 .page-list__item {
@@ -3017,7 +3034,7 @@ body::after {
     background-color: #035c67; }
   .page-list__item h2 {
     font-size: 16px;
-    font-weight: normal;
+    font-weight: 450;
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
     text-transform: uppercase; }
@@ -3054,7 +3071,7 @@ body::after {
 .page-list__name {
   font-size: 20px;
   margin-top: 0;
-  font-weight: normal;
+  font-weight: 450;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   text-transform: uppercase; }
@@ -3118,6 +3135,8 @@ body::after {
     padding-left: 20px;
     background-size: 30% auto;
     background-position: top 30px right; }
+    .page-list__main .page-list__item:last-of-type h2 {
+      max-width: 200px; }
   .page-list__item {
     padding-left: 25px; }
     .page-list__item::before {
@@ -3153,7 +3172,7 @@ body::after {
 .perehod {
   padding-top: 40px;
   padding-left: 63px;
-  background: url("../img/why.png") no-repeat top 114px right 48px/32% auto; }
+  background: url("../img/why.png") no-repeat top 86px right 48px/32% auto; }
 
 .perehod__accent {
   background-color: #f7f6f3;
@@ -3165,7 +3184,8 @@ body::after {
 .perehod__title {
   margin: 0 0 20px;
   font-size: 20px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: 450; }
 
 .perehod__how {
   margin-bottom: 80px; }
@@ -3231,6 +3251,7 @@ body::after {
 .uslovia__title {
   text-align: center;
   font-size: 20px;
+  font-weight: 450;
   text-transform: uppercase;
   margin: 0 auto 70px;
   max-width: 690px; }
@@ -3295,11 +3316,16 @@ body::after {
     background: none;
     padding-left: 20px; }
     .uslovia .page__title {
-      text-align: center; }
+      text-align: center;
+      font-weight: 450; }
     .uslovia > * {
       max-width: 100%; }
   .uslovia__accent {
     padding: 40px 0 0; }
+    .uslovia__accent .uslovia__title {
+      font-weight: 450;
+      max-width: 335px;
+      margin: 0 auto 50px; }
     .uslovia__accent .page-list__name {
       font-size: 16px; }
     .uslovia__accent .page-list-num {
@@ -3323,7 +3349,7 @@ body::after {
         background: url("../img/business_agreement.png") no-repeat center/contain; }
   .uslovia__title {
     font-size: 16px;
-    font-weight: normal; }
+    font-weight: 450; }
   .list-page__item {
     padding: 25px 35px;
     margin-bottom: 20px;

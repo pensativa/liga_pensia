@@ -358,18 +358,18 @@
         Після заповнення заявки співробітник компанії “Ліга Пенсія” перевірить Ваші дані та згодом сконтактує з Вами щодо подальшого оформлення пенсійного контракту.
       </li>
     </ul>
-    <form class="modal__form" action="" method="post">
+    <form class="modal__form modal__form--page" action="" method="post">
         <label for="username" class="modal__label">ПІБ</label>
-        <input class="modal__input" id="username" type="text" name="username" required="">
+        <input class="modal__input" id="username" type="text" name="username" placeholder="Призвище Ім’я По-батькові" required="">
         <label for="userphone" class="modal__label">Телефон</label>
         <input class="modal__input" id="userphone" type="tel" name="userphone" placeholder="+38 (XXX) XXX XXXX" required="">
         <label for="useremail" class="modal__label">Email</label>
-        <input class="modal__input modal__label--file" id="useremail" type="email" name="useremail" required="">
+        <input class="modal__input modal__label--file" id="useremail" type="email" name="useremail" placeholder="Еmail" required="">
         <div class="modal__input modal__input--file">
           <label for="file" class="modal__label modal__label--file">Загрузить</label>
-          <input class="file" type="file" name="file" multiple="" required="">
+          <input class="file" type="file" name="file" placeholder="Паспорт / ID картка та ІПН" multiple="" required="">
         </div>
-        <p class="modal__prim">*Паспорт та ідентифікаційний код (будь ласка, додайте копії усіх заповнених сторінок паспорта та ІПН)</p>
+        <p class="modal__prim">*будь ласка, додайте копії усіх заповнених сторінок паспорта або копію ID-карти та копію індивідуального податкового номеру. Оберіть “додати ще один документ”, щоб додати декілька файлів.</p>
         <div class="modal__checkbox">
           <input class="modal__none modal__label--file" id="agreement" type="checkbox" name="agreement" checked="" required="">
           <label class="modal__label-check" for="agreement">Даю дозвіл на збір і обробку персональних даних*</label>
