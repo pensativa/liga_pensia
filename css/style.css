@@ -1939,13 +1939,13 @@ input[type=range]:-moz-focusring {
 
 .moneybox__text {
   max-width: 959px;
-  margin: 0 auto 30px; }
+  margin: 0 auto 70px; }
 
 .moneybox__button {
-  margin-bottom: 70px; }
+  margin-bottom: 50px; }
 
 .moneybox__list-wrapper {
-  margin: 0 auto;
+  margin: 30px auto;
   overflow-x: scroll;
   -ms-overflow-style: none; }
   .moneybox__list-wrapper::-webkit-scrollbar {
@@ -1973,7 +1973,8 @@ input[type=range]:-moz-focusring {
   .moneybox__title {
     font-size: 20px; }
   .moneybox__text {
-    font-size: 13px; }
+    font-size: 13px;
+    margin-bottom: 30px; }
   .moneybox__list-wrapper {
     overflow-x: normal; }
   .moneybox__list {
@@ -2607,7 +2608,6 @@ body::after {
 
 .modal__prim {
   font-size: 14px;
-  text-transform: lowercase;
   color: #6F6F6F;
   margin-bottom: 25px; }
 
@@ -2914,7 +2914,8 @@ body::after {
     font-weight: 450;
     font-size: 20px;
     line-height: 26px;
-    padding-bottom: 0px; }
+    padding-bottom: 0px;
+    text-align: center; }
   .title__uppercase {
     font-weight: 450;
     font-size: 16px;
@@ -2937,7 +2938,7 @@ body::after {
     font-size: 13px;
     line-height: 18px;
     width: 100%;
-    text-align: right; }
+    text-align: left; }
   .taxes__item {
     max-width: 293px; }
   .taxes .payments,
