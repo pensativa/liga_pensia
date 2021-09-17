@@ -958,7 +958,7 @@ template {
   max-width: 600px;
   list-style: none; }
   .calc__list .page-list__item {
-    margin-top: 10px;
+    margin-bottom: 10px;
     text-transform: uppercase; }
     .calc__list .page-list__item:nth-of-type(even)::before {
       background-color: #f5a800; }
