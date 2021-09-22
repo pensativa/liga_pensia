@@ -633,7 +633,7 @@ template {
     font-size: 13px; } }
 
 .top-menu {
-  width: 160px;
+  width: 170px;
   margin-top: 25px;
   -ms-flex-negative: 0;
       flex-shrink: 0; }
@@ -644,9 +644,6 @@ template {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: relative; }
 
 .lang {
@@ -2318,15 +2315,15 @@ input[type=range]:-moz-focusring {
 .menu__item--footer {
   position: absolute;
   top: 60px;
-  right: 78px; }
+  right: 66px; }
 
 .top-menu--footer {
   margin: 0; }
 
 .top-menu__social--footer {
   position: static;
-  display: block;
-  margin-top: 70px; }
+  display: inline-block;
+  min-height: auto; }
 
 @media (max-width: 1200px) {
   .menu__item--footer {
@@ -2549,7 +2546,7 @@ body::after {
   border: none;
   border-bottom: 1px solid #f5a800;
   padding: 6px 10px;
-  font-size: 11px;
+  font-size: 14px;
   margin-bottom: 30px;
   outline: 0; }
 
@@ -2560,19 +2557,24 @@ body::after {
   background-color: rgba(245, 168, 0, 0.1); }
 
 .modal__input::-webkit-input-placeholder {
-  color: #F8CB5E; }
+  color: #F8CB5E;
+  font-weight: 450; }
 
 .modal__input::-moz-placeholder {
-  color: #F8CB5E; }
+  color: #F8CB5E;
+  font-weight: 450; }
 
 .modal__input:-ms-input-placeholder {
-  color: #F8CB5E; }
+  color: #F8CB5E;
+  font-weight: 450; }
 
 .modal__input::-ms-input-placeholder {
-  color: #F8CB5E; }
+  color: #F8CB5E;
+  font-weight: 450; }
 
 .modal__input::placeholder {
-  color: #F8CB5E; }
+  color: #F8CB5E;
+  font-weight: 450; }
 
 .modal__input--file {
   margin-bottom: 10px;
@@ -2754,7 +2756,8 @@ body::after {
         -ms-flex-align: center;
             align-items: center; }
     .no-page .wrapper > div {
-      width: 50%; }
+      width: 50%;
+      text-align: center; }
 
 .no-page__title {
   font-weight: 450;
@@ -2806,7 +2809,6 @@ body::after {
   .benefits-taxes__text {
     padding-bottom: 70px;
     margin-right: 90px;
-    text-indent: 40px;
     max-width: 605px;
     font-weight: normal;
     font-size: 16px;
@@ -2823,15 +2825,11 @@ body::after {
   max-width: 903px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 21px;
-  text-indent: 40px; }
+  line-height: 21px; }
 
 .discount__content span,
 .discount__text span {
   text-transform: uppercase; }
-
-.discount__content-link {
-  text-indent: 0px; }
 
 .discount__list {
   list-style: none;
@@ -4068,8 +4066,7 @@ body::after {
 
 .umovy__text {
   max-width: 660px;
-  padding-bottom: 60px;
-  text-indent: 40px; }
+  padding-bottom: 60px; }
 
 .umovy__advanteges {
   padding: 50px 0;
