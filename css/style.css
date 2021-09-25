@@ -2644,6 +2644,50 @@ body::after {
   margin: 0 auto;
   border: none; }
 
+.open-account {
+  font-family: "Avenir Next Cyr", "Arial", sans-serif !important; }
+
+.msf-content .text-block:nth-child(2), .msf-header .text-block:nth-child(2) {
+  font-weight: 450;
+  font-style: normal; }
+
+.step.active .step-circle {
+  width: 60px !important;
+  height: 60px !important; }
+
+.progress-steps .step .label {
+  font-family: "Avenir Next Cyr", "Arial", sans-serif; }
+
+.progress-steps .step.active .label {
+  font-weight: bold;
+  text-decoration: underline; }
+
+.step-circle--one {
+  border: none !important;
+  background: url("../img/one.png") no-repeat center/contain !important; }
+
+.step-circle--two {
+  border: none !important;
+  background: url("../img/two.png") no-repeat center/contain !important; }
+
+.step-circle--three {
+  border: none !important;
+  background: url("../img/three.png") no-repeat center/contain !important; }
+
+.ajaxform.modal__form {
+  width: 490px; }
+
+p.input-subtitle {
+  font-family: "Avenir Next Cyr", "Arial", sans-serif;
+  font-style: normal;
+  color: #035c67;
+  margin-top: -15px; }
+
+button.button.eds {
+  width: 100%;
+  font-size: 16px;
+  font-family: "Avenir Next Cyr", "Arial", sans-serif; }
+
 @media (max-width: 785px) {
   .modal {
     padding: 20px;

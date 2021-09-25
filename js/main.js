@@ -316,6 +316,11 @@
             }
         }
     });
-
-
+    $('#phone_number').mask('+38 (000) 000 0000', {
+        'translation': {
+            0: {
+                pattern: /[0-9+]/
+            }
+        }
+    });
 }(jQuery));
