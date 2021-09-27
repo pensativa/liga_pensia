@@ -160,7 +160,7 @@
   //Download files
   $('.file').change(function() {
     if ($(this).val() != '') $(this).prev().text('Обрано файлів: ' + $(this)[0].files.length);
-    else $(this).prev().text('Загрузить');
+    else $(this).prev().text('Завантажити');
   });
 
   //Tabs

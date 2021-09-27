@@ -3535,7 +3535,7 @@ button.button.eds {
   background: url("../img/delivery_hand.png") no-repeat bottom right/37% auto; }
 
 .tab-item--four {
-  background: url("../img/communication_chat.png") no-repeat bottom right; }
+  background: url("../img/communication_chat.png") no-repeat bottom right/auto 100%; }
 
 .page--npf .tab-item {
   padding-left: 0; }
@@ -3546,6 +3546,9 @@ button.button.eds {
     text-transform: uppercase; }
   .tab__text a {
     text-transform: uppercase; }
+
+.tab-item--four .tab__text--upper {
+  padding-bottom: 120px; }
 
 .tab__button {
   margin: 47px 0 100px; }
@@ -3652,7 +3655,9 @@ button.button.eds {
   .tab__table td {
     padding: 0 15px 15px 0; }
   .tab-item--four {
-    background: url("../img/communication_chat.png") no-repeat center right/25% auto; } }
+    background: url("../img/communication_chat.png") no-repeat center right/25% auto; }
+  .tab-item--four .tab__text--upper {
+    padding-bottom: 50px; } }
 
 .pay-form {
   display: -webkit-box;
