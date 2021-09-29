@@ -753,9 +753,20 @@ template {
   background: #f7f6f3 url("../img/top-bg-desctop.jpg") no-repeat bottom center/100% auto;
   padding-top: 120px; }
 
+.title__button {
+  margin-bottom: 255px; }
+
 @media (min-width: 1850px) {
   .title {
-    padding-top: 265px; } }
+    padding-top: 85px; }
+  .title__button {
+    margin-bottom: 450px; } }
+
+@media (min-width: 2000px) {
+  .title {
+    padding-top: 260px; }
+  .title__button {
+    margin-bottom: 590px; } }
 
 .title__wrapper {
   text-align: center;
@@ -778,15 +789,6 @@ template {
 
 .title__img-mob {
   display: none; }
-
-.title__button {
-  margin-bottom: 255px; }
-
-@media (min-width: 2000px) {
-  .title {
-    padding-top: 280px; }
-  .title__button {
-    margin-bottom: 380px; } }
 
 @media (max-width: 785px) {
   .title {
@@ -2024,7 +2026,7 @@ input[type=range]:-moz-focusring {
       right: 25px; }
   .faq__link--list {
     color: #0a0000;
-    padding: 20px 5px;
+    padding: 20px 25px;
     border-bottom: 1px solid #E0E0E0;
     position: relative; }
     .faq__link--list::after, .faq__link--list::before {
@@ -3793,7 +3795,7 @@ button.button.eds {
     font-size: 16px; } }
 
 .team {
-  background: url("../img/team.png") no-repeat top -50px right; }
+  background: url("../img/hats.png") no-repeat top -20px right; }
 
 .team__text {
   max-width: 70%; }
@@ -3804,13 +3806,13 @@ button.button.eds {
     font-size: 20px;
     font-weight: normal; }
 
+.bold {
+  font-weight: 450; }
+
 .team__list {
   list-style: none;
   padding: 0;
   margin-bottom: 70px; }
-
-.team__full-text {
-  display: none; }
 
 .team__link a {
   padding: 15px 20px;
@@ -4071,6 +4073,16 @@ button.button.eds {
 .report__download-list {
   padding-bottom: 0; }
 
+.other-report-block {
+  margin-top: 100px; }
+  .other-report-block h4 {
+    text-align: center;
+    margin-bottom: 27px;
+    font-weight: 450; }
+  .other-report-block .report__download-list {
+    background-color: #f7f6f3;
+    padding: 25px 0 1px; }
+
 @media (max-width: 785px) {
   .report__list {
     -webkit-box-orient: vertical;
@@ -4084,7 +4096,7 @@ button.button.eds {
     margin-bottom: 10px; } }
 
 .umovy {
-  background: url(../img/business.png) no-repeat top 18px right/28% auto;
+  background: url("../img/business.png") no-repeat top 18px right/28% auto;
   padding: 0 20px 0 142px; }
 
 .uper {
@@ -4102,10 +4114,13 @@ button.button.eds {
   font-size: 20px;
   margin: 0 0 25px;
   text-transform: uppercase;
-  font-weight: normal;
+  font-weight: 450;
   text-align: center; }
   .umovy__title--under {
     text-decoration: underline; }
+  .umovy__title--left {
+    text-align: left;
+    margin: 40px 0 35px; }
 
 .umovy__advanteges-list {
   display: -webkit-box;
@@ -4120,7 +4135,7 @@ button.button.eds {
 
 .umovy__list p,
 .umovy__list h3 {
-  width: 275px; }
+  width: 295px; }
 
 .umovy__list h3 {
   font-size: 20px;
@@ -4129,21 +4144,21 @@ button.button.eds {
 
 .umovy__left li:first-of-type {
   margin-bottom: 80px;
-  margin-left: 37%; }
+  margin-left: 32%; }
 
 .umovy__left li:nth-of-type(2) {
   margin-bottom: 96px; }
 
 .umovy__left li:nth-of-type(3) {
   margin-bottom: 55px;
-  margin-left: 9%; }
+  margin-left: 10%; }
 
 .umovy__left li:nth-of-type(4) {
   margin-left: 59%; }
 
 .umovy__right li:first-of-type {
   margin-bottom: 77px;
-  margin-left: -30%; }
+  margin-left: -23%; }
   .umovy__right li:first-of-type::before {
     background-image: url("../img/fiveth.png"); }
 
@@ -4154,12 +4169,12 @@ button.button.eds {
 
 .umovy__right li:nth-of-type(3) {
   margin-bottom: 50px;
-  margin-left: -10%; }
+  margin-left: -9%; }
   .umovy__right li:nth-of-type(3)::before {
     background-image: url("../img/seven.png"); }
 
 .umovy__right li:nth-of-type(4) {
-  margin-left: -67%; }
+  margin-left: -25%; }
   .umovy__right li:nth-of-type(4)::before {
     background-image: url("../img/eight.png"); }
 
@@ -4225,11 +4240,12 @@ button.button.eds {
     background: url("../img/arrow.png") no-repeat center/contain; }
 
 .umovy__shema-item {
-  width: 255px; }
+  width: 280px; }
 
 .umovy__shema-titel {
   font-size: 18px;
   padding: 20px 15px;
+  margin-bottom: 25px;
   background: url("../img/over-green.png") no-repeat center/contain; }
 
 .umovy__page-list > li {
@@ -4261,7 +4277,8 @@ button.button.eds {
   .umovy__what-img p {
     text-align: left;
     text-transform: uppercase;
-    color: #035c67; }
+    color: #035c67;
+    font-weight: 450; }
     .umovy__what-img p::before {
       content: "";
       width: 16px;
