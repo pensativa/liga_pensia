@@ -2067,7 +2067,8 @@ input[type=range]:-moz-focusring {
     padding: 20px 60px;
     border-bottom: 2px solid #EBEBEB; }
   .faq__detail--list {
-    padding: 20px; }
+    padding: 20px;
+    background: #f7f6f3; }
 
 .faq__list--main .faq__detail > p {
   padding: 20px 60px 0; }
@@ -3799,12 +3800,12 @@ button.button.eds {
 
 .team__text {
   max-width: 70%; }
-  .team__text h2 {
+  .team__text ~ h2 {
     text-transform: uppercase;
     margin: 50px 0 30px;
     text-align: center;
     font-size: 20px;
-    font-weight: normal; }
+    font-weight: 450; }
 
 .bold {
   font-weight: 450; }
@@ -3863,7 +3864,7 @@ button.button.eds {
   background: #C4C4C4;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin-right: 40px;
+  margin-right: 38px;
   margin-top: 0;
   text-align: center;
   font-size: 18px;
@@ -3906,7 +3907,7 @@ button.button.eds {
       bottom: -15px;
       right: -18px;
       background: url("../img/team.png") no-repeat center/contain; }
-    .team__text h2 {
+    .team__text ~ h2 {
       max-width: 70%;
       text-align: left;
       font-size: 20px; }
@@ -4005,7 +4006,7 @@ button.button.eds {
   font-size: 20px;
   text-align: center;
   text-transform: uppercase;
-  font-weight: normal;
+  font-weight: 450;
   margin: 0 0 45px; }
 
 .report__list {
@@ -4097,7 +4098,7 @@ button.button.eds {
 
 .umovy {
   background: url("../img/business.png") no-repeat top 18px right/28% auto;
-  padding: 0 20px 0 142px; }
+  padding: 0 20px; }
 
 .uper {
   text-transform: uppercase; }
@@ -4210,7 +4211,7 @@ button.button.eds {
     height: 21px;
     display: block;
     position: absolute;
-    top: 109px;
+    top: 215px;
     left: 35%;
     -webkit-transform: rotate(130deg);
             transform: rotate(130deg);
@@ -4248,9 +4249,11 @@ button.button.eds {
   margin-bottom: 25px;
   background: url("../img/over-green.png") no-repeat center/contain; }
 
-.umovy__page-list > li {
-  display: inline-block;
-  margin-right: 65px; }
+.umovy__page-list {
+  margin-bottom: 30px; }
+  .umovy__page-list > li {
+    display: inline-block;
+    margin-right: 65px; }
 
 .umovy__disc {
   max-width: 650px;
@@ -4363,6 +4366,8 @@ button.button.eds {
   .umovy__shema-list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
+    .umovy__shema-list::before {
+      right: 31%; }
   .page-list {
     margin-bottom: 0; }
     .page-list > li {

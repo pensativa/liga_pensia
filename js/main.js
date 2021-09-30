@@ -107,9 +107,10 @@
   // FAQ Accordion
   $(".faq__link").on("click", function() {
     if ($(this).hasClass('open')) {
-      $(this).removeClass('open')
+      $(this).removeClass('open');
     } else {
-      $(this).addClass('open')
+      $(".faq__link").removeClass('open');
+      $(this).addClass('open');
     }
     $(".faq__detail:visible").slideUp();
     if (!$(this).next().is(":visible")) {
@@ -119,9 +120,10 @@
 
   $(".faq__link--next").on("click", function() {
     if ($(this).hasClass('open')) {
-      $(this).removeClass('open')
+      $(this).removeClass('open');
     } else {
-      $(this).addClass('open')
+      $(".faq__link--next").removeClass('open');
+      $(this).addClass('open');
     }
     $(".faq__detail--next:visible").slideUp();
     if (!$(this).next().is(":visible")) {
