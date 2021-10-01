@@ -3613,6 +3613,8 @@ button.button.eds {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     overflow-x: scroll; }
+    .tabs::-webkit-scrollbar {
+      width: 0; }
   .tab {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 150px;
@@ -3912,7 +3914,7 @@ button.button.eds {
       width: 149px;
       height: 175px;
       position: absolute;
-      bottom: -15px;
+      bottom: -150px;
       right: -18px;
       background: url("../img/team.png") no-repeat center/contain; }
     .team__text ~ h2 {
@@ -3951,9 +3953,10 @@ button.button.eds {
   display: block !important;
   height: 0;
   overflow: hidden; }
+  .results iframe {
+    max-width: 100%; }
   .results.open {
-    height: auto;
-    overflow-x: scroll; }
+    height: auto; }
 
 .download-list {
   list-style: none;
@@ -4677,9 +4680,10 @@ button.button.eds {
   .audit-report::after {
     content: "";
     position: absolute;
-    top: -177px;
-    left: 0;
-    background: url("../img/delivery_hand.png") no-repeat center/50%; }
+    top: -24px;
+    height: 133px;
+    left: -20px;
+    background: url("../img/delivery_hand.png") no-repeat left top/50%; }
   .download-list--document {
     padding: 30px 20px 136px; } }
 
