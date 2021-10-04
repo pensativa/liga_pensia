@@ -367,7 +367,10 @@ template {
   border-radius: 2px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background-color: #f5a800; }
+  background-color: #f5a800;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
   .button:hover, .button:focus, .button:active {
     background: #ffbc28;
     color: #f6f6f6;
@@ -380,7 +383,11 @@ template {
   padding: 13px 15px;
   border: 1px solid #0a0000;
   margin-top: 30px;
-  background: transparent; }
+  background: transparent;
+  text-align: center;
+  -webkit-box-ordinal-group: 3 !important;
+      -ms-flex-order: 2 !important;
+          order: 2 !important; }
   .button--pay.button--payacc {
     padding: 12px 50px;
     border-color: #035c67;
@@ -1811,6 +1818,8 @@ input[type=range]:-moz-focusring {
     .profitability__grafic-text::before {
       width: 20px;
       height: 20px; }
+  .grafic__text {
+    margin: 0px 14px !important; }
   .profitability__grafic-discr {
     font-size: 13px; }
   .profitability__footer {
@@ -3916,7 +3925,7 @@ button.button.eds {
       position: absolute;
       bottom: -150px;
       right: -18px;
-      background: url("../img/team.png") no-repeat center/contain; }
+      background: url("../img/hats.png") no-repeat center/contain; }
     .team__text ~ h2 {
       max-width: 70%;
       text-align: left;
@@ -4380,11 +4389,13 @@ button.button.eds {
     .umovy__shema-list::before {
       right: 31%; }
   .page-list {
-    margin-bottom: 0; }
+    margin-bottom: 50px; }
     .page-list > li {
       display: block;
       margin-left: 20px;
       margin-right: 0; }
+    .page-list ~ .page-list__button {
+      margin-bottom: 50px; }
   .umovy__what {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -4680,10 +4691,11 @@ button.button.eds {
   .audit-report::after {
     content: "";
     position: absolute;
-    top: -24px;
-    height: 133px;
-    left: -20px;
-    background: url("../img/delivery_hand.png") no-repeat left top/50%; }
+    top: -67px;
+    height: 170px;
+    width: 100%;
+    left: 0;
+    background: url("../img/delivery_hand.png") no-repeat center top/contain; }
   .download-list--document {
     padding: 30px 20px 136px; } }
 
