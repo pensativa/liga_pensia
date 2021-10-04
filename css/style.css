@@ -384,10 +384,7 @@ template {
   border: 1px solid #0a0000;
   margin-top: 30px;
   background: transparent;
-  text-align: center;
-  -webkit-box-ordinal-group: 3 !important;
-      -ms-flex-order: 2 !important;
-          order: 2 !important; }
+  text-align: center; }
   .button--pay.button--payacc {
     padding: 12px 50px;
     border-color: #035c67;
@@ -749,7 +746,7 @@ template {
     margin-right: 50%;
     -webkit-transform: translateX(50px);
             transform: translateX(50px); }
-  .button--pay {
+  .top-menu .button--pay {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
@@ -2828,7 +2825,7 @@ button.button.eds {
     margin-bottom: 30px; }
   .page--faq {
     background-position: top 10px right;
-    background-size: 20% auto; }
+    background-size: 18% auto; }
   .no-page .wrapper > div {
     width: 100%;
     text-align: center; }
@@ -2837,8 +2834,8 @@ button.button.eds {
 
 @media (max-width: 680px) {
   .page--faq {
-    background-position: top 27px right;
-    background-size: 23% auto; } }
+    background-position: top 16px right;
+    background-size: 20% auto; } }
 
 .benefits-taxes {
   margin: 0; }
