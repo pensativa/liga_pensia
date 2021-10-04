@@ -1,0 +1,133 @@
+.page__title {
+  font-size: 42px;
+  font-weight: 450;
+  margin: 0;
+  padding: 70px 0 30px;
+
+  &--center {
+    text-align: center;
+  }
+}
+
+.page--calc {
+  background-color: $sec-color;
+
+  & .page__title {
+    color: #f6f6f6;
+  }
+}
+
+.page--faq {
+  padding-bottom: 100px;
+  padding-left: 98px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 44px;
+    right: -120px;
+    width: 25%;
+    height: 312px;
+    background: url('../img/communication.png') no-repeat top center/contain;
+  }
+
+  &.page--faq-fiz::before {
+    top: 44px;
+    left: -160px;
+    right: auto;
+    width: 20%;
+  }
+
+  &.page--faq-fiz::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -22px;
+    right: -120px;
+    width: 29%;
+    height: 346px;
+    background: url('../img/faq.png') no-repeat center/contain;
+  }
+}
+
+.no-page {
+  background: $bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+
+   & .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    & > div {
+      width: 50%;
+      text-align: center;
+    }
+   }
+}
+
+.no-page__title {
+  font-weight: 450;
+  font-size: 42px;
+  margin: 0 0 40px;
+}
+
+@media (max-width: 1430px) {
+  .page--faq {
+    padding-left: 20px;
+    background: url('../img/communication.png') no-repeat top right/27% auto;
+
+    &.page--faq.page--faq-fiz {
+      background-image: url('../img/faq.png');
+    }
+
+    & .page__title {
+      width: 70%;
+    }
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .page--faq.page--faq-fiz::after {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page__title {
+    font-size: 24px;
+    font-weight: 450;
+    padding-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .page--faq {
+    background-position: top 10px right;
+    background-size: 18% auto;
+  }
+
+  .no-page .wrapper > div {
+    width: 100%;
+    text-align: center;
+  }
+
+  .no-page__title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 680px) {
+  .page--faq {
+    background-position: top 16px right;
+    background-size: 20% auto;
+  }
+}

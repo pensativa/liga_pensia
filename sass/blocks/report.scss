@@ -1,0 +1,113 @@
+.report__title {
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 450;
+  margin: 0 0 45px;
+}
+
+.report__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+}
+
+.report__item a {
+  color: $text-color;
+  text-transform: capitalize;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 25px;
+  min-width: 76px;
+
+  &::before {
+    content: "";
+    width: 52px;
+    height: 67px;
+    display: block;
+    margin: 0 auto 20px;
+    background: url('../img/download-pdf.png') no-repeat center/contain;
+  }
+}
+
+.report__grafics {
+  text-align: center;
+}
+
+.report__grafic {
+  margin-bottom: 140px;
+}
+
+.report__grafic-name {
+  color: #fff;
+  font-size: 18px;
+  font-weight: normal;
+  text-transform: uppercase;
+  max-width: 330px;
+  padding: 20px 25px;
+  margin: 0 auto 40px;
+  background: url('../img/title.png') no-repeat center/contain;
+}
+
+.report__qa {
+  margin-bottom: 100px;
+}
+
+.report__faq-list {
+
+  & .faq__item {
+    background: $bg-color;
+    margin-bottom: 30px;
+  }
+
+  & .faq__link--list {
+    color: $sec-color;
+    border-bottom: none;
+
+    &.open::after {
+      background-color: $sec-color;
+    }
+  }
+}
+
+.information-report .faq__item:last-of-type {
+  margin-top: 0;
+}
+
+.callback--npf {
+  display: none;
+}
+
+.report__download-list {
+  padding-bottom: 0;
+}
+
+.other-report-block {
+  margin-top: 100px;
+
+  & h4 {
+    text-align: center;
+    margin-bottom: 27px;
+    font-weight: 450;
+  }
+
+  & .report__download-list {
+    background-color: $bg-color;
+    padding: 25px 0 1px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .report__list {
+    flex-direction: column;
+    max-height: 645px;
+  }
+
+  .report__item a::before {
+    width: 45px;
+    height: 56px;
+    margin-bottom: 10px;
+  }
+}

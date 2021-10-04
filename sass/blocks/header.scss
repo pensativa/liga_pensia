@@ -1,0 +1,46 @@
+.header {
+  background-color: $bg-color;
+}
+
+.header--page {
+  padding-bottom: 20px;
+  box-shadow: 0px 4px 20px rgba(141, 141, 141, 0.25);
+
+  & .top-menu__social {
+    display: none;
+  }
+}
+
+.header__navigation {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 20px;
+  position: relative;
+
+  @extend %wrapper;
+}
+
+@media (max-width: $mobile-width) {
+  .header__navigation {
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 62px;
+    flex-wrap: wrap;
+  }
+
+  .header__logo {
+    max-width: 68px;
+  }
+
+  .header--page {
+    padding-bottom: 0;
+
+    & .top-menu__social {
+      display: block;
+    }
+
+    & .header__navigation {
+      padding-bottom: 20px;
+    }
+  }
+}

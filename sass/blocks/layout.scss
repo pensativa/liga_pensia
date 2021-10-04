@@ -1,0 +1,51 @@
+body {
+  font-size: 13px;
+  font-family: $regular-font;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+  min-width: 375px;
+  height: 100%;
+  line-height: 1.3;
+  background-color: #fff;
+}
+
+a {
+  color: $sec-color;
+  display: inline-block;
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    color: $prime-color;
+  }
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+@media (min-width: 786px) {
+  body {
+    font-size: 17px;
+  }
+}

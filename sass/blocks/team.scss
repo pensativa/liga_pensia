@@ -1,0 +1,178 @@
+.team {
+  background: url('../img/hats.png') no-repeat top -20px right;
+}
+
+.team__text {
+  max-width: 70%;
+
+  & ~ h2 {
+    text-transform: uppercase;
+    margin: 50px 0 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 450;
+  }
+}
+
+.bold {
+  font-weight: 450;
+}
+
+.team__list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 70px;
+}
+
+.team__link a {
+  padding: 15px 20px;
+  background: url("../img/over-black-two.png") no-repeat center;
+}
+
+.team__item {
+  margin-bottom: 100px;
+  display: flex;
+  align-items: flex-start;
+  transition: 0.5s;
+
+  &.active {
+    position: fixed;
+    z-index: 2;
+    width: 1130px;
+    padding: 60px 40px;
+    max-width: 94%;
+    top: 2%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+    background: #F7F6F3;
+    box-shadow: 0px 8px 20px rgba(123, 122, 122, 0.25);
+
+    & .team__full-text {
+      display: block;
+    }
+
+    & .team__short-text {
+      display: none;
+    }
+
+    & .team__link a {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 45px;
+      right: 60px;
+      font-size: 0;
+      background: url('../img/cross.png') no-repeat center/contain;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.team__photo {
+  width: 220px;
+  height: 272px;
+  background: #C4C4C4;
+  flex-shrink: 0;
+  margin-right: 38px;
+  margin-top: 0;
+  text-align: center;
+  font-size: 18px;
+  position: relative;
+
+  .team__photo-text {
+    padding-top: 20px;
+  }
+}
+
+.team__name {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+  padding-left: 40px;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-color: $prime-color;
+    position: absolute;
+    top: 2px;
+    left: 0;
+  }
+}
+
+.team__position {
+  text-transform: uppercase;
+  margin: -15px 0 20px 40px;
+}
+
+@media (max-width: $mobile-width) {
+  .team {
+    background: none;
+  }
+
+  .team__text {
+    max-width: 100%;
+    margin-bottom: 50px;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 149px;
+      height: 175px;
+      position: absolute;
+      bottom: -150px;
+      right: -18px;
+      background: url('../img/hats.png') no-repeat center/contain;
+    }
+
+    & ~ h2 {
+      max-width: 70%;
+      text-align: left;
+      font-size: 20px;
+    }
+  }
+
+  .team__item {
+    flex-direction: column;
+  }
+
+  .team__photo {
+    margin: 0 auto 20px;
+  }
+
+  .team__name {
+    text-transform: inherit;
+    max-width: 231px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .team__position {
+    max-width: 231px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 40px;
+  }
+
+  .team__link a {
+    padding: 15px 34px;
+  }
+
+  .team__item.active {
+    max-width: 100%;
+    max-height: 100%;
+    overflow-y: scroll;
+
+    & .team__link a {
+      top: 20px;
+      right: 0px;
+    }
+  }
+}

@@ -1,0 +1,165 @@
+.investments {
+  background: #f2f2f2;
+  padding: 70px 0 100px;
+  text-align: center;
+}
+
+.investments__title {
+  font-weight: normal;
+  font-size: 42px;
+  margin: 0 0 30px;
+}
+
+.investments__text {
+  max-width: 960px;
+  margin: 0 auto 60px;
+}
+
+.investments__vars {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+  padding: 0;
+  list-style: none;
+}
+
+.investments__var {
+  width: 200px;
+}
+
+.investments__percent {
+  width: 160px;
+  padding: 60px;
+  margin: 0 auto 25px;
+  font-size: 14px;
+  font-weight: bold;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &--one {
+    background-image: url("../img/6_1.png");
+  }
+
+  &--two {
+    background-image: url("../img/6_2.png");
+  }
+
+  &--three {
+    background-image: url("../img/6_3.png");
+  }
+
+  &--four {
+    background-image: url("../img/6_4.png");
+  }
+
+  &--five {
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 173px;
+      height: 243px;
+      display: block;
+      position: absolute;
+      top: 7px;
+      left: 0;
+      background: url("../img/five.png") no-repeat top left /contain;
+    }
+
+    & ~ .investmets__instr {
+      margin-top: 65px;
+    }
+  }
+}
+
+.investmets__instr {
+  text-align: left;
+  list-style: disc;
+
+  & li {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .investments {
+    padding: 50px 0;
+  }
+
+  .investments__title {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .investments__text {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .investments__var {
+    width: 330px;
+    margin-bottom: 40px;
+  }
+
+  .investments__percent {
+    background: none;
+    padding: 0;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 68px;
+      height: 68px;
+      margin-right: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      vertical-align: middle;
+    }
+
+    &--one::before {
+      background-image: url("../img/6_1-mob.png");
+    }
+
+    &--two::before {
+      background-image: url("../img/6_2-mob.png");
+    }
+
+    &--three::before {
+      background-image: url("../img/6_3-mob.png");
+    }
+
+    &--four::before {
+      background-image: url("../img/6_4-mob.png");
+    }
+
+    &--five::after {
+      width: 147px;
+      height: 215px;
+      top: -1px;
+      left: -78px;
+      background-image: url("../img/five-mob.png");
+    }
+
+    &--five ~ .investmets__instr {
+      margin-top: 36px;
+      margin-left: 70px;
+    }
+  }
+
+  .investmets__instr {
+    text-align: center;
+    list-style: none;
+
+    & li {
+      margin-bottom: 10px;
+    }
+  }
+
+  .investmets__button {
+    display: none;
+  }
+}

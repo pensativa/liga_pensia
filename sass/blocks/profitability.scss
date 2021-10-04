@@ -1,0 +1,169 @@
+.profitability {
+  background-color: $bg-color;
+  padding: 70px 0 80px;
+
+  & .wrapper{
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 123px;
+      right: -95px;
+      width: 267px;
+      height: 224px;
+      background: url('../img/benefits_taxes.png') no-repeat center/contain;
+    }
+  }
+}
+
+@media (max-width: 1390px) {
+  .profitability .wrapper {
+    background: url('../img/benefits_taxes.png') no-repeat top 126px right -10px/17% auto;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 810px) {
+  .profitability .wrapper {
+    background: none;
+  }
+}
+
+.profitability__title {
+  font-weight: normal;
+  font-size: 42px;
+  text-align: center;
+  margin: 0 0 30px;
+}
+
+
+.profitability__list,
+.profitability__grafics {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  list-style: none;
+}
+
+.profitability__grafics {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profitability__grafic {
+  margin-bottom: 40px;
+  max-width: 340px;
+  background-color: #fff;
+}
+
+.profitability__list-item.page-list__item:nth-of-type(even)::before {
+  background-color: #f5a800;
+}
+
+.grafic__title {
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 0;
+  font-weight: 450;
+  text-align: center;
+  background-color: $prime-color;
+}
+
+.grafic__text {
+  margin: 0px 25px !important;
+  padding: 20px 0;
+  border-top: 1px solid #EFEFEF;
+  font-size: 16px;
+
+  &.page-list__item::before {
+    top: 22px;
+    left: 8px;
+    background-color: $prime-color !important;
+  }
+
+  & span {
+    font-weight: 450;
+  }
+}
+
+.profitability__grafic--sec {
+  & .grafic__title {
+    color: #fff;
+    background-color: $sec-color;
+  }
+
+  & .grafic__text.page-list__item::before {
+    background-color: $sec-color !important;
+  }
+
+}
+
+.profitability__grafic-text {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+.profitability__grafic-discr {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.profitability__footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: $mobile-width) {
+  .profitability__list {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .profitability__list-item {
+    margin-bottom: 20px;
+  }
+
+  .profitability__grafics {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .profitability__grafic {
+    min-width: 320px;
+    background: #fff;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0 20px 20px;
+  }
+
+  .profitability__grafic-name {
+    font-size: 15px;
+  }
+
+  .profitability__grafic-text {
+    font-size: 14px;
+
+    &::before {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .grafic__text {
+    margin: 0px 14px !important;
+  }
+
+  .profitability__grafic-discr {
+    font-size: 13px;
+  }
+
+  .profitability__footer {
+    display: none;
+  }
+}

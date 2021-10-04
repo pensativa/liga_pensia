@@ -1,0 +1,703 @@
+@media only screen and (min-width: 1920px){
+	
+}
+
+@media only screen and (max-width: 6000px){
+	.showmob {
+		display: none;
+	}
+	.hidmob{
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 1300px){
+	
+}
+
+@media only screen and (max-width: 1200px){
+	.header-section .header-top .header-social {
+		padding-right: 40px;
+	}
+	/*.liga-calculator .benefit-title h4 {
+		padding: 0 285px;
+	}*/
+	.liga-calculator .pension-result {
+		font-size: 54px;
+	}
+	.liga-about .sec-title,
+	.liga-advantages .sec-title {
+		padding: 0;
+	}
+	.liga-advantages .steps:nth-child(1)::after, 
+	.liga-advantages .steps:nth-child(2)::after {
+		display: none;
+	}
+	.liga-steps .steps:before {
+		-webkit-transform: translate(-50%,-50%) scale(.7);
+		-moz-transform: translate(-50%,-50%) scale(.7);
+		-ms-transform: translate(-50%,-50%) scale(.7);
+		-o-transform: translate(-50%,-50%) scale(.7);
+		transform: translate(-50%,-50%) scale(.7);
+	}
+	.footer-top .liga-btn-two {
+		font-size: 18px;
+		padding: 15px 45px;
+	}
+	.msf-step:nth-child(1):after, 
+	.msf-step:nth-child(2):after {
+		left: 265px;
+	}
+	.slick-dots li button:before {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 1164px){
+	.liga-calculator .pension-subtitle.left {
+		margin-bottom: 11.5px;
+		text-align: right;
+		margin-right: 20px;
+	}
+	.liga-calculator .pension-result {
+		font-size: 51px;
+		padding: 5px 0;
+	}
+}
+
+@media only screen and (max-width: 1140px){
+	.header-social {
+		padding-right: 0;
+	}
+	.liga-calculator .pension-result {
+		font-size: 46px;
+		padding: 5px 0;
+	}
+}
+
+@media only screen and (min-width: 768px){
+	
+}
+
+@media only screen and (max-width: 1023px){
+	
+}
+
+@media only screen and (max-width: 992px){
+	header {
+		min-height: 150px;
+	}
+	.header-top .header-top-inner {
+    	padding: 7px 0;
+	}
+	.header-section.compressed .header-bottom .logo img {
+		max-width: 50%;
+    }
+	.header-section .navigation-content .col-hide {
+    	display: none;
+    }
+    .header-section .navigation-content .row:nth-child(2).mt-50 {
+    	margin-top: 0;
+    }
+    .header-section .navigation-content {
+		padding-top: 35px;
+	}
+	.header-section .header-top .header-social {
+		padding-right: 40px;
+	}
+	.navigation-content .row.mt-100,
+	.navigation-content .col-pad {
+		padding-top: 25px;
+		margin-top: .5rem;
+	}
+	.tooltip.bottom .tooltip-content {
+		bottom: calc(-100% - 38px);
+	}
+	.liga-intro .image-wrap img {
+		position: relative;
+		top: unset;
+		left: unset;
+		transform: unset;
+	}
+	.liga-intro h2.intro-subtitle {
+		margin-bottom: 40px;
+	}
+	.liga-advantages .steps-wrap {
+		margin-bottom: 20px;
+		-webkit-box-align: center!important;
+		-webkit-align-items: center!important;
+		-ms-flex-align: center!important;
+		align-items: center!important;
+		-webkit-justify-content: flex-start!important;
+		-ms-flex-pack: start!important;
+		justify-content: flex-start!important;
+	}
+	.liga-advantages .steps-wrap .step-info {padding-top: 0}
+	.liga-advantages .steps-wrap .step-info br {display: none;}
+	.liga-calculator .range-items {
+		/*padding-right: 0;*/
+		padding: 0 45px;
+		margin-bottom: 60px;
+	}
+	.liga-calculator .benefit-title br,
+	.liga-intro .subtitle br {
+		display: none;
+	}
+	.liga-calculator .benefit-title.pb-40 {
+		padding: 40px 0;
+	}
+	.liga-calculator .pension-result {
+		font-size: 24px;
+		line-height: 32px;
+		text-align: center;
+	}
+	.liga-calculator .battery-title {
+		text-align: center;
+	}
+	.liga-calculator .benefits-wrap > div {
+		justify-content: center;
+	}
+	.liga-calculator .calc-button {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	.liga-banner .image-wrap img {
+		width: 100%;
+	}
+	.liga-banner .background-item {
+		display: none;
+	}
+	.liga-calculator .pr-0 {padding-right: 15px!important;}
+	.liga-calculator p.calc-attention br,
+	.liga-banner h2.title br,
+	.liga-info h2.title br,
+	.liga-faq h1.faq-title br {display: none;}
+	.footer .footer-bottom .social-list li {
+		padding-left: 10px;
+	}
+	.footer .liga-btn-two {
+		width: unset;
+	}
+	.msf-step:nth-child(1):after, 
+	.msf-step:nth-child(2):after {
+		left: 185px;
+	}
+	.msf-social ul.social-networks li {
+		margin-bottom: 10px;
+		margin-right: 0;
+	}
+	.msf-social ul.social-networks {
+		flex-direction: column;
+	}
+
+}
+
+@media only screen and (max-width: 991px){
+	.header-top {
+		padding-bottom: 15px;
+	}
+	.header-section .header-top .header-social {
+		padding-right: 0;
+	}
+	.header-section .navigation {
+		background-image: none;
+	}
+	.header-top .navbar-nav {
+		display: none;
+    }
+	.header-top .header-links {
+		display: none;
+    }
+	.header-top .header-right-wrap {
+    	-webkit-justify-content: flex-end;
+    	-ms-flex-pack: end;
+    	justify-content: flex-end;
+    }
+    .header-top .header-right-wrap .header-social li:first-child {
+    	margin-right: 0;
+    }
+    .header-top .header-right-wrap .header-social li {
+    	margin-left: 10px;
+    }
+	.header-section .header-top .header-right-wrap .header-social a:nth-child(2) span,
+	.header-section .header-top .header-right-wrap .header-social li:nth-child(2) span {
+		display: none;
+	}
+	.header-bottom .header-pay {
+		 padding-right: 0px; 
+	}
+	.header-bottom .logo img {
+		width: 150px;
+	}
+	.header-bottom .header-button .liga-btn-two {
+		padding: 10px 39px;
+		font-size: 18px;
+	}
+	.liga-steps .steps:nth-child(1),
+	.liga-steps .steps:nth-child(2) {
+		margin-bottom: 50px;
+	}
+	/*.footer .footer-column .footer-column-inner {
+		padding: 0 100px;
+	}*/
+	.footer-top .liga-btn-two {
+		font-size: 18px;
+		padding: 15px 55px;
+	}
+	.liga-appointment .contact-info {
+		margin-top: 50px;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	.showmob {
+		display: block;
+	}
+	.hidmob {
+		display: none;
+	}
+	.sm-column-reverse {
+		-ms-flex-direction: column-reverse!important;
+		flex-direction: column-reverse!important;
+	}
+	.col-reverse {
+		display: -webkit-box!important;
+		display: -webkit-flex!important;
+		display: -ms-flexbox!important;
+		display: flex!important;
+		-ms-flex-direction: column-reverse!important;
+		flex-direction: column-reverse!important;
+	}
+	header {
+		min-height: 140px;
+	}
+	.navigation-content .row.mt-100,
+	.navigation-content .col-pad {
+		padding-top: 0;
+		margin-top: 0;
+	}
+	.navigation .navigation-content .col-lg-10 .row:first-child .col-lg-3:first-child .menu-title {
+		padding-top: 0;
+	}
+	.header-section .navigation {
+		display: unset;
+	}
+	.tooltip.bottom {
+		margin-left: 10px;
+	}
+	.tooltip.bottom .tooltip-content {
+		bottom: calc(-100% - 39px);
+		left: 0;
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+	.tooltip .tooltip-content::after {
+		display: none;
+	}
+	.liga-intro {
+		padding: 50px 0;
+	}
+	.header-bottom .logo img {
+		width: 100px;
+	}
+	.header-bottom .header-pay a {
+		font-size: 16px;
+	}
+	.header-bottom .header-button .liga-btn-two {
+		padding: 10px 23px;
+		font-size: 16px;
+	}
+	.navigation .navigation-content .menu-title {
+		padding-top: 25px;
+	}
+	.navigation .navigation-content .col-md-3:first-child .menu-title {
+		padding-top: 0;
+	}
+	.header-section .navigation .closebtn {
+		top: 0;
+		right: 25px;
+	}
+	.header-section .navigation-content {
+    	padding: 35px 0;
+	}
+	.header-top .drop-content ul {
+		top: -5px;
+	}
+	.sec-title h2,
+	.liga-banner .sec-title h2,
+	.liga-calculator .calc-sec-title h2,
+	section .info-title h2 {
+		font-size: 35px;
+		text-align: center!important;
+	}
+	section.banner-section .section-title h1.title {
+		font-size: 35px;
+	}
+	.liga-faq #trickslist {
+		width: 100%
+	}
+	.liga-faq .tipstricks {
+		font-size: 18px;
+	}
+	.liga-calculator .calc-sec-title h2 {
+		margin-bottom: 50px;
+	}
+	.liga-calculator .range-items #age-range {
+		margin-top: 0!important;
+	}
+	.liga-banner .sec-title h2,
+	.liga-intro .inner-column {
+		text-align: center;
+	}
+	.liga-intro h1.intro-title {
+		font-size: 32px;
+		line-height: 35px;
+	}
+	.hidxs,
+	.liga-calculator .col-md-4.hidxs {
+		display: none!important;
+	} 
+	.liga-calculator .switch-button {
+		margin-bottom: .5rem;
+	} 
+	.liga-calculator .bar {
+		display: none;
+	}
+	.liga-calculator .benefits-wrap > div {
+		justify-content: center;
+		padding: 2px 5px;
+	}
+	.liga-calculator .benefits-wrap img {
+		width: 35px;
+		height: 35px;
+	}
+	.liga-calculator .person-right-wrap .person-right-bag {
+
+	}
+	.liga-calculator .benefits-wrap h4,
+	.liga-calculator .range-item .range-title {
+		font-size: 18px;
+	}
+	.liga-calculator .person-title {
+		font-size: 24px;
+		padding-bottom: 0
+		margin-bottom: 0;
+		padding-top: 60px;
+	}
+	.liga-calculator .pension-result {
+		font-size: 58px;
+		text-align: center;
+		margin-top: 10px;
+	}
+	/*.liga-calculator .pension-result::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		width: 80px;
+		height: 1px;
+		background: #F2A900;
+	}*/
+	.liga-calculator .benefits-wrap {
+		margin-top: 0;
+		box-shadow: none;
+	}
+
+	.text-block,
+	.liga-advantages .steps h4 {
+		font-size: 18px;
+	}
+	.liga-steps .button-wrap {text-align: center;}
+	.liga-group .logos-wrap {
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		margin-bottom: 30px;
+	}
+	.liga-group .col-md-8 .text-block.mb-30:last-child {
+		margin-bottom: 0;
+	}
+	.liga-group .logos-wrap a{
+		text-align: center;
+	}
+	.liga-group .logos-wrap a:first-child {
+		margin-bottom: 0;
+	}
+	.liga-group .logos-wrap img {
+		width: 40%;
+	}
+	.liga-news .slick-carousel .slick-item .hidxs {
+		display: none;
+	}
+
+	.liga-news .slick-carousel .slick-item {
+		min-height: 280px;
+	}
+
+	.footer .footer-bottom .footer-bottom-logos {
+		text-align: center;
+		padding-bottom: 40px;
+	}
+
+	.footer .footer-bottom .contact-list {
+		padding-bottom: 40px;
+	}
+
+	.footer .footer-bottom .social-list {
+		float: none;
+		text-align: center;
+	}
+
+	.footer .footer-bottom .copyright {
+		float: none;
+	}
+
+	.footer .footer-bottom .copyright p {
+		text-align: center;
+	}
+	.footer .footer-top, 
+	.footer .footer-top .footer-column-inner,
+	.footer .footer-top .fl-menu li .drd-menu {
+		text-align: center;
+	}
+	.footer .footer-top .footer-top-list {
+		margin-bottom: 50px;
+	}
+	.footer .footer-top .footer-column-inner h2.pb-30 {
+		padding-bottom: 0;
+	}
+	.nav-pills .nav-item {
+		margin-bottom: .5em;
+		width: 100%;
+	}
+	.msf-step:nth-child(1):after, 
+	.msf-step:nth-child(2):after {
+		display: none;
+	}
+	.liga-appointment .contact-info .contact-inner {
+		padding: 0 50px;
+	}
+}
+
+@media only screen and (max-width: 699px) {
+	.header-bottom .header-button .liga-btn-two {
+		padding: 10px 18px;
+		font-size: 16px;
+	}
+	.liga-calculator .mobile-block .person-right-wrap .person-right-bag {
+		max-height: 200px;
+		margin-left: 35px;
+	}
+
+	.liga-calculator .person-right-wrap .person-right-car {
+		max-height: 150px;
+	}
+}
+
+
+@media only screen and (max-width: 599px){
+	.slick-arrow {
+		width: 25px;
+		height: 25px;
+	}
+	.slick-prev, .slick-next {
+		margin: 0 -10px;
+	}
+	.slick-dots {
+		bottom: -35px;
+	}
+
+	.liga-calculator .person-right-wrap .person-right-car {
+		max-height: 150px;
+		margin-left: 0;
+	}
+}
+
+@media only screen and (max-width: 576px){
+	.header-section .header-desktop {
+		display: none;
+	}
+	.header-section .header-mobile {
+    	display: block;
+    }
+    .header-section .header-mobile .dropdown_l .selected img { 
+		padding-top: 13px;
+    }
+	.header-top .header-right-wrap {
+    	-webkit-justify-content: flex-start;
+    	-ms-flex-pack: start;
+    	justify-content: flex-start;
+    }
+    .header-top .header-right-wrap .header-social a:last-child img {
+		margin-left: 0;
+		padding-right: 10px;
+	}
+    .header-top .header-right-wrap .header-social li {
+    	margin-left: 0;
+    }
+	.header-top .header-right-wrap .header-social li:first-child {
+    	margin-left: 10px
+    }
+    .header-top .header-right-wrap .header-social li:last-child img {
+    	padding-right: 10px
+    }
+    .header-top .header-right-wrap .header-social ul.phone-menu {
+    	left: calc(100% + 43px);
+    }
+    .header-top .header-right-wrap .header-social ul.phone-menu:before {
+    	left: 4px;
+    	right: unset;
+    }
+	.header-mobile .header-top .menu-btn {
+		padding-right: 0;
+	}
+	.header-top .header-social a {
+		font-size: 14px;
+		margin-left: 10px;
+	}
+	.header-top .header-social li:last-child a {
+		margin-left: 0;
+	}
+	.header-social a:nth-child(2) img {
+		padding-right: 0;
+	}
+	.liga-steps .steps-wrap {
+		-webkit-box-align: center!important;
+		-webkit-align-items: center!important;
+		-ms-flex-align: center!important;
+		align-items: center!important;
+	}
+	.liga-steps .steps-wrap .steps-wrap_info {padding-top: 0;}
+	.liga-steps .steps-wrap .steps-wrap_info br {display: none;}
+	.footer .footer-top {
+		padding-bottom: 50px;
+	}
+	.footer .footer-top,
+	.footer .footer-top .footer-column-inner {
+		text-align: center;
+	}
+
+	.footer .footer-top .footer-column-inner h2.pb-30 {
+		padding-bottom: 20px;
+	}
+
+	.footer .footer-bottom {
+		padding-top: 40px;
+	}
+
+	.footer .footer-bottom .contact-list {
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		text-align: center;
+	}
+	.footer .footer-bottom .contact-list li {
+		padding-bottom: 20px;
+	}
+	.footer .footer-bottom .contact-list li:last-child {
+		padding-bottom: 0;
+	}
+	.liga-contact .contact-info { 
+		width: 95%;
+		top: 10px;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	.liga-intro h1.title {
+		font-size: 55px;
+	}
+	.liga-intro h2.subtitle {
+		font-size: 25px;
+		line-height: 38px;
+	}
+	.header-section .navigation .closebtn {
+		top: 0;
+		right: 25px;
+	}
+	.msf-header .msf-step p {
+		font-size: 14px;
+	}
+	.liga-calculator .mobile-block .person-right-wrap .person-right-bag {
+		max-height: 180px;
+		margin-left: -15px;
+	}
+	.liga-calculator .person-right-wrap .person-right-car {
+		margin-left: -15%;
+	}
+}
+
+@media (max-width: 400px) {
+	.liga-intro h1.intro-title,
+	h2.title {
+		font-size: 32px;
+		line-height: 36px;
+	}
+	.liga-news .slick-carousel .slick-item {
+		min-height: 330px;
+	}
+	.msf-header .msf-step p {
+		font-size: 13px;
+	}
+	.liga-calculator .mobile-block .person-right-wrap .person-right-bag {
+		bottom: 25px
+	}
+}
+
+@media (max-width: 375px) {
+	.header-top .header-social li:last-child span {
+		display: none;
+	}
+	.header-top .header-social .phone-menu li:last-child span {
+		display: block;
+	}
+	.liga-calculator .liga-btn-two,
+	.liga-steps .button-wrap .liga-btn-two {
+		padding: 15px 55px;
+	}
+	.liga-intro h1.intro-title,
+	h2.title {
+		font-size: 26px;
+		line-height: 29px;
+	}
+}
+
+@media only screen and (max-height: 900px) {
+	header.min-head {
+		min-height: 100px;
+	}
+	header.min-head .header-desktop .header-bottom {
+		display: none;
+	}
+	header.min-head .header-section.compressed {
+		padding-bottom: 0;
+	}
+	header.min-head .header-section.compressed .header-desktop {
+		padding-bottom: 0;
+	}
+	header.min-head .header-section.compressed .header-mobile {
+		padding-bottom: 10px;
+	}
+	header.min-head .header-section.compressed .header-desktop .header-top {
+		padding-bottom: 0;
+	}
+	header.min-head .header-desktop .header-top .header-top-inner {
+		border: 0;
+	}
+}
+
+@media only screen and (max-height: 680px) {
+	.header-section .navigation {
+		background-image: none;
+	}
+}

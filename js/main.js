@@ -325,4 +325,15 @@
             }
         }
     });
+
+    //Временный скрипт для старой формы регистрации
+      $(".vodafone").on('click', function() {
+        $(".ajaxform").fadeOut(800);
+        $(".vodafon-form").fadeIn(800);
+      });
+
+      $(".ks").on('click', function() {
+        $(".ajaxform").fadeOut(800);
+        $(".ks-form").fadeIn(800);
+      });
 }(jQuery));

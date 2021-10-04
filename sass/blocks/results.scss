@@ -1,0 +1,14 @@
+.results {
+  text-align: center;
+  display: block !important;
+  height: 0;
+  overflow: hidden;
+
+  & iframe {
+    max-width: 100%;
+  }
+
+  &.open {
+    height: auto;
+  }
+}

@@ -1,0 +1,268 @@
+.page-list__main {
+  padding: 55px 20px 0 80px;
+  position: relative;
+
+  & p {
+    max-width: 800px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 115px;
+    right: -115px;
+    width: 403px;
+    height: 403px;
+    background: url('../img/finance.png') no-repeat center;
+  }
+}
+
+.page-list__title {
+  width: 60%;
+  font-weight: 450;
+}
+
+.page-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 70px;
+  max-width: 800px;
+
+  &.page-list--garant {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+  }
+}
+
+.page-list__main .page-list {
+  margin-top: 50px;
+}
+
+.page-list--perehod .page-list__item:first-of-type {
+  max-width: 600px;
+}
+
+.page-list__item {
+  padding-left: 40px;
+  position: relative;
+  margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    background-color: $prime-color;
+  }
+
+  &:nth-of-type(even)::before {
+    background-color: $sec-color;
+  }
+
+  & h2 {
+    font-size: 16px;
+    font-weight: 450;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+  }
+
+  &.long {
+    width: 100%;
+  }
+
+  & ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  & li {
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 20px;
+
+    &::before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    border: 1px solid $prime-color;
+    border-radius: 50%;
+  }
+
+  &:nth-of-type(even)::before {
+    border-color: $sec-color;
+  }
+  }
+}
+
+.page-list--garant .page-list__item::before {
+  top: 23px;
+}
+
+.item--color::before {
+  background-color: $sec-color;
+}
+
+.page-list--prime {
+  & .page-list__item {
+    &:nth-of-type(even)::before {
+      background-color: $prime-color;
+    }
+  }
+}
+
+.page-list__name {
+  font-size: 20px;
+  margin-top: 0;
+  font-weight: 450;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}
+
+.page-list-num {
+  padding: 0;
+  list-style: none;
+  margin-top: 40px;
+
+  & ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+  }
+}
+
+.page-list-num__item {
+  padding-left: 60px;
+  margin-bottom: 25px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 44px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    top: -7px;
+    left: 0;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &:first-of-type::before {
+    background-image: url('../img/one1.png');
+  }
+
+  &:nth-of-type(2)::before {
+    background-image: url('../img/two2.png');
+  }
+
+  &:nth-of-type(3)::before {
+    background-image: url('../img/three.png');
+  }
+
+  &:nth-of-type(4)::before {
+    background-image: url('../img/four.png');
+  }
+}
+
+.list-page {
+  list-style: none;
+  padding: 0;
+}
+
+.list-page__item {
+  padding: 30px 25px;
+  margin-bottom: 10px;
+  background: url('../img/over.png') no-repeat center/100% auto;
+  display: inline-block;
+}
+
+.page-list__button {
+  margin-bottom: 100px;
+}
+
+@media (max-width: 1430px) {
+  .page-list__title {
+      width: 70%;
+  }
+
+  .page-list__main {
+    background: url('../img/finance.png') no-repeat top 75px right/30% auto;
+  }
+
+  .page-list__main::after {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-list__main {
+    padding-left: 20px;
+    background-size: 30% auto;
+    background-position: top 30px right;
+
+    & .page-list__item:last-of-type h2 {
+      max-width: 200px;
+    }
+  }
+
+  .page-list__item {
+    padding-left: 25px;
+
+    &::before {
+      width: 13px;
+      height: 13px;
+      top: 2px;
+    }
+  }
+
+  .page-list__item li {
+    padding-left: 25px;
+  }
+
+  .page-list-num__item {
+    padding-left: 50px;
+
+    &::before {
+      width: 37px;
+      height: 36px;
+    }
+  }
+
+  .perehod .page-list__title {
+    width: 255px;
+    margin-bottom: 50px;
+  }
+
+  .page-list--perehod {
+    margin-bottom: 0;
+  }
+
+  .page-list__name {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 630px) {
+  .page-list__main {
+    background-size: 35% auto;
+    background-position: top 3% right;
+  }
+
+  .page-list__title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 495px) {
+  .page-list__main {
+    background-position: top 10% right;
+  }
+}

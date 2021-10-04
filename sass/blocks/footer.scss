@@ -1,0 +1,153 @@
+.footer {
+  background: #f7f6f3;
+  padding: 48px 0 40px;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  width: 60px;
+  margin-right: 25px;
+}
+
+.menu--footer {
+  width: 650px;
+  position: relative;
+  margin: 0;
+
+  & .menu__item {
+    width: 160px;
+    margin: 0 25px 25px;
+
+    & .menu__link {
+      font-size: 14px;
+    }
+  }
+}
+
+.menu--footer .popap-menu {
+  display: block;
+  width: 160px;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.menu__item--footer {
+  position: absolute;
+  top: 60px;
+  right: 16px;
+}
+
+.top-menu--footer {
+  margin: 0;
+
+  &.top-menu {
+    width: 220px;
+  }
+
+  & .top-menu__wrapper {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  & .button--pay {
+    margin-top: 0;
+  }
+}
+
+.top-menu__social--footer {
+  position: static;
+  display: inline-block;
+  min-height: auto;
+  margin-top: 145px;
+
+  & .top-menu__icon {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .menu__item--footer {
+    position: static;
+  }
+}
+
+@media (max-width: 935px) {
+  .top-menu--footer {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .footer__wrapper {
+    position: relative;
+  }
+
+  .menu--footer {
+    width: 650px;
+    position: relative;
+    margin: 0;
+    justify-content: center;
+
+    & .popap-menu {
+      width: auto;
+      display: none;
+
+      & .popap-menu__item {
+        border: none;
+        padding: 0 0 20px;
+      }
+    }
+
+    & .menu__item {
+      width: 100%;
+      border-color: #E3DDDD;
+      margin: 0;
+
+      & .menu__link {
+        text-align: left;
+        width: 135px;
+        margin: 0 auto;
+      }
+
+      &--open .popap-menu{
+        display: block;
+      }
+    }
+  }
+
+  .top-menu--footer.top-menu {
+    width: 100%;
+  }
+
+  .top-menu--footer .top-menu__wrapper {
+    width: 100%;
+    align-items: baseline;
+
+    & .top-menu__phones {
+      top: auto;
+      bottom: 0;
+      right: auto;
+      left: 30px
+    }
+  }
+
+  .top-menu__social--footer {
+    margin-top: 10px;
+    text-align: left;
+    order: 2;
+    min-width: 100px;
+    margin-right: 50%;
+    transform: translateX(85px);
+  }
+
+  .top-menu--footer .button--pay {
+    margin-top: 30px;
+    width: 100%;
+  }
+}

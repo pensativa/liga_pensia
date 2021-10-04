@@ -1,0 +1,68 @@
+.download-list {
+  list-style: none;
+  padding: 0 0 100px 0;
+}
+
+.download-list--docs {
+  margin-bottom: 0;
+  background: url('../img/education.png') no-repeat bottom -80px right/50% auto;
+}
+
+.download-list--contracts {
+  padding-bottom: 0;
+  margin-bottom: 100px;
+  background: url('../img/contracts.png') no-repeat top right/30% auto;
+}
+
+.download-list--garnt-contracts {
+  margin-bottom: 0;
+  padding-bottom: 100px;
+}
+
+.download-list__item {
+  margin-bottom: 35px;
+  position: relative;
+  transition: 0.3s;
+
+  & a {
+    color: $text-color;
+    text-transform: uppercase;
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 60px;
+
+    &::before {
+      content: '';
+      width: 38px;
+      height: 36px;
+      display: block;
+      position: absolute;
+      top: -8px;
+      left: 0;
+      background: url("../img/downarrow.png") no-repeat center/contain;
+      opacity: 0;
+    }
+  }
+
+  &:hover a,
+  &:focus a,
+  &:active a {
+    text-decoration: underline;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .download-list--contracts {
+    padding-bottom: 100px;
+    margin-bottom: 0;
+    background-position: bottom right;
+  }
+
+  .download-list--docs {
+    background-position:bottom -23px right;
+  }
+}
