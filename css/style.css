@@ -2705,6 +2705,9 @@ button.button.eds {
   font-size: 16px;
   font-family: "Avenir Next Cyr", "Arial", sans-serif; }
 
+.contract .code-wrapper {
+  display: block; }
+
 @media (max-width: 785px) {
   .modal {
     padding: 20px;
@@ -2729,7 +2732,17 @@ button.button.eds {
     .modal-body h2 {
       font-size: 30px; }
     .modal-body .bigger {
-      font-size: 22px; } }
+      font-size: 22px; }
+  .msf-social ul.social-networks .tooltip {
+    position: relative !important;
+    opacity: 1 !important;
+    z-index: 0 !important; }
+  .msf-social ul.social-networks .banknbu-item .banknbu-icon {
+    background-image: url("../img/logo_nbu.png") i !important; }
+  .contract .code-wrapper .code-dialog {
+    display: block !important; }
+  section.success.white-bg {
+    font-size: 20px; } }
 
 .page__title {
   font-size: 42px;

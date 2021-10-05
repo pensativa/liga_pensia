@@ -336,4 +336,9 @@
         $(".ajaxform").fadeOut(800);
         $(".ks-form").fadeIn(800);
       });
+
+      $(".email-item").on('click', function() {
+        $(".ajaxform").fadeOut(800);
+        $(".email-form").fadeIn(800);
+      });
 }(jQuery));

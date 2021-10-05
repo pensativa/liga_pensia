@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale = 1.0">
   <title>Укласти контракт</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/style-old.css" rel="stylesheet" type="text/css">
   <link href="css/style.css" rel="stylesheet" type="text/css">
-  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link rel="preload" href="fonts/AvenirNextCyr-Bold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/AvenirNextCyr-Regular.woff2" as="font" crossorigin="anonymous">
 </head>
@@ -169,7 +169,7 @@
           <div class="row justify-content-center">
             <div class="col-lg-12 col-md-6 col-sm-12">
               <ul class="social-networks list-group list-group-horizontal">
-                <li class="email-item" style="display:none">
+                <li class="email-item">
                   <a class="email" href="javascript:void(0)"><img style="height:35px" src="http://pluspng.com/img-png/email-icon-png-download-icons-logos-emojis-email-icons-2400.png" alt=""></a>
                 </li>
                 <li class="vodafone-item">
@@ -219,23 +219,23 @@
         <div class="auto-container">
           <div class="row d-flex justify-content-center">
             <div class="col-md-6">
-              <form class="ajaxform" name="reg" url="/registration" method="post">
+              <form class="ajaxform email-form" name="reg" url="/registration" method="post">
                 <input type="hidden" name="form" value="reg">
                 <span class="input input--liga">
-                  <input name="firstname" class="input__field input__field--liga" placeholder="Имя" type="text" id="firstname" required="" />
+                  <input name="firstname" class="input__field input__field--liga" placeholder="Имя" type="text" id="firstname" required="">
                 </span>
                 <span class="input input--liga">
-                  <input name="lastname" class="input__field input__field--liga" placeholder="Фамилия" type="text" id="lastname" required="" />
+                  <input name="lastname" class="input__field input__field--liga" placeholder="Фамилия" type="text" id="lastname" required="">
                 </span>
                 <span class="input input--liga">
-                  <input name="givenname" class="input__field input__field--liga" placeholder="Отчество" type="text" id="givenname" required="" />
+                  <input name="givenname" class="input__field input__field--liga" placeholder="Отчество" type="text" id="givenname" required="">
                 </span>
                 <span class="input input--liga mb-0">
-                  <input name="email" class="input__field input__field--liga" placeholder="Email" type="email" id="email" required="" />
+                  <input name="email" class="input__field input__field--liga" placeholder="Email" type="email" id="email" required="">
                 </span>
                 <p class="input-subtitle">На этот Email придет сообщение об открытии счета</p>
                 <span class="input input--liga mb-0">
-                  <input name="phone" class="input__field input__field--liga" placeholder="+38 (XXX) XXX-XXXX" type="text" id="phone_number" required="" />
+                  <input name="phone" class="input__field input__field--liga" placeholder="+38 (XXX) XXX-XXXX" type="text" id="phone_number" required="">
                 </span>
                 <p class="input-subtitle">На этот номер придет код</p>
                 <span class="toggle toggle--block d-flex align-items-center">
@@ -243,7 +243,7 @@
                   <label class="toggle__label" for="terms">Даю разрешение на сбор и обработку персональных данных<i class="">*</i></label>
                   <label class="toggle__checkbox" for="terms">
                     <svg class="toggle__checkbox-mark" viewBox="0 0 18 18" aria-label="check">
-                      <path d="M6.61 11.89L3.5 8.78 2.44 9.84 6.61 14l8.95-8.95L14.5 4z" />
+                      <path d="M6.61 11.89L3.5 8.78 2.44 9.84 6.61 14l8.95-8.95L14.5 4z"></path>
                     </svg>
                   </label>
                 </span>
@@ -258,7 +258,7 @@
               <form class="ajaxform vodafon-form" name="vodafone" url="/vodafone" method="post" style="display:none">
                 <input type="hidden" name="form" value="vodafone">
                 <span class="input input--liga mb-0">
-                  <input name="phone" class="input__field input__field--liga" placeholder="+38 (XXX) XXX-XXXX" type="text" id="phone_number" required="" />
+                  <input name="phone" class="input__field input__field--liga" placeholder="+38 (XXX) XXX-XXXX" type="text" id="phone_number" required="">
                 </span>
                 <p class="input-subtitle">Телефон подключен к mobileID Vodafone</p>
                 <div class="msf-navigation mt-50">
@@ -272,7 +272,7 @@
               <form class="ajaxform ks-form" name="ks" url="/ks" method="post" style="display:none">
                 <input type="hidden" name="form" value="ks">
                 <span class="input input--liga mb-0">
-                  <input name="phone" class="input__field input__field--liga" placeholder="+38 (XXX) XXX-XXXX" type="text" id="phone_number" required="" />
+                  <input name="phone" class="input__field input__field--liga" placeholder="+38 (XXX) XXX-XXXX" type="text" id="phone_number" required="">
                 </span>
                 <p class="input-subtitle">Телефон подключен к mobileID Киевстар</p>
                 <div class="msf-navigation mt-50">
@@ -369,7 +369,6 @@
   <script src="js/jquery.mask.js"></script>
   <script src="js/main.js"></script>
   <script src="js/app.js"></script>
-  <script src="js/common.js"></script>
 </body>
 
 </html>
