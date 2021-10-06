@@ -814,7 +814,8 @@ template {
   .title__img-mob {
     display: block;
     width: 100%;
-    height: auto; }
+    height: auto;
+    margin-top: 25px; }
   .title__button {
     margin-bottom: 0;
     width: 100vw; } }
@@ -1688,7 +1689,8 @@ input[type=range]:-moz-focusring {
       margin-left: 70px; }
   .investmets__instr {
     text-align: center;
-    list-style: none; }
+    list-style: none;
+    padding-left: 0; }
     .investmets__instr li {
       margin-bottom: 10px; }
   .investmets__button {
@@ -1884,29 +1886,14 @@ input[type=range]:-moz-focusring {
     max-width: 100%; } }
 
 @media (max-width: 785px) {
-  .whu {
+  .why {
     padding: 50px 0 30px; }
   .why__title {
     font-size: 20px; }
   .why__item {
     margin-bottom: 30px; }
   .why__item-title {
-    font-size: 15px;
-    position: relative; }
-    .why__item-title::after {
-      content: "^";
-      display: inline-block;
-      margin-left: 10px;
-      font-weight: normal;
-      -webkit-transform: rotate(180deg) scaleX(1.4);
-              transform: rotate(180deg) scaleX(1.4); }
-    .why__item-title.open::after {
-      -webkit-transition: 0.5s;
-      transition: 0.5s;
-      -webkit-transform: rotate(0deg) scaleX(1.4);
-              transform: rotate(0deg) scaleX(1.4); }
-  .why__item-text {
-    display: none; } }
+    font-size: 15px; } }
 
 .moneybox {
   background-color: #f7f6f3;
