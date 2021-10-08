@@ -50,22 +50,6 @@
             $(this).removeClass('menu__item--open');
           }
         });
-
-    //Mobile Why
-    $(function() {
-      $('.why__item-title').on('click', function() {
-        if ($(this).hasClass('open')) {
-          $(this).removeClass('open');
-        } else {
-          $(this).addClass('open');
-        }
-        $(this).next().slideToggle(300, function() {
-          if ($(this).css('display') === 'none') {
-            $(this).removeAttr('style');
-          }
-        });
-      });
-    });
   }
 
   //Grafic img
@@ -202,18 +186,6 @@
       } else {
         $(".results").removeClass('open');
       }
-    }
-  });
-
-  //Team page
-  $(".team__link a").on('click', function(e) {
-    e.preventDefault();
-    if ($(this).hasClass('close')) {
-      $(this).removeClass('close');
-      $(this).parents(".team__item").addClass('active');
-    } else {
-      $(this).addClass('close');
-      $(this).parents(".team__item").removeClass('active');
     }
   });
 

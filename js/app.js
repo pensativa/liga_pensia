@@ -143,26 +143,24 @@
         var rate = (income / 100) / 12; // Ежемесячная ставка
         var _rate = parseFloat(rate.toFixed(7)); // Ежемесячная ставка = 0,0083333
         var summ1 = deposit * _rate + deposit; // Начальный доход от первого месяца
-        for (var i = 1; i < diff; i++) {
+        for (var i = 2; i < diff; i++) {
             var summ2 = (summ1 + deposit) * _rate + summ1 + deposit;
             summ1 = summ2;
-            summ2 = (summ1 + deposit) * _rate + summ1 + deposit;
+            summ2 = ((summ1 + deposit)  * _rate + summ1 + deposit).toFixed(2);
         } //Накопленная сумма
-        console.log(summ2);
-        var payment1 = summ2 / _period; // Первая выплата за месяц
-        console.log(payment1);
+        var payment1 = (summ2 / _period).toFixed(0); // Первая выплата за месяц
         var summ3 = 0;
         var payment2 = 0;
-        var summ4 = 0;
-        var summ = summ2 - payment1;
+        var summ4 = parseInt(payment1);
+        var summ = summ2 - payment1;//Сумма без первой выплаты
         for (let i = _period - 1; i > 0; i -= 1) {
           summ3 = (summ - payment2) * _rate + summ - payment2;
           summ = summ3;
-          payment2 = (summ3 / i);
+          payment2 = (summ / i);
           summ4 += parseInt(payment2.toFixed(0));
         }
-        console.log(summ4 - payment1);
-        var average = (summ4 - payment1) / _period; // Средняя пенсионая выплата
+        // summ4 - сумма всех выплат
+        var average = summ4 / _period; // Средняя пенсионая выплата
         var _average = average.toFixed(0);
         var nill = 0;
         var maxNum = parseInt(9999999);
