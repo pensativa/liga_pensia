@@ -31,7 +31,7 @@
   text-transform: uppercase; }
 
 body {
-  font-size: 13px;
+  font-size: 15px;
   font-family: "Avenir Next Cyr", "Arial", sans-serif;
   color: #0a0000;
   margin: 0;
@@ -898,7 +898,8 @@ template {
     .work__wrapper > div {
       width: 100%; }
   .work__title {
-    padding-top: 40px; }
+    padding-top: 40px;
+    font-size: 20px; }
   .work__image {
     margin-right: 0; }
   .work__text {
@@ -947,7 +948,8 @@ template {
 .calc__list {
   margin: 0 auto 50px;
   max-width: 600px;
-  list-style: none; }
+  list-style: none;
+  padding-left: 17px; }
   .calc__list .page-list__item {
     margin-bottom: 10px;
     text-transform: uppercase; }
@@ -1792,6 +1794,8 @@ input[type=range]:-moz-focusring {
   margin-top: 20px; }
 
 @media (max-width: 785px) {
+  .profitability {
+    padding: 50px 0; }
   .profitability__list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1976,7 +1980,7 @@ input[type=range]:-moz-focusring {
   padding: 70px 0 100px; }
 
 .faq__title {
-  font-weight: normal;
+  font-weight: 450;
   font-size: 42px;
   margin: 0 0 50px;
   text-align: center; }
@@ -1994,7 +1998,7 @@ input[type=range]:-moz-focusring {
   font-size: 20px;
   margin: 0; }
   .faq__item-title--list {
-    font-weight: normal;
+    font-weight: 450;
     padding-bottom: 10px;
     padding-right: 40px; }
 
@@ -2358,7 +2362,7 @@ input[type=range]:-moz-focusring {
         -ms-flex-order: 2;
             order: 2;
     min-width: 100px;
-    margin-right: 50%;
+    margin-right: 46%;
     -webkit-transform: translateX(85px);
             transform: translateX(85px); }
   .top-menu--footer .button--pay {
@@ -3013,7 +3017,7 @@ button.button.eds {
           -ms-flex-direction: column;
               flex-direction: column; }
     .not-taxed .list-page__item {
-      padding: 33px 35px;
+      padding: 32px 18px;
       margin-right: 30px; }
     .not-taxed .item--right {
       margin-left: 89px;
@@ -3157,7 +3161,7 @@ button.button.eds {
 .list-page__item {
   padding: 30px 25px;
   margin-bottom: 10px;
-  background: url("../img/over.png") no-repeat center/100% auto;
+  background: url("../img/over.svg") no-repeat center/100% auto;
   display: inline-block; }
 
 .page-list__button {
@@ -3197,7 +3201,9 @@ button.button.eds {
   .page-list--perehod {
     margin-bottom: 0; }
   .page-list__name {
-    font-size: 13px; } }
+    font-size: 13px; }
+  .page-list__title {
+    text-align: left; } }
 
 @media (max-width: 630px) {
   .page-list__main {
@@ -3392,11 +3398,11 @@ button.button.eds {
     font-size: 16px;
     font-weight: 450; }
   .list-page__item {
-    padding: 25px 35px;
+    padding: 31px 25px;
     margin-bottom: 20px;
     max-width: 215px;
     position: relative;
-    background: url("../img/over.png") no-repeat center/100% 84%; }
+    background: url("../img/over.svg") no-repeat center/100% 84%; }
   .uslovia__sec .list-page {
     padding-top: 30px;
     max-height: 100%;
@@ -3626,7 +3632,8 @@ button.button.eds {
         -ms-flex: 1 1 150px;
             flex: 1 1 150px;
     margin-right: 20px;
-    min-width: 112px; }
+    min-width: 112px;
+    font-size: 13px; }
     .tab:hover, .tab:focus, .tab:active, .tab.active {
       padding-left: 20px; }
       .tab:hover::before, .tab:focus::before, .tab:active::before, .tab.active::before {
@@ -3798,6 +3805,9 @@ button.button.eds {
     overflow-x: scroll; }
   .about__table {
     min-width: 700px; }
+  .about__table .about__title_table {
+    width: 150px;
+    font-size: 14px; }
   .about__table--garant {
     margin-bottom: 30px; }
   .about__title {
@@ -3916,22 +3926,18 @@ button.button.eds {
     margin-bottom: 50px;
     position: relative; }
     .team__text::after {
-      content: "";
-      width: 149px;
-      height: 175px;
-      position: absolute;
-      bottom: -150px;
-      right: -18px;
-      background: url("../img/hats.png") no-repeat center/contain; }
+      display: none; }
     .team__text ~ h2 {
-      max-width: 70%;
-      text-align: left;
-      font-size: 20px; }
+      max-width: 100%;
+      text-align: center;
+      font-size: 18px;
+      margin: 40px 0 30px; }
   .team__item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    margin-bottom: 50px; }
   .team__photo {
     margin: 0 auto 20px; }
   .team__name {
@@ -4015,9 +4021,16 @@ button.button.eds {
   .download-list--contracts {
     padding-bottom: 100px;
     margin-bottom: 0;
-    background-position: bottom right; }
+    background-position: bottom right;
+    background-size: auto 130px; }
   .download-list--docs {
-    background-position: bottom -23px right; } }
+    background-position: bottom -23px right; }
+  .download-list__item a {
+    font-size: 13px;
+    margin-left: 30px; }
+    .download-list__item a::before {
+      width: 25px;
+      height: 44px; } }
 
 .report__title {
   font-size: 20px;
@@ -4052,6 +4065,13 @@ button.button.eds {
     display: block;
     margin: 0 auto 20px;
     background: url("../img/download-pdf.png") no-repeat center/contain; }
+
+.report__item {
+  width: 16.6%;
+  text-align: center; }
+
+.report__item.no-active {
+  opacity: 0.4; }
 
 .report__grafics {
   text-align: center; }
@@ -4102,12 +4122,18 @@ button.button.eds {
     padding: 25px 0 1px; }
 
 @media (max-width: 785px) {
+  .tabs-content--report {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto; }
   .report__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    max-height: 645px; }
+    max-height: 665px; }
+  .report__item {
+    width: 50%; }
   .report__item a::before {
     width: 45px;
     height: 56px;
@@ -4222,17 +4248,23 @@ button.button.eds {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
     background: url("../img/arrow.png") no-repeat center/contain; }
-  .umovy__shema-img:last-of-type::before {
+
+.umovy__shema-name {
+  position: relative;
+  background: url("../img/oval-o.png") no-repeat center/contain;
+  padding: 15px 25px;
+  margin-bottom: 80px;
+  font-weight: 450;
+  font-size: 18px; }
+  .umovy__shema-name::after {
     content: "";
-    width: 50px;
-    height: 21px;
-    display: block;
+    width: 100%;
+    height: 70px;
+    display: inline-block;
     position: absolute;
-    top: 215px;
-    left: 35%;
-    -webkit-transform: rotate(130deg);
-            transform: rotate(130deg);
-    background: url("../img/arrow.png") no-repeat center/contain; }
+    bottom: -80px;
+    left: 0;
+    background: url("../img/arrowes.png") no-repeat center/contain; }
 
 .umovy__shema-list {
   list-style: none;
@@ -4245,17 +4277,6 @@ button.button.eds {
           justify-content: space-evenly;
   position: relative;
   margin-bottom: 100px; }
-  .umovy__shema-list::before {
-    content: "";
-    width: 50px;
-    height: 21px;
-    display: block;
-    position: absolute;
-    top: -55px;
-    right: 35%;
-    -webkit-transform: rotate(30deg);
-            transform: rotate(30deg);
-    background: url("../img/arrow.png") no-repeat center/contain; }
 
 .umovy__shema-item {
   width: 280px; }
@@ -4267,10 +4288,13 @@ button.button.eds {
   background: url("../img/over-green.png") no-repeat center/contain; }
 
 .umovy__page-list {
-  margin-bottom: 30px; }
+  margin-bottom: 0; }
   .umovy__page-list > li {
     display: inline-block;
-    margin-right: 65px; }
+    margin-right: 65px;
+    margin-bottom: 15px; }
+  .umovy__page-list ~ p {
+    margin-top: 0; }
 
 .umovy__disc {
   max-width: 650px;
@@ -4382,34 +4406,63 @@ button.button.eds {
       text-decoration: none; }
   .umovy__shema-list {
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .umovy__shema-list::before {
-      right: 31%; }
+      content: "";
+      width: 22%;
+      height: 100%;
+      position: absolute;
+      top: -86px;
+      left: 0;
+      background: url("../img/arrowes.svg") no-repeat top right/auto 100%; }
+  .umovy__shema-name {
+    margin-bottom: 60px; }
+    .umovy__shema-name::after {
+      display: none; }
   .page-list {
     margin-bottom: 50px; }
     .page-list > li {
       display: block;
-      margin-left: 20px;
       margin-right: 0; }
     .page-list ~ .page-list__button {
       margin-bottom: 50px; }
+  .umovy__page-list {
+    margin-bottom: 0; }
+  .umovy__title--left {
+    text-align: center; }
   .umovy__what {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     position: relative;
     padding: 20px; }
     .umovy__what .page-list-num {
-      width: 70%; }
+      width: 74%; }
     .umovy__what .umovy__what-img {
       font-size: 16px;
       width: 100%; }
       .umovy__what .umovy__what-img img {
-        position: absolute;
-        top: 40px;
-        right: 30px;
+        float: right;
+        margin: -50px 0 -160px 0;
         max-width: 120px;
         -webkit-transform: translateX(10%);
                 transform: translateX(10%); } }
+
+@media (max-width: 500px) {
+  .umovy__shema-list::before {
+    left: 0;
+    width: 86px;
+    background-position: top left; }
+  .umovy__shema-titel {
+    font-size: 16px;
+    padding: 15px 10px;
+    margin-bottom: 10px; } }
 
 .head-administrator {
   max-width: 900px;
@@ -4642,15 +4695,21 @@ button.button.eds {
     max-width: 350px;
     margin-right: 0;
     font-size: 15px;
-    background: url("../img/Ellipse-bg-picture.png") no-repeat 182px -1px; }
+    background: url("../img/Ellipse-bg-picture.png") no-repeat top right 7px; }
     .about__comment-content img {
       margin-bottom: 0;
       padding-left: 8px; }
     .about__comment-content p {
-      text-align: left; }
+      text-align: left;
+      font-weight: 450;
+      font-size: 16px; }
+      .about__comment-content p span {
+        font-size: 14px;
+        font-weight: normal;
+        margin-top: 10px; }
   .about__comment-text {
     margin-right: 0;
-    padding: 40px 30px; }
+    padding: 40px 30px 70px; }
   .about__comment::after {
     left: 0;
     position: absolute;
@@ -4664,10 +4723,9 @@ button.button.eds {
     font-size: 16px;
     line-height: 21px; }
   .about__comment-content p::before {
-    content: "";
-    width: 14px;
-    height: 14px;
-    margin-right: 5px; }
+    display: none; }
+  .about img {
+    margin: 0; }
   .about__company-title {
     font-weight: 450;
     font-size: 16px;
@@ -4688,8 +4746,8 @@ button.button.eds {
   .audit-report::after {
     content: "";
     position: absolute;
-    top: -67px;
-    height: 170px;
+    top: -29px;
+    height: 145px;
     width: 100%;
     left: 0;
     background: url("../img/delivery_hand.png") no-repeat center top/contain; }
