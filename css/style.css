@@ -4444,14 +4444,14 @@ button.button.eds {
     position: relative;
     padding: 20px; }
     .umovy__what .page-list-num {
-      width: 74%; }
+      width: 72%; }
     .umovy__what .umovy__what-img {
       font-size: 16px;
       width: 100%; }
       .umovy__what .umovy__what-img img {
         float: right;
         margin: -50px 0 -160px 0;
-        max-width: 120px;
+        max-width: 110px;
         -webkit-transform: translateX(10%);
                 transform: translateX(10%); } }
 
