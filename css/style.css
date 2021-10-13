@@ -4535,7 +4535,6 @@ button.button.eds {
 
 .about__comment-content {
   text-transform: uppercase;
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4549,19 +4548,9 @@ button.button.eds {
   max-width: 300px;
   font-size: 20px;
   margin-right: 30px;
-  position: relative;
-  background: url("../img/Ellipse-bg-picture.png") no-repeat center top; }
-  .about__comment-content p::before {
-    content: "";
-    width: 16px;
-    height: 16px;
-    margin-right: 20px;
-    display: inline-block;
-    vertical-align: baseline;
-    background-color: #035c67; }
+  position: relative; }
 
 .about__comment-content > img {
-  padding-left: 58px;
   margin-bottom: 10px;
   display: inline-block; }
 
