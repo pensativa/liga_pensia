@@ -851,7 +851,7 @@ template {
     margin: 40px auto 50px; }
   .adv__point {
     padding-left: 62px;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 18px; }
     .adv__point::before {
       top: 5px;
@@ -1653,7 +1653,7 @@ input[type=range]:-moz-focusring {
     margin-bottom: 20px;
     font-size: 20px; }
   .investments__text {
-    font-size: 13px;
+    font-size: 15px;
     margin-bottom: 20px; }
   .investments__var {
     width: 330px;
@@ -1943,9 +1943,10 @@ input[type=range]:-moz-focusring {
   .moneybox {
     padding: 50px 0 30px; }
   .moneybox__title {
-    font-size: 20px; }
+    font-size: 20px;
+    margin-bottom: 30px; }
   .moneybox__text {
-    font-size: 13px;
+    font-size: 15px;
     margin-bottom: 30px; }
   .moneybox__list-wrapper {
     overflow-x: normal; }
@@ -2970,7 +2971,7 @@ button.button.eds {
     line-height: 21px;
     text-align: center; }
   .benefits-taxes__text {
-    line-height: 18px;
+    font-size: 15px;
     padding-bottom: 260px;
     margin-right: 0px; }
   .benefits-taxes .wrapper {
@@ -2983,7 +2984,7 @@ button.button.eds {
     text-align: center; }
   .taxes h4 {
     font-weight: 450;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 18px;
     width: 100%;
     text-align: left; }
@@ -3000,7 +3001,7 @@ button.button.eds {
     line-height: 21px; }
   .discount__content {
     font-weight: 400;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 18px; }
   .discount__list {
     margin-top: 30px;
