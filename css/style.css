@@ -2383,7 +2383,7 @@ input[type=range]:-moz-focusring {
   background-color: #fff;
   max-height: 100%;
   max-width: 94%;
-  width: 600px;
+  width: 1000px;
   top: 50%;
   left: 50%;
   margin-right: -50%;
@@ -2502,24 +2502,25 @@ body::after {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 300px;
           flex: 1 1 300px;
-  padding: 0 20px 0 40px;
-  margin-bottom: 20px; }
+  padding: 0 20px 0 60px;
+  margin-bottom: 35px; }
   .modal__item::before {
-    content: "\2716";
-    font-size: 36px;
-    font-family: inherit;
+    content: "";
+    width: 43px;
+    height: 40px;
     display: block;
     position: absolute;
     top: -10px;
     left: 0;
-    color: crimson; }
-  .modal__item--plus::before {
-    content: "\2714";
-    color: green; }
-  .modal__item--one::before {
-    background: url("../img/one.png") no-repeat center/contain; }
-  .modal__item--two::before {
-    background: url("../img/two.png") no-repeat center/contain; }
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .modal__item--un::before {
+    background-image: url("../img/un.svg"); }
+  .modal__item--du::before {
+    background-image: url("../img/du.svg"); }
+  .modal__item--tre::before {
+    background-image: url("../img/tre.svg"); }
 
 /*.modal__text {
   background: url('../img/education.png') no-repeat right center/contain;
@@ -2527,22 +2528,22 @@ body::after {
 */
 .modal__form {
   max-width: 94%;
-  margin: 0 auto;
-  max-width: 400px; }
+  max-width: 400px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
   .modal__form--page {
     max-width: 100%;
-    margin-bottom: 50px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    background: url("../img/education.png") no-repeat right center/contain; }
+    padding-bottom: 50px;
+    background: url("../img/education.png") no-repeat bottom -35px right/contain; }
 
 .modal__label {
   font-size: 15px;
@@ -2562,7 +2563,7 @@ body::after {
   margin-bottom: 30px;
   outline: 0; }
   .modal__input--last {
-    margin-bottom: 0; }
+    position: relative; }
 
 .modal__input:hover {
   border-color: #035c67; }
@@ -2629,10 +2630,23 @@ body::after {
     background: url("../img/download.png") repeat-x left top; }
 
 .modal__prim {
-  font-size: 14px;
-  color: #6F6F6F;
-  margin-bottom: 25px;
-  max-width: 400px; }
+  width: 330px;
+  position: absolute;
+  top: 50%;
+  left: 430px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
+@media (max-width: 950px) {
+  .modal__prim {
+    width: 100%;
+    max-width: 400px;
+    position: static;
+    margin-bottom: 20px;
+    -webkit-transform: none;
+            transform: none; }
+  .modal__input--last {
+    margin-bottom: 0; } }
 
 .modal__none {
   display: none; }
