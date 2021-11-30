@@ -150,16 +150,6 @@
   });
 
   //Tabs
-  $('.tabs-wrapper').each(function() {
-    let ths = $(this);
-    ths.find('.tab-item').not(':first').hide();
-    ths.find('.tab').click(function(e) {
-      e.preventDefault();
-      ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
-      ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
-    }).eq(0).addClass('active');
-  });
-
   $('.tabs-wrapper--report').each(function() {
     let ths = $(this);
     ths.find('.tab-item--report').not(':first').hide();
@@ -170,25 +160,15 @@
     }).eq(0).addClass('active');
   });
 
-  $('.popap-menu__item').on('click', function() {
-    $('.popap-menu__item').removeClass('active');
-    $(this).addClass('active');
-    const loc = window.location.hash;
-    if (loc != "") {
-      const href = loc;
-      const target = $('.tab').find(href);
-      $('.tab').removeClass('active');
-      $('.tab[href="'+href  +'"]').addClass('active');
-      $('.tab-item').hide();
-      $(href).fadeIn();
-      if ($('.tab').hasClass('report-tab') && $(this).hasClass('active')) {
-        $(".results").addClass('open');
-      } else {
-        $(".results").removeClass('open');
-      }
-    }
+  $('.tabs-wrapper').each(function() {
+    let ths = $(this);
+    ths.find('.tab-item').not('.active').hide();
+    ths.find('.tab').click(function(e) {
+      e.preventDefault();
+      ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+      ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
+    });
   });
-
   //Section block
 
   $(".team__link").on('click', function(e) {
@@ -233,8 +213,7 @@
                     </div>
                     <div class="modal-body">
                         <h2>Дякуємо!</h2>
-                        <p>Ваші документи успішно завантажені.</p>
-                        <p class="bigger">В найближчий час ми зв’яжемося з Вами та відкриємо рахунок.</p>
+                        <p class="bigger">Представник  “Ліга Пенсія” зв’яжеться з Вами у найближчий час</p>
                     </div>
                 </div>
             </div>
