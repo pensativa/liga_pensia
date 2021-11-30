@@ -2485,15 +2485,7 @@ body::after {
           transform: rotate(-45deg); }
 
 .modal__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   list-style: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   padding: 0;
   margin: 0 0 15px; }
 
@@ -2502,11 +2494,11 @@ body::after {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 300px;
           flex: 1 1 300px;
-  padding: 0 20px 0 60px;
+  padding: 0 20px 0 45px;
   margin-bottom: 35px; }
   .modal__item::before {
     content: "";
-    width: 43px;
+    width: 37px;
     height: 40px;
     display: block;
     position: absolute;
@@ -2546,21 +2538,21 @@ body::after {
     background: url("../img/education.png") no-repeat bottom -35px right/contain; }
 
 .modal__label {
-  font-size: 15px;
-  color: #035c67; }
+  color: #035c67;
+  display: none; }
 
 .modal__input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  max-width: 400px;
+  max-width: 301px;
   min-height: 30px;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #f5a800;
+  border: 2px solid #f5a800;
+  min-height: 46px;
   padding: 6px 10px;
-  font-size: 14px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   outline: 0; }
   .modal__input--last {
     position: relative; }
@@ -2572,23 +2564,23 @@ body::after {
   background-color: rgba(245, 168, 0, 0.1); }
 
 .modal__input::-webkit-input-placeholder {
-  color: #F8CB5E;
+  color: #0a0000;
   font-weight: 450; }
 
 .modal__input::-moz-placeholder {
-  color: #F8CB5E;
+  color: #0a0000;
   font-weight: 450; }
 
 .modal__input:-ms-input-placeholder {
-  color: #F8CB5E;
+  color: #0a0000;
   font-weight: 450; }
 
 .modal__input::-ms-input-placeholder {
-  color: #F8CB5E;
+  color: #0a0000;
   font-weight: 450; }
 
 .modal__input::placeholder {
-  color: #F8CB5E;
+  color: #0a0000;
   font-weight: 450; }
 
 .modal__input--file {
@@ -2633,11 +2625,15 @@ body::after {
   width: 330px;
   position: absolute;
   top: 50%;
-  left: 430px;
+  left: 330px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%); }
 
-@media (max-width: 950px) {
+.modal__form--page .modal__prim {
+  -webkit-transform: translateY(calc(-50% - 50px));
+          transform: translateY(calc(-50% - 50px)); }
+
+@media (max-width: 850px) {
   .modal__prim {
     width: 100%;
     max-width: 400px;
