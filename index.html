@@ -38,24 +38,24 @@
             <li class="popap-menu__item-title">
               Про ТОВ «АДМІНІСТРАТОР ПЕНСІЙНИХ ФОНДІВ «ЛІГА ПЕНСІЯ»
               <ul class="popap-menu--iner">
-                <li class="popap-menu__item"><a class="popap-menu__link" href="administrator-pension-fond.html#about">Про компанію</a></li>
-                <li class="popap-menu__item"><a class="popap-menu__link" href="administrator-pension-fond.html#report">Документи та звітність</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="administrator-pension-fond.html">Про компанію</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="administrator-pension-fond.html?topic=javascript&file=tabs-08&tab=2">Документи та звітність</a></li>
               </ul>
             </li>
             <li class="popap-menu__item-title">
               Про НПФ «ВЗАЄМОДОПОМОГА»
               <ul class="popap-menu--iner">
-                <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html#about">Про фонд</a></li>
-                <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html#results">Показники діяльності</a></li>
-                <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html#report">Документи та звітність</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html">Про фонд</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html?topic=javascript&file=tabs-08&tab=3">Показники діяльності</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="vzaemodopomoga.html?topic=javascript&file=tabs-08&tab=4">Документи та звітність</a></li>
               </ul>
             </li>
             <li class="popap-menu__item-title">
               Про ВНПФ «ГАРАНТ-ПЕНСІЯ»
               <ul class="popap-menu--iner">
-                <li class="popap-menu__item"><a class="popap-menu__link" href="garant-pensia.html#about">Про фонд</a></li>
-                <li class="popap-menu__item"><a class="popap-menu__link" href="garant-pensia.html#results">Показники діяльності</a></li>
-                <li class="popap-menu__item"><a class="popap-menu__link" href="garant-pensia.html#report">Документи та звітність</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="garant-pensia.html">Про фонд</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="garant-pensia.html?topic=javascript&file=tabs-08&tab=3">Показники діяльності</a></li>
+                <li class="popap-menu__item"><a class="popap-menu__link" href="garant-pensia.html?topic=javascript&file=tabs-08&tab=4">Документи та звітність</a></li>
               </ul>
             </li>
           </ul>
@@ -1062,30 +1062,28 @@
   </footer>
   <div id="to-top"></div>
   <section class="modal">
-    <ul class="modal__list">
-      <li class="modal__item modal__item--one">Щоб відкрити пенсійний рахунок заповніть заявку і додайте до неї скан-копії паспорта/ ID карти та ІПН (індивідуального податкового номера). Бажано надсилати скан-копії документів у форматі .pdf, один документ - один файл
-      </li>
-      <li class="modal__item modal__item--two">
-        Після заповнення заявки співробітник компанії “Ліга Пенсія” перевірить Ваші дані та згодом сконтактує з Вами щодо подальшого оформлення пенсійного контракту.
-      </li>
-    </ul>
-    <form class="modal__form modal__form--page" action="" method="post">
+    <h2 class="page__title modal__title">Як почати накопичувати в недержавному пенсійному фонді?</h2>
+      <div class="modal__text">
+        <p>Накопичувати в НПФ дуже просто!
+        <br>Ви самі обираєте – скільки коштів вносити та як часто.
+        <br>Щоб відкрити пенсійний рахунок потрібні лише паспорт та ідентифікаційний код.</p>
+        <p>Для вкладників НПФ:</p>
+        <ul class="modal__list">
+          <li class="modal__item">немає обов’язкових платежів
+          </li>
+          <li class="modal__item">немає графіку внесків
+          </li>
+          <li class="modal__item modal__item--plus">надається податкова знижка – до 18% від річної суми внеску
+          </li>
+        </ul>
+      </div>
+      <form class="modal__form">
         <label for="username" class="modal__label">ПІБ</label>
-        <input class="modal__input" id="username" type="text" name="username" placeholder="Призвище Ім’я По-батькові" required="">
-        <label for="userphone" class="modal__label">Телефон</label>
-        <input class="modal__input" id="userphone" type="tel" name="userphone" placeholder="+38 (XXX) XXX XXXX" required="">
-        <label for="useremail" class="modal__label">Email</label>
-        <input class="modal__input modal__label--file" id="useremail" type="email" name="useremail" placeholder="Еmail" required="">
-        <div class="modal__input modal__input--file">
-          <label for="file" class="modal__label modal__label--file">Завантажити</label>
-          <input class="file" type="file" name="file" placeholder="Паспорт / ID картка та ІПН" multiple="" required="">
-        </div>
-        <p class="modal__prim">*будь ласка, додайте копії усіх заповнених сторінок паспорта або копію ID-карти та копію індивідуального податкового номеру. Оберіть “додати ще один документ”, щоб додати декілька файлів.</p>
-        <div class="modal__checkbox">
-          <input class="modal__none modal__label--file" id="agreement" type="checkbox" name="agreement" checked="" required="">
-          <label class="modal__label-check" for="agreement">Даю дозвіл на збір і обробку персональних даних*</label>
-        </div>
-        <input class="button modal__button" type="submit" value="відправити">
+        <input class="modal__input" id="username" type="text" name="username" placeholder="Призвище Ім’я По-батькові">
+        <label for="userphone" class="modal__label">Телефон*</label>
+        <input class="modal__input modal__input--last" id="userphone" type="tel" name="userphone" placeholder="+38 (XXX) XXX XXXX" required="">
+        <p class="modal__prim">*Залиште номер телефону та отримайте консультацію щодо пенсійних накопичень.</p>
+        <input class="button modal__button" type="submit" value="отримайти консультацію">
         <button class="modal__close" type="button">Закрыть</button>
       </form>
   </section>

@@ -2383,19 +2383,20 @@ input[type=range]:-moz-focusring {
   background-color: #fff;
   max-height: 100%;
   max-width: 94%;
-  width: 1150px;
+  width: 600px;
   top: 50%;
   left: 50%;
   margin-right: -50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 1010;
-  padding: 50px 65px 30px;
+  padding: 30px 65px;
   -webkit-box-shadow: 0px 8px 20px rgba(123, 122, 122, 0.25);
           box-shadow: 0px 8px 20px rgba(123, 122, 122, 0.25);
   display: none; }
-  .modal .modal__item {
-    font-size: 15px; }
+  .modal .modal__title {
+    font-size: 28px;
+    padding: 20px 0 10px; }
 
 .modal--fade {
   width: 1100px;
@@ -2491,35 +2492,57 @@ body::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 0;
   margin: 0 0 15px; }
 
 .modal__item {
   position: relative;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  padding: 0 20px 0 80px;
-  margin-bottom: 15px; }
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
+  padding: 0 20px 0 40px;
+  margin-bottom: 20px; }
   .modal__item::before {
-    content: "";
-    width: 56px;
-    height: 52px;
+    content: "\2716";
+    font-size: 36px;
+    font-family: inherit;
     display: block;
     position: absolute;
-    top: 5px;
-    left: 0; }
+    top: -10px;
+    left: 0;
+    color: crimson; }
+  .modal__item--plus::before {
+    content: "\2714";
+    color: green; }
   .modal__item--one::before {
     background: url("../img/one.png") no-repeat center/contain; }
   .modal__item--two::before {
     background: url("../img/two.png") no-repeat center/contain; }
 
+/*.modal__text {
+  background: url('../img/education.png') no-repeat right center/contain;
+}
+*/
 .modal__form {
-  width: 400px;
   max-width: 94%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  max-width: 400px; }
   .modal__form--page {
-    margin-bottom: 50px; }
+    max-width: 100%;
+    margin-bottom: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background: url("../img/education.png") no-repeat right center/contain; }
 
 .modal__label {
   font-size: 15px;
@@ -2529,6 +2552,7 @@ body::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
+  max-width: 400px;
   min-height: 30px;
   background-color: transparent;
   border: none;
@@ -2537,6 +2561,8 @@ body::after {
   font-size: 14px;
   margin-bottom: 30px;
   outline: 0; }
+  .modal__input--last {
+    margin-bottom: 0; }
 
 .modal__input:hover {
   border-color: #035c67; }
@@ -2605,7 +2631,8 @@ body::after {
 .modal__prim {
   font-size: 14px;
   color: #6F6F6F;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  max-width: 400px; }
 
 .modal__none {
   display: none; }
@@ -2650,7 +2677,7 @@ body::after {
   font-size: 20px; }
 
 .modal__button {
-  margin: 0 auto;
+  margin: 0;
   border: none; }
 
 .open-account {
@@ -2706,13 +2733,18 @@ button.button.eds {
     width: 100%;
     height: 100%;
     overflow-y: scroll; }
+  .modal__form--page {
+    padding-bottom: 150px;
+    background-position: bottom -28px right;
+    background-size: auto 200px;
+    margin-bottom: 0; }
   .modal__list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
     .modal__list .modal__item {
       margin-bottom: 25px; }
   .modal__item {
-    width: 400px;
+    width: auto;
     max-width: 95%; }
   .modal--pay {
     padding: 20px 20px 190px;
@@ -3555,11 +3587,14 @@ button.button.eds {
 .page--payaccount .tab {
   max-width: 100%; }
 
-.tab-item--three {
-  background: url("../img/delivery_hand.png") no-repeat bottom right/37% auto; }
-
-.tab-item--four {
-  background: url("../img/communication_chat.png") no-repeat bottom right/auto 100%; }
+.tab-item {
+  display: none; }
+  .tab-item--three {
+    background: url("../img/delivery_hand.png") no-repeat bottom right/37% auto; }
+  .tab-item--four {
+    background: url("../img/communication_chat.png") no-repeat bottom right/auto 100%; }
+  .tab-item.active {
+    display: block; }
 
 .page--npf .tab-item {
   padding-left: 0; }
@@ -3963,13 +3998,9 @@ button.button.eds {
 
 .results {
   text-align: center;
-  display: block !important;
-  height: 0;
   overflow: hidden; }
   .results iframe {
     max-width: 100%; }
-  .results.open {
-    height: auto; }
 
 .download-list {
   list-style: none;
