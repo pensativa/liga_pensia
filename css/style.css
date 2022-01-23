@@ -378,13 +378,18 @@ template {
             box-shadow: 8px 20px 40px rgba(138, 100, 11, 0.3); }
 
 .button--pay {
+  font-weight: bold;
+  text-decoration: none;
   color: #0a0000;
   font-size: 11px;
   padding: 13px 15px;
   border: 1px solid #0a0000;
   margin-top: 30px;
   background: transparent;
-  text-align: center; }
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
   .button--pay.button--payacc {
     padding: 12px 50px;
     border-color: #035c67;
@@ -2553,7 +2558,8 @@ body::after {
   min-height: 46px;
   padding: 6px 10px;
   margin-bottom: 20px;
-  outline: 0; }
+  outline: 0;
+  font-weight: 450; }
   .modal__input--last {
     position: relative; }
 
@@ -2627,7 +2633,10 @@ body::after {
   top: 50%;
   left: 330px;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); }
+          transform: translateY(-50%);
+  margin: 0;
+  font-size: 18px;
+  font-weight: 450; }
 
 .modal__form--page .modal__prim {
   -webkit-transform: translateY(calc(-50% - 50px));
@@ -2640,7 +2649,9 @@ body::after {
     position: static;
     margin-bottom: 20px;
     -webkit-transform: none;
-            transform: none; }
+            transform: none;
+    font-size: inherit;
+    margin-top: 10px; }
   .modal__form--page .modal__prim {
     -webkit-transform: none;
             transform: none; }
@@ -4787,5 +4798,394 @@ button.button.eds {
     background: url("../img/delivery_hand.png") no-repeat center top/contain; }
   .download-list--document {
     padding: 30px 20px 136px; } }
+
+.color-sec {
+  color: #035c67; }
+
+.text-center {
+  text-align: center; }
+
+.openform input[type="checkbox"]:checked,
+.openform input[type="checkbox"]:not(:checked),
+.openform input[type="radio"]:checked,
+.openform input[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden; }
+
+.openform input[type="checkbox"]:checked + label,
+.openform input[type="checkbox"]:not(:checked) + label,
+.openform input[type="radio"]:checked + label,
+.openform input[type="radio"]:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 13px;
+  font-size: 14px; }
+
+.openform input[type="checkbox"]:checked + label,
+.openform input[type="checkbox"]:not(:checked) + label {
+  line-height: 24px; }
+
+.openform input[type="radio"] + label:before {
+  content: "";
+  left: 0;
+  top: 3px;
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  border: 1px solid #FCBE3A;
+  border-radius: 50%; }
+
+.openform input[type="checkbox"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+  vertical-align: middle;
+  border: 1px solid #FCBE3A; }
+
+.openform input[type="radio"]:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 7px;
+  width: 11px;
+  height: 11px;
+  border: none;
+  background-color: #035c67;
+  border-radius: 50%; }
+
+.openform input[type="checkbox"]:checked + label:before {
+  content: "";
+  display: inline-block;
+  margin-right: 15px;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: url("../img/form/checked.svg") no-repeat center/contain; }
+
+.openform input[type="text"] {
+  background: #F7F6F3;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: 457px;
+  height: 45px;
+  padding: 12px 24px;
+  color: #565656; }
+  .openform input[type="text"]:hover, .openform input[type="text"]:focus, .openform input[type="text"]:active, .openform input[type="text"]:focus-visible {
+    background: #FFFCF1;
+    border: 1px solid #F5A800; }
+  .openform input[type="text"]::-webkit-input-placeholder {
+    color: #9E9E9E !important; }
+  .openform input[type="text"]::-moz-placeholder {
+    color: #9E9E9E !important; }
+  .openform input[type="text"]:-ms-input-placeholder {
+    color: #9E9E9E !important; }
+  .openform input[type="text"]::-ms-input-placeholder {
+    color: #9E9E9E !important; }
+  .openform input[type="text"]::placeholder {
+    color: #9E9E9E !important; }
+
+.openform__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .openform__title::after {
+    content: "";
+    width: 218px;
+    height: 218px;
+    display: block;
+    background: url("../img/form/achievements.svg") no-repeat center right/contain;
+    margin-left: 30px; }
+
+.openform__title .page__title {
+  font-weight: 450;
+  font-size: 38px;
+  text-transform: uppercase;
+  max-width: 642px;
+  margin: 80px 0; }
+
+.openform__accent-section {
+  background: rgba(255, 250, 227, 0.5);
+  padding: 45px 0; }
+  .openform__accent-section .page-list__item {
+    padding-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: 450; }
+    .openform__accent-section .page-list__item .color-sec {
+      padding: 0 5px; }
+    .openform__accent-section .page-list__item::before {
+      position: static;
+      display: inline-block;
+      margin-right: 20px; }
+
+.openform__shema {
+  max-width: 630px;
+  margin: 0 auto 45px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.openform__shema-main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%; }
+  .openform__shema-main p {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 25px 62px;
+    background: url("../img/form/bg-border.svg") no-repeat center/contain; }
+  .openform__shema-main::after {
+    content: "";
+    width: 320px;
+    height: 68px;
+    display: block;
+    margin: 0 auto;
+    background: url("../img/form/form-arrows.svg") no-repeat top center/contain; }
+
+.openform__shema-sec {
+  width: 260px; }
+
+.openform__shema-sec-title {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 34px 18px;
+  background: url("../img/form/border.svg") no-repeat center/contain; }
+
+.openform__text {
+  max-width: 630px;
+  margin: 0 auto;
+  font-weight: 450; }
+
+.openform__choise .wrapper {
+  max-width: 680px;
+  margin: 50px auto 80px; }
+  .openform__choise .wrapper h2 {
+    font-weight: 450;
+    font-size: 20px;
+    margin-bottom: 20px; }
+
+.openform__choise label {
+  font-size: inherit !important; }
+
+@media (max-width: 930px) {
+  .openform__title .page__title {
+    font-size: 30px;
+    max-width: 71%; }
+  .openform__title::after {
+    content: "";
+    width: 25%;
+    margin-left: 3%; } }
+
+@media (max-width: 778px) {
+  .openform__title .page__title {
+    font-size: 28px;
+    max-width: 100%;
+    margin-bottom: 10px;
+    margin-top: 0; }
+  .openform__title::after {
+    content: "";
+    width: 100%;
+    height: 150px;
+    margin-left: 0;
+    margin-bottom: 30px;
+    background-position: center; }
+  .openform__accent-section .page-list__item {
+    display: block; }
+  .openform__shema {
+    display: block; }
+  .openform__shema-main {
+    width: 260px; }
+    .openform__shema-main::after {
+      display: none; }
+  .openform__shema-sec {
+    margin-left: 50px; } }
+
+.openform-reg .wrapper {
+  position: relative;
+  margin-top: 36px; }
+
+.openform-reg .wrapper::before {
+  content: "";
+  width: 286px;
+  height: 286px;
+  background-position: center right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  right: -7%; }
+
+.openform-reg--both .wrapper::before {
+  background-image: url("../img/done.png"); }
+
+.openform-reg--vzaem .wrapper::before {
+  background-image: url("../img/benefits_taxes.png"); }
+
+.openform-reg--garant .wrapper::before {
+  background-image: url("../img/why.png"); }
+
+.openform-reg .page__title {
+  max-width: 630px;
+  margin: 0 auto 30px;
+  font-weight: 450;
+  font-size: 24px;
+  text-transform: uppercase; }
+
+.registration {
+  margin: 40px 0 80px; }
+
+.registration__item {
+  margin-bottom: 20px; }
+  .registration__item label {
+    width: 215px;
+    margin-right: 25px;
+    display: inline-block; }
+
+.registration__item--checkbox {
+  max-width: 420px;
+  margin: 50px 0 70px 240px; }
+  .registration__item--checkbox label {
+    width: 100%; }
+
+.registration__btn {
+  margin-left: 350px; }
+
+@media (max-width: 1400px) {
+  .openform-reg {
+    overflow-x: hidden; } }
+
+@media (max-width: 1030px) {
+  .openform-reg .wrapper {
+    margin-top: 0; }
+  .openform-reg .wrapper::before {
+    display: block;
+    position: static;
+    width: 100%;
+    height: 180px; }
+  .openform-reg .page__title {
+    padding-top: 0; } }
+
+@media (max-width: 745px) {
+  .registration__item label {
+    width: 100%;
+    margin-bottom: 10px; }
+  .registration__item--checkbox {
+    margin: 30px 0; }
+  .registration__btn {
+    margin-left: 0; } }
+
+.bankid .wrapper {
+  margin-bottom: 60px;
+  max-width: 785px; }
+
+.bankid .page__title {
+  font-weight: 450;
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-transform: uppercase; }
+  .bankid .page__title::after {
+    content: "";
+    width: 137px;
+    height: 67px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../img/form/bankid.png") no-repeat center/contain; }
+
+.bankid__block {
+  background: #FFC524 url("../img/form/dashed.svg") no-repeat center/97% 100%;
+  border-radius: 20px;
+  padding: 54px 35px 34px;
+  max-width: 770px;
+  font-size: 16px;
+  margin-bottom: 20px; }
+  .bankid__block p {
+    margin: 0 0 10px; }
+
+.bankid__block-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: 0; }
+  .bankid__block-title::after {
+    content: "";
+    width: 116px;
+    height: 57px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../img/form/bankid.png") no-repeat center/contain; }
+
+.bankid__block-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none; }
+  .bankid__block-list li::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #035c67;
+    display: inline-block;
+    margin-right: 15px; }
+
+.bankid__list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-height: 450px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 55px; }
+  .bankid__list li {
+    width: 35%;
+    margin-bottom: 30px; }
+
+@media (max-width: 785px) {
+  .bankid .page__title {
+    font-size: 22px;
+    margin-bottom: 20px; }
+  .bankid__block {
+    background: #FFC524;
+    padding: 20px; }
+  .bankid__list li {
+    padding: 0 15px; } }
 
 /*# sourceMappingURL=style.css.map */
