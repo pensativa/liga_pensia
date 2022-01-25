@@ -4811,10 +4811,8 @@ button.button.eds {
 .openform input[type="radio"]:not(:checked) {
   position: absolute;
   left: -9999px;
-  width: 0;
-  height: 0;
-  opacity: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  opacity: 0; }
 
 .openform input[type="checkbox"]:checked + label,
 .openform input[type="checkbox"]:not(:checked) + label,
@@ -4824,7 +4822,13 @@ button.button.eds {
   position: relative;
   cursor: pointer;
   margin-bottom: 13px;
-  font-size: 14px; }
+  font-size: 14px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+
+.openform input[type="radio"]:checked + label,
+.openform input[type="radio"]:not(:checked) + label {
+  padding-left: 35px; }
 
 .openform input[type="checkbox"]:checked + label,
 .openform input[type="checkbox"]:not(:checked) + label {
@@ -4870,8 +4874,14 @@ button.button.eds {
   border: none;
   background: url("../img/form/checked.svg") no-repeat center/contain; }
 
-.openform input[type="text"] {
-  background: #F7F6F3;
+.openform input[type="text"],
+.openform input[type="email"],
+.openform input[type="date"],
+.openform input[type="tel"],
+.openform input[type="file"],
+.openform .file-text,
+.openform select {
+  background-color: #F7F6F3;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -4881,20 +4891,92 @@ button.button.eds {
   width: 457px;
   height: 45px;
   padding: 12px 24px;
-  color: #565656; }
-  .openform input[type="text"]:hover, .openform input[type="text"]:focus, .openform input[type="text"]:active, .openform input[type="text"]:focus-visible {
-    background: #FFFCF1;
+  color: #565656;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+  .openform input[type="text"]:hover, .openform input[type="text"]:focus, .openform input[type="text"]:active, .openform input[type="text"]:focus-visible,
+  .openform input[type="email"]:hover,
+  .openform input[type="email"]:focus,
+  .openform input[type="email"]:active,
+  .openform input[type="email"]:focus-visible,
+  .openform input[type="date"]:hover,
+  .openform input[type="date"]:focus,
+  .openform input[type="date"]:active,
+  .openform input[type="date"]:focus-visible,
+  .openform input[type="tel"]:hover,
+  .openform input[type="tel"]:focus,
+  .openform input[type="tel"]:active,
+  .openform input[type="tel"]:focus-visible,
+  .openform input[type="file"]:hover,
+  .openform input[type="file"]:focus,
+  .openform input[type="file"]:active,
+  .openform input[type="file"]:focus-visible,
+  .openform .file-text:hover,
+  .openform .file-text:focus,
+  .openform .file-text:active,
+  .openform .file-text:focus-visible,
+  .openform select:hover,
+  .openform select:focus,
+  .openform select:active,
+  .openform select:focus-visible {
+    background-color: #FFFCF1;
     border: 1px solid #F5A800; }
-  .openform input[type="text"]::-webkit-input-placeholder {
+  .openform input[type="text"]::-webkit-input-placeholder,
+  .openform input[type="email"]::-webkit-input-placeholder,
+  .openform input[type="date"]::-webkit-input-placeholder,
+  .openform input[type="tel"]::-webkit-input-placeholder,
+  .openform input[type="file"]::-webkit-input-placeholder,
+  .openform .file-text::-webkit-input-placeholder,
+  .openform select::-webkit-input-placeholder {
     color: #9E9E9E !important; }
-  .openform input[type="text"]::-moz-placeholder {
+  .openform input[type="text"]::-moz-placeholder,
+  .openform input[type="email"]::-moz-placeholder,
+  .openform input[type="date"]::-moz-placeholder,
+  .openform input[type="tel"]::-moz-placeholder,
+  .openform input[type="file"]::-moz-placeholder,
+  .openform .file-text::-moz-placeholder,
+  .openform select::-moz-placeholder {
     color: #9E9E9E !important; }
-  .openform input[type="text"]:-ms-input-placeholder {
+  .openform input[type="text"]:-ms-input-placeholder,
+  .openform input[type="email"]:-ms-input-placeholder,
+  .openform input[type="date"]:-ms-input-placeholder,
+  .openform input[type="tel"]:-ms-input-placeholder,
+  .openform input[type="file"]:-ms-input-placeholder,
+  .openform .file-text:-ms-input-placeholder,
+  .openform select:-ms-input-placeholder {
     color: #9E9E9E !important; }
-  .openform input[type="text"]::-ms-input-placeholder {
+  .openform input[type="text"]::-ms-input-placeholder,
+  .openform input[type="email"]::-ms-input-placeholder,
+  .openform input[type="date"]::-ms-input-placeholder,
+  .openform input[type="tel"]::-ms-input-placeholder,
+  .openform input[type="file"]::-ms-input-placeholder,
+  .openform .file-text::-ms-input-placeholder,
+  .openform select::-ms-input-placeholder {
     color: #9E9E9E !important; }
-  .openform input[type="text"]::placeholder {
+  .openform input[type="text"]::placeholder,
+  .openform input[type="email"]::placeholder,
+  .openform input[type="date"]::placeholder,
+  .openform input[type="tel"]::placeholder,
+  .openform input[type="file"]::placeholder,
+  .openform .file-text::placeholder,
+  .openform select::placeholder {
     color: #9E9E9E !important; }
+
+.openform select {
+  background-image: url("../img/form/select.svg");
+  background-repeat: no-repeat;
+  background-position: right 11px center; }
+
+.openform .file-text {
+  display: inline-block;
+  cursor: pointer;
+  background-image: url("../img/form/download.svg");
+  background-repeat: no-repeat;
+  background-position: left 11px center;
+  padding-left: 65px;
+  padding-right: 15px;
+  color: #9E9E9E;
+  font-size: 16px; }
 
 .openform__title {
   display: -webkit-box;
@@ -5069,7 +5151,7 @@ button.button.eds {
 .registration__item {
   margin-bottom: 20px; }
   .registration__item label {
-    width: 215px;
+    width: 250px;
     margin-right: 25px;
     display: inline-block; }
 
@@ -5097,14 +5179,23 @@ button.button.eds {
   .openform-reg .page__title {
     padding-top: 0; } }
 
-@media (max-width: 745px) {
+@media (max-width: 785px) {
   .registration__item label {
     width: 100%;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    margin-right: 0; }
   .registration__item--checkbox {
     margin: 30px 0; }
   .registration__btn {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .openform input[type="text"],
+  .openform input[type="email"],
+  .openform input[type="date"],
+  .openform input[type="tel"],
+  .openform input[type="file"],
+  .openform .file-text,
+  .openform select {
+    width: 100%; } }
 
 .bankid .wrapper {
   margin-bottom: 60px;
@@ -5187,5 +5278,149 @@ button.button.eds {
     padding: 20px; }
   .bankid__list li {
     padding: 0 15px; } }
+
+.bankid-form {
+  margin-bottom: 50px; }
+  .bankid-form .page__title {
+    font-weight: 450;
+    font-size: 24px; }
+  .bankid-form .page-list__item:nth-of-type(even)::before {
+    background-color: #f5a800; }
+
+.bankid-form fieldset {
+  border: none;
+  border-bottom: 1px solid #035c67;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden; }
+
+.bankid-form legend {
+  font-weight: 450;
+  padding-top: 40px; }
+
+.radio-block {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle; }
+  .radio-block label {
+    width: auto; }
+
+.registration__item--select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 736px;
+  max-width: 100%; }
+  .registration__item--select select {
+    width: auto;
+    border-right: 1px solid #f5a800; }
+  .registration__item--select input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    width: auto !important; }
+
+.bankid-form .registration__item--checkbox {
+  max-width: 100%;
+  margin-left: 277px;
+  margin-bottom: 0; }
+
+.bankid-form .prim {
+  font-size: 14px;
+  color: #000;
+  max-width: 593px;
+  margin-left: 40px;
+  margin-top: 0; }
+
+#other-person .registration__item--checkbox {
+  margin: 0; }
+  #other-person .registration__item--checkbox label {
+    font-weight: 450; }
+  #other-person .registration__item--checkbox .prim {
+    max-width: 690px; }
+
+#other-person {
+  border-bottom: none;
+  padding-bottom: 0; }
+
+.other-person__form .registration__item--checkbox {
+  margin-bottom: 10px;
+  margin-top: 0; }
+
+.same-adress {
+  position: absolute;
+  top: -23px;
+  left: 305px;
+  font-weight: 450;
+  text-decoration: none; }
+  .same-adress::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background: url("../img/form/arrow-down.svg") no-repeat center/contain;
+    vertical-align: middle;
+    margin-left: 10px; }
+
+.bankid-form__block,
+.other-person__form,
+.bankid-form__block-other,
+.bankid-form__block-id,
+.bankid-form__block-id {
+  display: none; }
+
+@media (max-width: 820px) {
+  .bankid-form .registration__item--checkbox {
+    margin-left: 0; }
+  .registration__item--select label {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%; }
+  .registration__item--select select {
+    width: 136px; }
+  .registration__item--select input {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 320px;
+            flex: 0 0 320px; }
+  .bankid-form {
+    overflow-x: hidden; }
+  .registration__item--checkbox .prim {
+    margin: 0 !important; }
+  .registration__item--select {
+    width: auto; } }
+
+@media (max-width: 785px) {
+  .registration__item--select input {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: calc(100% - 136px) !important; }
+  .openform .file-text {
+    height: auto;
+    font-size: 14px; } }
+
+.bankid-success {
+  padding-bottom: 250px;
+  font-size: 24px;
+  background: url("../img/business.png") no-repeat bottom center/auto 250px; }
+
+.bankid-success .page__title {
+  font-weight: 450;
+  font-size: 38px;
+  margin-bottom: 25px;
+  text-transform: uppercase; }
+
+.bankid-success .bigger {
+  font-weight: 450;
+  color: #f5a800;
+  margin-bottom: 60px;
+  text-transform: uppercase; }
+
+.bankid-success p {
+  max-width: 695px;
+  margin-left: auto;
+  margin-right: auto; }
 
 /*# sourceMappingURL=style.css.map */

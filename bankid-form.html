@@ -132,37 +132,632 @@
       </div>
     </nav>
   </header>
-  <main class="page openform openform-reg openform-reg--garant">
+  <main class="page openform bankid-form">
     <div class="wrapper">
-      <h1 class="page__title color-sec text-center">Дякуємо, Ви обрали ВНПФ “Гарант-Пенсія”!</h1>
-      <p class="text-center">Щоб продовжити оформлення пенсійного контракту, введіть Ваші дані:</p>
-      <form action="" class="registration">
-        <div class="registration__item">
-          <label for="surname">Прізвище</label>
-          <input id="surname" name="surname" type="text" placeholder="Іванов" required="">
+      <h1 class="page__title color-sec">Будь ласка, перевірте Ваші персональні дані, передані через систему Bank ID.</h1>
+      <p class="page-list__item">Деякі поля можуть бути пустими або інформація може бути вже не актуальною - виправте та впишіть самостійно правильні дані.</p>
+      <p class="page-list__item">Заяву необхідно заповнювати українською мовою.</p>
+      <form action="" class="bankid-form">
+        <fieldset>
+          <div class="registration__item">
+            <label for="surname">Прізвище</label>
+            <input id="surname" name="surname" type="text" placeholder="Іванов" required="">
+          </div>
+          <div class="registration__item">
+            <label for="firstname">Ім’я</label>
+            <input id="firstname" name="firstname" type="text" placeholder="Іван" required="">
+          </div>
+          <div class="registration__item">
+            <label for="secondname">По-батькові (за наявності)</label>
+            <input id="secondname" name="secondname" type="text" placeholder="Іванович" required="">
+          </div>
+          <div class="registration__item">
+            <label for="data">Дата народження</label>
+            <input id="data" name="data" type="date" placeholder="01.12.1985" required="">
+          </div>
+          <div class="registration__item">
+            <label for="place">Місце народження</label>
+            <input id="place" name="place" type="text" placeholder="Україна, м. Київ" required="">
+          </div>
+          <div class="registration__item registration__item--radio">
+            <label>Стать</label>
+            <div class="radio-block">
+              <input id="woman" name="stat" type="radio">
+              <label for="woman">жіноча</label>
+              <input id="man" name="stat" type="radio" checked="">
+              <label for="man">чоловіча</label>
+            </div>
+          </div>
+          <div class="registration__item">
+            <label for="ipn">ІПН (Індивідуальний податковий номер (РНОКПП))</label>
+            <input id="ipn" name="ipn" type="text" placeholder="0000000000" required="">
+          </div>
+          <div class="registration__item">
+            <label for="useremail">E-mail</label>
+            <input id="useremail" name="useremail" type="email" placeholder="ivanov@gmail.com" required="">
+          </div>
+          <div class="registration__item">
+            <label for="tel">Телефон</label>
+            <input id="tel" name="tel" type="tel" placeholder="+38 097 456 67 67" required="">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div class="registration__item">
+            <label for="doctype">Тип документа</label>
+            <select name="type" id="doctype" required="">
+              <option disabled="" selected="">Оберіть</option>
+              <option value="pasport">Паспорт громадянина України</option>
+              <option value="idpasport">Паспорт громадянина України (ID-картка)</option>
+              <option value="zagranpasport">Паспорт громадянина України для виїзду за кордон</option>
+              <option value="dippasport">Дипломатичний паспорт України</option>
+              <option value="morpasport">Посвідчення особи моряка</option>
+              <option value="timchasove">Тимчасове посвідчення громадянина України</option>
+              <option value="posvidka">Посвідка на постійне проживання в Україні</option>
+              <option value="svidotctvo">Свідоцтво про народження</option>
+              <option value="inozemny">Паспорт громадянина іншої країни</option>
+            </select>
+          </div>
+          <div class="bankid-form__block">
+            <div class="registration__item">
+              <label for="seria">Серія (за наявності)</label>
+              <input id="seria" name="seria" type="text" required="">
+            </div>
+            <div class="registration__item">
+              <label for="nomer">Номер документа, що підтверджує особу</label>
+              <input id="nomer" name="nomer" type="text" required="">
+            </div>
+            <div class="registration__item">
+              <label for="vydan">Ким виданий</label>
+              <input id="vydan" name="vydan" type="text" required="">
+            </div>
+            <div class="registration__item">
+              <label for="datav">Дата видачі</label>
+              <input id="datav" name="datav" type="date" required="">
+            </div>
+          </div>
+          <div class="bankid-form__block-id">
+            <div class="registration__item">
+              <label for="nomerid">Номер</label>
+              <input id="nomerid" name="nomerid" type="text" required="">
+            </div>
+            <div class="registration__item">
+              <label for="zapis">Запис №</label>
+              <input id="zapis" name="zapis" type="text" placeholder="19929991-09876" required="">
+            </div>
+            <div class="registration__item">
+              <label for="vydanid">Ким виданий</label>
+              <input id="vydanid" name="vydanid" type="text" required="">
+            </div>
+            <div class="registration__item">
+              <label for="datavid">Дата видачі</label>
+              <input id="datavid" name="datavid" type="date" required="">
+            </div>
+            <div class="registration__item">
+              <label for="datadoid">Дійсний до</label>
+              <input id="datadoid" name="datadoid" type="date" required="">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="adres adres-propiska">
+          <legend>Адреса реєстрації (прописка)</legend>
+          <div class="registration__item">
+            <label for="index">Індекс</label>
+            <input id="index" name="index" type="text" required="">
+          </div>
+          <div class="registration__item">
+            <label for="oblast">Область</label>
+            <select name="oblast" id="oblast" required="">
+              <option disabled="" selected="">Оберіть</option>
+              <option value="krym">АР Крим</option>
+              <option value="vinnica">Вінницька</option>
+              <option value="volyn">Волинська</option>
+              <option value="dnipro">Дніпропетровська</option>
+              <option value="doneck">Донецька</option>
+              <option value="zitomir">Житомирська</option>
+              <option value="zakarpat">Закарпатська</option>
+              <option value="zaporiz">Запорізька</option>
+              <option value="iv-frank">Івано-Франківська</option>
+              <option value="kiyev">Київська</option>
+              <option value="kirovog">Кіровоградська</option>
+              <option value="lugan">Луганська</option>
+              <option value="lviv">Львівська</option>
+              <option value="mikol">Миколаївська</option>
+              <option value="odesa">Одеська</option>
+              <option value="poltav">Полтавська</option>
+              <option value="riven">Рівненська</option>
+              <option value="sumska">Сумська</option>
+              <option value="ternop">Тернопільська</option>
+              <option value="kharkiv">Харківська</option>
+              <option value="herson">Херсонська</option>
+              <option value="hmelnic">Хмельницька</option>
+              <option value="cherkas">Черкаська</option>
+              <option value="cherniv">Чернівецька</option>
+              <option value="chernig">Чернігівська</option>
+            </select>
+          </div>
+          <div class="registration__item">
+            <label for="area">Район</label>
+            <input id="area" name="area" type="text">
+          </div>
+          <div class="registration__item registration__item--select">
+            <label for="city">Населенний пункт</label>
+            <select name="puntk" id="punkt">
+              <option disabled="" selected="">Оберіть</option>
+              <option value="misto">м.</option>
+              <option value="mistechko">містечко</option>
+              <option value="smt">смт</option>
+              <option value="s.">с.</option>
+              <option value="s-che">с-ще</option>
+              <option value="hutir">хутір</option>
+            </select>
+            <input id="city" name="city" type="text" placeholder="Назва населеного пункту" required="">
+          </div>
+          <div class="registration__item registration__item--select">
+            <label for="street">Вулиця</label>
+            <select name="vulica" id="vulica">
+              <option disabled="" selected="">Оберіть</option>
+              <option value="aleya">алея</option>
+              <option value="bulvar">бульвар</option>
+              <option value="vylica">вулиця</option>
+              <option value="doroga">дорога</option>
+              <option value="zatoka">затока</option>
+              <option value="maydan">майдан</option>
+              <option value="naberezna">набережна</option>
+              <option value="ostriv">острів</option>
+              <option value="plosha">площа</option>
+              <option value="provulok">провулок</option>
+              <option value="prospect">проспект</option>
+              <option value="proizd">проїзд</option>
+              <option value="tupic">тупік</option>
+              <option value="tupyc">тупик</option>
+              <option value="uzviz">узвіз</option>
+              <option value="shose">шосе</option>
+              <option value="maydan">майдан</option>
+              <option value="microrayon">мікрорайон</option>
+              <option value="kvartal">квартал</option>
+              <option value="gorodok">городок</option>
+            </select>
+            <input id="street" name="street" type="text" placeholder="Найменування вулиці" required="">
+          </div>
+          <div class="registration__item">
+            <label for="korpus">Номер будинку, корпусу (за наявності)</label>
+            <input id="korpus" name="korpus" type="text">
+          </div>
+          <div class="registration__item">
+            <label for="flat">Номер квартири (за наявності)</label>
+            <input id="flat" name="flat" type="text">
+          </div>
+          <div class="registration__item--checkbox">
+            <input id="fact" type="checkbox" name="fact">
+            <label for="fact">Фактична адреса проживання відповідає прописці</label>
+            <p class="prim">*Проставляючи позначку у даному полі, Ви підтверджуєте, що Ваша адреса реєстрації (поштова адреса) збігається з фактичним місцем проживання. Якщо відомості різні, Вам необхідно заповнити наступне поле:</p>
+          </div>
+        </fieldset>
+
+        <fieldset class="adres adres-fact" id="adres-fact">
+          <legend>Фактична адреса проживання</legend>
+          <div class="registration__item">
+            <label for="index-fact">Індекс</label>
+            <input id="index-fact" name="index-fact" type="text" required="">
+          </div>
+          <div class="registration__item">
+            <label for="oblast-fact">Область</label>
+            <select name="oblast-fact" id="oblast-fact" required="">
+              <option disabled="" selected="">Оберіть</option>
+              <option value="krym">АР Крим</option>
+              <option value="vinnica">Вінницька</option>
+              <option value="volyn">Волинська</option>
+              <option value="dnipro">Дніпропетровська</option>
+              <option value="doneck">Донецька</option>
+              <option value="zitomir">Житомирська</option>
+              <option value="zakarpat">Закарпатська</option>
+              <option value="zaporiz">Запорізька</option>
+              <option value="iv-frank">Івано-Франківська</option>
+              <option value="kiyev">Київська</option>
+              <option value="kirovog">Кіровоградська</option>
+              <option value="lugan">Луганська</option>
+              <option value="lviv">Львівська</option>
+              <option value="mikol">Миколаївська</option>
+              <option value="odesa">Одеська</option>
+              <option value="poltav">Полтавська</option>
+              <option value="riven">Рівненська</option>
+              <option value="sumska">Сумська</option>
+              <option value="ternop">Тернопільська</option>
+              <option value="kharkiv">Харківська</option>
+              <option value="herson">Херсонська</option>
+              <option value="hmelnic">Хмельницька</option>
+              <option value="cherkas">Черкаська</option>
+              <option value="cherniv">Чернівецька</option>
+              <option value="chernig">Чернігівська</option>
+            </select>
+          </div>
+          <div class="registration__item">
+            <label for="area-fact">Район</label>
+            <input id="area-fact" name="area-fact" type="text">
+          </div>
+          <div class="registration__item registration__item--select">
+            <label for="city-fact">Населенний пункт</label>
+            <select name="puntk-fact" id="punkt-fact">
+              <option disabled="" selected="">Оберіть</option>
+              <option value="misto">м.</option>
+              <option value="mistechko">містечко</option>
+              <option value="smt">смт</option>
+              <option value="s.">с.</option>
+              <option value="s-che">с-ще</option>
+              <option value="hutir">хутір</option>
+            </select>
+            <input id="city-fact" name="city-fact" type="text" placeholder="Назва населеного пункту" required="">
+          </div>
+          <div class="registration__item registration__item--select">
+            <label for="street-fact">Вулиця</label>
+            <select name="vulica-fact" id="vulica-fact">
+              <option disabled="" selected="">Оберіть</option>
+              <option value="aleya">алея</option>
+              <option value="bulvar">бульвар</option>
+              <option value="vylica">вулиця</option>
+              <option value="doroga">дорога</option>
+              <option value="zatoka">затока</option>
+              <option value="maydan">майдан</option>
+              <option value="naberezna">набережна</option>
+              <option value="ostriv">острів</option>
+              <option value="plosha">площа</option>
+              <option value="provulok">провулок</option>
+              <option value="prospect">проспект</option>
+              <option value="proizd">проїзд</option>
+              <option value="tupic">тупік</option>
+              <option value="tupyc">тупик</option>
+              <option value="uzviz">узвіз</option>
+              <option value="shose">шосе</option>
+              <option value="maydan">майдан</option>
+              <option value="microrayon">мікрорайон</option>
+              <option value="kvartal">квартал</option>
+              <option value="gorodok">городок</option>
+            </select>
+            <input id="street-fact" name="street-fact" type="text" placeholder="Найменування вулиці" required="">
+          </div>
+          <div class="registration__item">
+            <label for="korpus-fact">Номер будинку, корпусу (за наявності)</label>
+            <input id="korpus-fact" name="korpus-fact" type="text">
+          </div>
+          <div class="registration__item">
+            <label for="flat-fact">Номер квартири (за наявності)</label>
+            <input id="flat-fact" name="flat-fact" type="text">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Додавання документів</legend>
+          <div class="registration__item">
+            <label for="scanpasport">Скан копія паспорту:</label>
+            <span class="file-text">додайте вручну, якщо документ не підтягнувся</span>
+            <input class="file" id="scanpasport" name="scanpasport" type="file">
+          </div>
+          <div class="registration__item">
+            <label for="scancode">Скан-копія ідентифікаційного коду:</label>
+            <span class="file-text">додайте вручну, якщо документ не підтягнувся</span>
+            <input class="file" id="scancode" name="scancode" type="file">
+          </div>
+        </fieldset>
+
+        <fieldset id="other-person">
+          <div class="registration__item--checkbox">
+            <input id="otherperson" type="checkbox" name="otherperson">
+            <label for="otherperson">Контракт на користь третьої особи</label>
+            <p class="prim">Оберіть цей варіант, якщо Ви бажаєте відкрити пенсійний рахунок на користь родича (дружина/чоловік, дитина, батьки, рідні брати і сестри, дід і баба).  Ви будете вкладником (платником) по такому контракту, а учасником контракту буде особа на користь якої Ви робитимете внески. При виборі такого варіанту Вам необхідно буде вказати повний перелік персональних даних третьої особи.</p>
+          </div>
+        </fieldset>
+
+        <div class="other-person__form">
+          <fieldset>
+            <div class="registration__item">
+              <label for="other-persons">Контакт на</label>
+              <select name="other-persons" id="other-persons">
+                <option value="marred">дружина/чоловік</option>
+                <option value="child">дитина</option>
+                <option value="parents">батьки</option>
+                <option value="sibling">рідні брат/сестра</option>
+                <option value="grandparents">дід/баба</option>
+              </select>
+            </div>
+            <div class="registration__item--checkbox">
+              <input id="vozrast" type="checkbox" name="vozrast">
+              <label for="vozrast">На неповнолітню особу (менше 18 років)</label>
+            </div>
+            <div class="registration__item">
+              <label for="surname-other">Прізвище</label>
+              <input id="surname-other" name="surname-other" type="text" placeholder="Іванов" required="">
+            </div>
+            <div class="registration__item">
+              <label for="firstname-other">Ім’я</label>
+              <input id="firstname-other" name="firstname-other" type="text" placeholder="Іван" required="">
+            </div>
+            <div class="registration__item">
+              <label for="secondname-other">По-батькові (за наявності)</label>
+              <input id="secondname-other" name="secondname-other" type="text" placeholder="Іванович" required="">
+            </div>
+            <div class="registration__item">
+              <label for="data-other">Дата народження</label>
+              <input id="data-other" name="data-other" type="date" placeholder="01.12.1985" required="">
+            </div>
+            <div class="registration__item">
+              <label for="place-other">Місце народження</label>
+              <input id="place-other" name="place-other" type="text" placeholder="Україна, м. Київ" required="">
+            </div>
+            <div class="registration__item registration__item--radio">
+              <label>Стать</label>
+              <div class="radio-block">
+                <input id="woman-other" name="stat-other" type="radio">
+                <label for="woman-other">жіноча</label>
+                <input id="man-other" name="stat-other" type="radio" checked="">
+                <label for="man-other">чоловіча</label>
+              </div>
+            </div>
+            <div class="registration__item">
+              <label for="ipn-other">ІПН (Індивідуальний податковий номер (РНОКПП))</label>
+              <input id="ipn-other" name="ipn-other" type="text" placeholder="0000000000" required="">
+            </div>
+            <div class="registration__item">
+              <label for="useremail-other">E-mail</label>
+              <input id="useremail-other" name="useremail-other" type="email" placeholder="ivanov@gmail.com" required="">
+            </div>
+            <div class="registration__item">
+              <label for="tel-other">Телефон</label>
+              <input id="tel-other" name="tel-other" type="tel" placeholder="+38 097 456 67 67" required="">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <div class="registration__item">
+              <label for="doctype-other">Тип документа</label>
+              <select name="doctype-other" id="doctype-other" required="">
+                <option disabled="" selected="">Оберіть</option>
+                <option value="pasport">Паспорт громадянина України</option>
+                <option value="idpasport">Паспорт громадянина України (ID-картка)</option>
+                <option value="zagranpasport">Паспорт громадянина України для виїзду за кордон</option>
+                <option value="dippasport">Дипломатичний паспорт України</option>
+                <option value="morpasport">Посвідчення особи моряка</option>
+                <option value="timchasove">Тимчасове посвідчення громадянина України</option>
+                <option value="posvidka">Посвідка на постійне проживання в Україні</option>
+                <option value="svidotctvo">Свідоцтво про народження</option>
+                <option value="inozemny">Паспорт громадянина іншої країни</option>
+              </select>
+            </div>
+            <div class="bankid-form__block-other">
+              <div class="registration__item">
+                <label for="seria-other">Серія (за наявності)</label>
+                <input id="seria-other" name="seria-other" type="text" required="">
+              </div>
+              <div class="registration__item">
+                <label for="number-other">Номер документа, що підтверджує особу</label>
+                <input id="number-other" name="number-other" type="text" required="">
+              </div>
+              <div class="registration__item">
+                <label for="cod-other">Ким виданий</label>
+                <input id="cod-other" name="cod-other" type="text" required="">
+              </div>
+              <div class="registration__item">
+                <label for="data-other">Дата видачі</label>
+                <input id="data-other" name="data-other" type="date" required="">
+              </div>
+            </div>
+            <div class="bankid-form__block-id">
+            <div class="registration__item">
+              <label for="nomerid-other">Номер</label>
+              <input id="nomerid-other" name="nomerid-other" type="text" required="">
+            </div>
+            <div class="registration__item">
+              <label for="zapis-other">Запис №</label>
+              <input id="zapis-other" name="zapis-other" type="text" placeholder="19929991-09876" required="">
+            </div>
+            <div class="registration__item">
+              <label for="vydanid-other">Ким виданий</label>
+              <input id="vydanid-other" name="vydanid-other" type="text" required="">
+            </div>
+            <div class="registration__item">
+              <label for="datavid-other">Дата видачі</label>
+              <input id="datavid-other" name="datavid-other" type="date" required="">
+            </div>
+            <div class="registration__item">
+              <label for="datadoid-other">Дійсний до</label>
+              <input id="datadoid-other" name="datadoid-other" type="date" required="">
+            </div>
+          </div>
+          </fieldset>
+
+          <fieldset class="adres adres-propiska-other">
+            <legend>Адреса реєстрації (прописка)</legend>
+            <a href="#" class="same-adress same-adress-propiska">з Вашої адреси</a>
+            <div class="registration__item">
+              <label for="index-other">Індекс</label>
+              <input id="index-other" name="index-other" type="text" required="">
+            </div>
+            <div class="registration__item">
+              <label for="oblast-other">Область</label>
+              <select name="oblast-other" id="oblast-other" required="">
+                <option disabled="" selected="">Оберіть</option>
+                <option value="krym">АР Крим</option>
+                <option value="vinnica">Вінницька</option>
+                <option value="volyn">Волинська</option>
+                <option value="dnipro">Дніпропетровська</option>
+                <option value="doneck">Донецька</option>
+                <option value="zitomir">Житомирська</option>
+                <option value="zakarpat">Закарпатська</option>
+                <option value="zaporiz">Запорізька</option>
+                <option value="iv-frank">Івано-Франківська</option>
+                <option value="kiyev">Київська</option>
+                <option value="kirovog">Кіровоградська</option>
+                <option value="lugan">Луганська</option>
+                <option value="lviv">Львівська</option>
+                <option value="mikol">Миколаївська</option>
+                <option value="odesa">Одеська</option>
+                <option value="poltav">Полтавська</option>
+                <option value="riven">Рівненська</option>
+                <option value="sumska">Сумська</option>
+                <option value="ternop">Тернопільська</option>
+                <option value="kharkiv">Харківська</option>
+                <option value="herson">Херсонська</option>
+                <option value="hmelnic">Хмельницька</option>
+                <option value="cherkas">Черкаська</option>
+                <option value="cherniv">Чернівецька</option>
+                <option value="chernig">Чернігівська</option>
+              </select>
+            </div>
+            <div class="registration__item">
+              <label for="area-other">Район</label>
+              <input id="area-other" name="area-other" type="text">
+            </div>
+            <div class="registration__item registration__item--select">
+              <label for="city-other">Населенний пункт</label>
+              <select name="puntk-other" id="punkt-other">
+                <option disabled="" selected="">Оберіть</option>
+                <option value="misto">м.</option>
+                <option value="mistechko">містечко</option>
+                <option value="smt">смт</option>
+                <option value="s.">с.</option>
+                <option value="s-che">с-ще</option>
+                <option value="hutir">хутір</option>
+              </select>
+              <input id="city-other" name="city-other" type="text" placeholder="Назва населеного пункту" required="">
+            </div>
+            <div class="registration__item registration__item--select">
+              <label for="street-other">Вулиця</label>
+              <select name="vulica-other" id="vulica-other">
+                <option disabled="" selected="">Оберіть</option>
+                <option value="aleya">алея</option>
+                <option value="bulvar">бульвар</option>
+                <option value="vylica">вулиця</option>
+                <option value="doroga">дорога</option>
+                <option value="zatoka">затока</option>
+                <option value="maydan">майдан</option>
+                <option value="naberezna">набережна</option>
+                <option value="ostriv">острів</option>
+                <option value="plosha">площа</option>
+                <option value="provulok">провулок</option>
+                <option value="prospect">проспект</option>
+                <option value="proizd">проїзд</option>
+                <option value="tupic">тупік</option>
+                <option value="tupyc">тупик</option>
+                <option value="uzviz">узвіз</option>
+                <option value="shose">шосе</option>
+                <option value="maydan">майдан</option>
+                <option value="microrayon">мікрорайон</option>
+                <option value="kvartal">квартал</option>
+                <option value="gorodok">городок</option>
+              </select>
+              <input id="street-other" name="street-other" type="text" placeholder="Найменування вулиці" required="">
+            </div>
+            <div class="registration__item">
+              <label for="korpus-other">Номер будинку, корпусу (за наявності)</label>
+              <input id="korpus-other" name="korpus-other" type="text">
+            </div>
+            <div class="registration__item">
+              <label for="flat-other">Номер квартири (за наявності)</label>
+              <input id="flat-other" name="flat-other" type="text">
+            </div>
+            <div class="registration__item--checkbox">
+              <input id="fact-other" type="checkbox" name="fact-other">
+              <label for="fact-other">Фактична адреса проживання відповідає прописці</label>
+              <p class="prim">*Проставляючи позначку у даному полі, Ви підтверджуєте, що Ваша адреса реєстрації (поштова адреса) збігається з фактичним місцем проживання. Якщо відомості різні, Вам необхідно заповнити наступне поле:</p>
+            </div>
+          </fieldset>
+
+          <fieldset class="adres adres-fact-other" id="adres-fact-other">
+            <legend>Фактична адреса проживання</legend>
+            <a href="#" class="same-adress same-adress-fact">з Вашої адреси</a>
+            <div class="registration__item">
+              <label for="index-fact-other">Індекс</label>
+              <input id="index-fact-other" name="index-fact-other" type="text" required="">
+            </div>
+            <div class="registration__item">
+              <label for="oblast-fact-other">Область</label>
+              <select name="oblast-fact-other" id="oblast-fact-other" required="">
+                <option disabled="" selected="">Оберіть</option>
+                <option value="krym">АР Крим</option>
+                <option value="vinnica">Вінницька</option>
+                <option value="volyn">Волинська</option>
+                <option value="dnipro">Дніпропетровська</option>
+                <option value="doneck">Донецька</option>
+                <option value="zitomir">Житомирська</option>
+                <option value="zakarpat">Закарпатська</option>
+                <option value="zaporiz">Запорізька</option>
+                <option value="iv-frank">Івано-Франківська</option>
+                <option value="kiyev">Київська</option>
+                <option value="kirovog">Кіровоградська</option>
+                <option value="lugan">Луганська</option>
+                <option value="lviv">Львівська</option>
+                <option value="mikol">Миколаївська</option>
+                <option value="odesa">Одеська</option>
+                <option value="poltav">Полтавська</option>
+                <option value="riven">Рівненська</option>
+                <option value="sumska">Сумська</option>
+                <option value="ternop">Тернопільська</option>
+                <option value="kharkiv">Харківська</option>
+                <option value="herson">Херсонська</option>
+                <option value="hmelnic">Хмельницька</option>
+                <option value="cherkas">Черкаська</option>
+                <option value="cherniv">Чернівецька</option>
+                <option value="chernig">Чернігівська</option>
+              </select>
+            </div>
+            <div class="registration__item">
+              <label for="area-fact-other">Район</label>
+              <input id="area-fact-other" name="area-fact-other" type="text">
+            </div>
+            <div class="registration__item registration__item--select">
+              <label for="city-fact-other">Населенний пункт</label>
+              <select name="puntk-fact-other" id="punkt-fact-other">
+                <option disabled="" selected="">Оберіть</option>
+                <option value="misto">м.</option>
+                <option value="mistechko">містечко</option>
+                <option value="smt">смт</option>
+                <option value="s.">с.</option>
+                <option value="s-che">с-ще</option>
+                <option value="hutir">хутір</option>
+              </select>
+              <input id="city-fact-other" name="city-fact-other" type="text" placeholder="Назва населеного пункту" required="">
+            </div>
+            <div class="registration__item registration__item--select">
+              <label for="street-fact-other">Вулиця</label>
+              <select name="vulica-fact-other" id="vulica-fact-other">
+                <option disabled="" selected="">Оберіть</option>
+                <option value="aleya">алея</option>
+                <option value="bulvar">бульвар</option>
+                <option value="vylica">вулиця</option>
+                <option value="doroga">дорога</option>
+                <option value="zatoka">затока</option>
+                <option value="maydan">майдан</option>
+                <option value="naberezna">набережна</option>
+                <option value="ostriv">острів</option>
+                <option value="plosha">площа</option>
+                <option value="provulok">провулок</option>
+                <option value="prospect">проспект</option>
+                <option value="proizd">проїзд</option>
+                <option value="tupic">тупік</option>
+                <option value="tupyc">тупик</option>
+                <option value="uzviz">узвіз</option>
+                <option value="shose">шосе</option>
+                <option value="maydan">майдан</option>
+                <option value="microrayon">мікрорайон</option>
+                <option value="kvartal">квартал</option>
+                <option value="gorodok">городок</option>
+              </select>
+              <input id="street-fact-other" name="street-fact-other" type="text" placeholder="Найменування вулиці" required="">
+            </div>
+            <div class="registration__item">
+              <label for="korpus-fact-other">Номер будинку, корпусу (за наявності)</label>
+              <input id="korpus-fact-other" name="korpus-fact-other" type="text">
+            </div>
+            <div class="registration__item">
+              <label for="flat-fact-other">Номер квартири (за наявності)</label>
+              <input id="flat-fact-other" name="flat-fact-other" type="text">
+            </div>
+          </fieldset>
         </div>
-        <div class="registration__item">
-          <label for="firstname">Ім’я</label>
-          <input id="firstname" name="firstname" type="text" placeholder="Іван" required="">
-        </div>
-        <div class="registration__item">
-          <label for="secondname">По-батькові (за наявності)</label>
-          <input id="secondname" name="secondname" type="text" placeholder="Іванович" required="">
-        </div>
-        <div class="registration__item">
-          <label for="email">E-mail</label>
-          <input id="email" name="email" type="text" placeholder="user@gmail.com" required="">
-        </div>
-        <div class="registration__item">
-          <label for="tel">Телефон</label>
-          <input id="tel" name="tel" type="text" placeholder="+38 097 456 67 67" required="">
-        </div>
-        <div class="registration__item--checkbox">
-          <input id="agreement" type="checkbox" name="agree" checked="">
-          <label for="agreement">Ви приймаєте згоду щодо обробки персональних даних </label>
-        </div>
+
         <div class="registration__btn">
-          <a href="bankid-form.html" class="button--pay button--payacc">продовжити</a>
+          <a href="bankid-success.html" class="button--pay button--payacc">відправити</a>
         </div>
       </form>
     </div>
