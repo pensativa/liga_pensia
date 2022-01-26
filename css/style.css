@@ -5108,9 +5108,15 @@ button.button.eds {
   .openform__shema {
     display: block; }
   .openform__shema-main {
-    width: 260px; }
+    width: 260px;
+    position: relative; }
     .openform__shema-main::after {
-      display: none; }
+      height: 266px;
+      width: 74px;
+      background: url("../img/form/arrow-ch.svg") no-repeat top left/contain;
+      left: -15px;
+      top: 39px;
+      position: absolute; }
   .openform__shema-sec {
     margin-left: 50px; } }
 
@@ -5294,9 +5300,13 @@ button.button.eds {
   position: relative;
   overflow: hidden; }
 
-.bankid-form legend {
+.bankid-form .legend {
   font-weight: 450;
-  padding-top: 40px; }
+  padding-bottom: 20px;
+  font-weight: 450;
+  font-size: 18px;
+  margin-top: 0;
+  padding-top: 0; }
 
 .radio-block {
   display: inline-block;
@@ -5351,7 +5361,7 @@ button.button.eds {
 
 .same-adress {
   position: absolute;
-  top: -23px;
+  top: 39px;
   left: 305px;
   font-weight: 450;
   text-decoration: none; }
@@ -5399,7 +5409,13 @@ button.button.eds {
     width: calc(100% - 136px) !important; }
   .openform .file-text {
     height: auto;
-    font-size: 14px; } }
+    font-size: 14px; }
+  .bankid-form .legend {
+    margin-bottom: 0; }
+  .same-adress {
+    position: static;
+    margin-bottom: 10px;
+    display: inline-block; } }
 
 .bankid-success {
   padding-bottom: 250px;
@@ -5422,5 +5438,16 @@ button.button.eds {
   max-width: 695px;
   margin-left: auto;
   margin-right: auto; }
+
+@media (max-width: 785px) {
+  .bankid-success {
+    padding-bottom: 200px;
+    font-size: 20px;
+    background-size: auto 200px; }
+  .bankid-success .page__title {
+    font-size: 30px;
+    margin-bottom: 25px; }
+  .bankid-success .bigger {
+    margin-bottom: 30px; } }
 
 /*# sourceMappingURL=style.css.map */
